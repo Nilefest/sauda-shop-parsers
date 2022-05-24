@@ -7,4 +7,4 @@ use Classes\ComPortal\ComPortal;
 use Classes\Azerti\Azerti;
 
 // $comPortal = (new ComPortal())->testingProduct();
-$azerti = (new Azerti())->testingProduct();
+$azerti = (new Azerti('read'))->testingProduct();
