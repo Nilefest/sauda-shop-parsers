@@ -1,0 +1,21 @@
+{
+    "name": "1vick/supsauda.loc",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vika Vas",
+            "email": "1vikavas@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-SimpleXML": "*",
+        "ext-zip": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "Classes"
+        }
+    }
+}
