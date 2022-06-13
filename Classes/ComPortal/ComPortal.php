@@ -71,7 +71,7 @@ class ComPortal extends Supplier
             return false;
         }
         
-        print_r($content['shop']);
+        print_r($content['shop']); exit('*0*');
         if (!$products = (array)$content['Товары'] ?? []) {
             return false;
         }
@@ -318,7 +318,10 @@ class ComPortal extends Supplier
         $result = [];
         if($fileType === 'xml') {
             if ($response = file_get_contents($localFile)){
-                $result = new SimpleXMLElement($response);
+                $categories = $this->getCategoryFromXml($response);
+                $result = (array)(new SimpleXMLElement($response));
+                $result['shop'] = (array)$result['shop'];
+                $result['shop']['categories'] = $categories;
             } else {
                 Logger::Log('error', 'Read local XML file: FAIL - ' . $localFile, $this->settings['logPring']);
             }
@@ -329,7 +332,42 @@ class ComPortal extends Supplier
                 Logger::Log('error', 'Read local file: FAIL - ' . $localFile, $this->settings['logPring']);
             }
         }
+        print_r($result);exit('*2*');
         return $result;
+    }
+
+    /**
+     * Parse categories from XML-data if SimpleXMLElement incorrect convert data
+     * @param string xml-data as string
+     * @return array parsed array
+     */
+    private function getCategoryFromXml($xmlData) {
+        $categories = [];
+        if ($xmlData){
+            $re = '/<category id="(.+)" parentId="(.*)">(.*)<\/category>/m';
+            preg_match_all($re, $xmlData, $result, PREG_SET_ORDER, 0);
+            foreach($result as $row) {
+                $categories[$row[1]] = [
+                    'id' => $row[1],
+                    'parentId' => $row[2],
+                    'name' => $row[3],
+                ];
+            }
+        }
+        return $categories;
+    }
+
+    /**
+     * Parse categories from XML-file
+     * @param array filepath to file
+     * @return array parsed array
+     */
+    private function getCategoryFromXmlFile($localFile) {
+        $categories = [];
+        if ($xmlData = file_get_contents($localFile)){
+            $categories = $this->getCategoryFromXml($xmlData);
+        }
+        return $categories;
     }
 
     public function addTextInfo($request, $product){
