@@ -69,7 +69,7 @@ class Azerti extends Supplier
         }
 
         if($limit ?? 0) {
-            $products['offer'] = array_slice($products['offer'], 0, 5);
+            $products['offer'] = array_slice($products['offer'], 0, $limit);
         }
         
         foreach ($products['offer'] as $product_key => $product) {

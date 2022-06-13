@@ -60,6 +60,7 @@ class ComPortal extends Supplier
     }
     
     public function getData() {
+        $limit = $_GET['limit'] ?? 0; // limit for import;
         
         $this->getImagesFtpDownlaod();
 
@@ -75,7 +76,9 @@ class ComPortal extends Supplier
             return false;
         }
 
-        $products['Товар'] = array_slice($products['Товар'], 0, 5); // @TODO: remove. get 5 for test
+        if($limit ?? 0) {
+            $products['offer'] = array_slice($products['offer'], 0, $limit);
+        }
         
         foreach ($products['Товар'] as $product_key => $product) {
             if ($temp_count){
