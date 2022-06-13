@@ -70,17 +70,16 @@ class ComPortal extends Supplier
         if (!$content = (array)$this->saveAndGetCatalog($this->settings['content'])) {
             return false;
         }
-        
-        print_r($content['shop']); exit('*0*');
-        if (!$products = (array)$content['Товары'] ?? []) {
+
+        if (!$products = (array)$content['offers'] ?? []) {
             return false;
         }
 
         if($limit ?? 0) {
-            $products['offer'] = array_slice($products['offer'], 0, $limit);
+            $products = array_slice($products, 0, $limit);
         }
         
-        foreach ($products['Товар'] as $product_key => $product) {
+        foreach ($products as $product_key => $product) {
             if ($temp_count){
                 if ($temp_inc == $temp_count){break;}
                 $temp_inc++;
@@ -89,30 +88,28 @@ class ComPortal extends Supplier
             $product_obj = $product;
             $product = (array) $product;
 
-            print_r($product);
-            exit('*1*');
             // получить артикул
-            $product['article'] = $product['Артикул'] ?? $product['Код'];
+            $product['article'] = $product['articul'] ?? $product['stock'];
 
             $this->articuls[] = $product['article'];
 
             // Цена "Дилерская цена"
             $price = 0;
             if (isset($product['price'])){
-                $price = $product['Цена']; // ?? НЕТ в файле
+                $price = $product['price']; // ?? НЕТ в файле
             }
 
             // Кол-во товаров на складе
             $stock = 0;
-            if (isset($product['Код'])){
-                $stock = preg_replace("/[^0-9]/", '', $product['Код']);
+            if (isset($product['stock'])){
+                $stock = preg_replace("/[^0-9]/", '', $product['stock']);
             }
 
             // проверить если ли товар в Onebox по артикулу
             $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
 
             if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
-
+                
                 $product_ob = $oneboxResponse->products;
 
                 $request = [
@@ -124,7 +121,7 @@ class ComPortal extends Supplier
                     'supplierprice' => $price ? round($price) : 0,
                     'supplieravail' => $stock > 0 ? 1 : 0,
                     'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
-                    'brandname' => (string)$product['vendor'],
+                    'brandname' => $product['params']['brand'][1] ?? '', // ?? !!
                 ];
 
                 // дополнительная информация по продукту
@@ -138,7 +135,7 @@ class ComPortal extends Supplier
                     }
                 }
 
-                $oneboxResponse = $this->onebox->request('/product/update/', $request);
+                $oneboxResponse = $this->onebox->request('/product/update/', $request); // @TODO: uncomment
 
                 if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
                     $this->updated_products[] = $product_ob->id;
@@ -160,8 +157,8 @@ class ComPortal extends Supplier
                     // добавление информации о новом продукте
                     $request = [
 
-                        'name' => $product['Название'],
-                        'brandname' => $product['Производитель'] ?? '', // ?? !!
+                        'name' => $product['name'],
+                        'brandname' => $product['params']['brand'][1] ?? '', // ?? !!
                         'articul' => $product['article'],
                         'unit' => 'шт.',
 
@@ -180,13 +177,15 @@ class ComPortal extends Supplier
                     $request = $this->prepare($request);
 
                     // собрать картинки
-                    if (isset($product['Изображения']) && !empty($product['Изображения'])){
-                        foreach($product['Изображения'] as $picture){
-                            $request .= '&image[0]='.$picture['Изображение'];
-                        }
-                    }
+                    // if (isset($product['picture'])){
+                    //     $request .= '&image[0]='.$picture['picture'];
+                    // } elseif (isset($product['pictures']) && !empty($product['pictures'])){
+                    //     foreach($product['pictures'] as $imageKey => $picture){
+                    //         $request .= "&image[$imageKey]=".$picture;
+                    //     }
+                    // }
 
-                    $oneboxResponse = $this->onebox->request('/product/add/', $request);
+                    $oneboxResponse = $this->onebox->request('/product/add/', $request);// @TODO: uncomment
 
                     if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
 
@@ -210,10 +209,8 @@ class ComPortal extends Supplier
 
         }
 
-        exit('*0*');
-
         if ($temp_count === 0 || $temp_count === false){ // если включено ограничение на количество то не обнулять товары
-            $this->updateNotInCatalogProducts(); // обнулить товары которые есть в onebox, но нет в akcent
+            //$this->updateNotInCatalogProducts(); // обнулить товары которые есть в onebox, но нет в akcent
         }
 
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products) . ' || Обнулено товаров: ' . count($this->deleted_products), $this->settings['logPring']);
@@ -318,10 +315,10 @@ class ComPortal extends Supplier
         $result = [];
         if($fileType === 'xml') {
             if ($response = file_get_contents($localFile)){
-                $categories = $this->getCategoryFromXml($response);
-                $result = (array)(new SimpleXMLElement($response));
-                $result['shop'] = (array)$result['shop'];
-                $result['shop']['categories'] = $categories;
+                $result = new SimpleXMLElement($response);
+                $result = (array)$result->shop;
+                $result['categories'] = $this->getCategoryFromXml($response);
+                $result['offers'] = $this->parseParamFromXml((array)$result['offers'], $response);
             } else {
                 Logger::Log('error', 'Read local XML file: FAIL - ' . $localFile, $this->settings['logPring']);
             }
@@ -332,8 +329,33 @@ class ComPortal extends Supplier
                 Logger::Log('error', 'Read local file: FAIL - ' . $localFile, $this->settings['logPring']);
             }
         }
-        print_r($result);exit('*2*');
         return $result;
+    }
+
+    private function parseParamFromXml($offersData, $xmlData) {
+        $reParam = '/<param name="(.*)">(.*)<\/param>/m';
+
+        $offers = (array)$offersData['offer'];
+        foreach($offers as $key => $offer){
+            $id = $offer->attributes()->id[0];
+            $reOffer = '/<offer id="' . $id . '".*?>(.*?)<\/offer>/ms';
+            preg_match_all($reOffer, $xmlData, $offerXml, PREG_SET_ORDER, 0);
+
+            // get params
+            preg_match_all($reParam, $offerXml[0][1] ?? '', $paramsData, PREG_SET_ORDER, 0);
+            $params = [];
+            foreach($paramsData as $paramRow) {
+                if($paramRow[1] === 'Бренд'){
+                    $params['brand'] = [$paramRow[1], $paramRow[2]];
+                } else {
+                    $params[] = [$paramRow[1], $paramRow[2]];
+                }
+            }
+            $offer = (array)$offer;
+            $offer['params'] = $params;
+            $offers[$key] = $offer;
+        }
+        return $offers;
     }
 
     /**
@@ -372,33 +394,22 @@ class ComPortal extends Supplier
 
     public function addTextInfo($request, $product){
 
-        $params = $product->Param;
+        $params = $product['param'];
         $product = (array) $product;
 
         // собрать описание
-        if (isset($product['description']) && !empty($product['Описание'])){
-            $request['description'] = $product['Описание'];
+        if (isset($product['description']) || isset($product['fullname'])){
+            $request['description'] = ($product['description'] ?? '') . ' ' . ($product['fullname'] . '');
         }
 
         // собрать характеристики в тег ul
-        if (isset($product['Свойства']) && !empty($product['Свойства']) && is_array($product['Свойства'])) {
+        if (isset($product['param']) && !empty($product['param']) && is_array($product['param'])) {
             $properties = '<ul>';
-            foreach ($product['Свойства']['Свойство'] ?? [] as $prop_key => $prop) {
+            foreach ($product['params'] ?? [] as $prop_key => $prop_arr) {
 
-                $prop = (array)$prop;
-                $prop_name = (string)$params[$prop_key]['Название'];
-                $prop_value = (string)$params[$prop_key]['Значение'];
+                $prop_name = (string)$prop_arr[0] ?? '';
+                $prop_value = (string)$prop_arr[1] ?? '--';
                 $properties .= '<li><b>' . $prop_name . ':</b> ' . $prop_value . '</li>';
-
-                if (!in_array($prop_name, $this->excludedAttributes)){
-
-                    $properties .= '<li><b>' . $prop_name . ':</b> ' . prop_value . '</li>';
-
-                    // собрать отдельные характеристики которые нужно положить в свои поля в onebox
-                    if (array_key_exists($prop_name, $this->asbis_onebox_params)) {
-                        $request['customfield_'.$this->asbis_onebox_params[$prop_name]] = prop_value;
-                    }
-                }
             }
             $properties .= '</ul>';
             $request['characteristic'] = $properties;
