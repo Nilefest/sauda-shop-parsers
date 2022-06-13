@@ -46,13 +46,13 @@
             <div class="col-3">
                 <div class="card text-center">
                     <h4>Синхронизация с Azertu</h4>
-                    <a href="/sync.php?sup=azerti" class="btn btn-primary">Запустить</a>
+                    <a href="/sync.php?sup=azerti&limit=5" class="btn btn-primary">Запустить</a>
                 </div>
             </div>
             <div class="col-3">
                 <div class="card text-center">
                     <h4>Синхронизация с ComPortal</h4>
-                    <a href="/sync.php?sup=comportal" class="btn btn-danger">Запустить</a>
+                    <a href="/sync.php?sup=comportal&limit=5" class="btn btn-danger">Запустить</a>
                 </div>
             </div>
         </div>

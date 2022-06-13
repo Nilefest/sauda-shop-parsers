@@ -28,12 +28,6 @@ class Azerti extends Supplier
             'password' => 'mdjnfjHHdtB755HNBD!sad&',
             'dir' => './',
         ],
-        // 'ftp' => [
-        //     'host' => 'nilefest.ftp.tools',
-        //     'username' => 'nilefest_tests',
-        //     'password' => 'BTT99s98ckLi',
-        //     'dir' => './',
-        // ],
         'source' => [
             'files' => [
                 'import' => 'import.xml', 
@@ -60,10 +54,8 @@ class Azerti extends Supplier
         exit('test');
     }
 
-    /**
-     * Method as Akcent
-     */
     public function getData(){
+        $limit = $_GET['limit'] ?? 0; // limit for import;
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -76,7 +68,9 @@ class Azerti extends Supplier
             return false;
         }
 
-        $products['offer'] = array_slice($products['offer'], 0, 5); // @TODO: remove. get 5 for test
+        if($limit ?? 0) {
+            $products['offer'] = array_slice($products['offer'], 0, 5);
+        }
         
         foreach ($products['offer'] as $product_key => $product) {
             if ($temp_count){
@@ -148,7 +142,7 @@ class Azerti extends Supplier
 
             }else{ // товара нет в onebox
 
-                // проверить если ди товар в наличии и есть ли у него цена
+                // проверить если ли товар в наличии и есть ли у него цена
                 if (isset($product['stock']) && isset($price) && $stock > 0 && $price > 0) {
 
                     // добавление информации о новом продукте
@@ -203,7 +197,7 @@ class Azerti extends Supplier
 
 
         if ($temp_count === 0 || $temp_count === false){ // если включено ограничение на количество то не обнулять товары
-            $this->updateNotInCatalogProducts(); // обнулить товары которые есть в onebox, но нет в akcent
+            //$this->updateNotInCatalogProducts(); // обнулить товары которые есть в onebox, но нет в akcent
         }
 
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products) . ' || Обнулено товаров: ' . count($this->deleted_products), $this->settings['logPring']);
@@ -300,11 +294,12 @@ class Azerti extends Supplier
         $result = [];
         if($fileType === 'xml') {
             if ($response = file_get_contents($localFile)){
+                $categories = $this->getCategoryFromXml($response);
                 $result = new SimpleXMLElement($response);
-                // print_r(simplexml_load_string($response)); exit('*3*');
                 if($type = 'import'){
-                    $result = $result->shop;
+                    $result = (array)$result->shop;
                 }
+                $result['categories'] = $categories;
             } else {
                 Logger::Log('error', 'Read local XML file: FAIL - ' . $localFile, $this->settings['logPring']);
             }
@@ -316,6 +311,40 @@ class Azerti extends Supplier
             }
         }
         return $result;
+    }
+
+    /**
+     * Parse categories from XML-data if SimpleXMLElement incorrect convert data
+     * @param string xml-data as string
+     * @return array parsed array
+     */
+    private function getCategoryFromXml($xmlData) {
+        $categories = [];
+        if ($xmlData){
+            $re = '/<category id="(.+)" parentId="(.*)">(.*)<\/category>/m';
+            preg_match_all($re, $xmlData, $result, PREG_SET_ORDER, 0);
+            foreach($result as $row) {
+                $categories[$row[1]] = [
+                    'id' => $row[1],
+                    'parentId' => $row[2],
+                    'name' => $row[3],
+                ];
+            }
+        }
+        return $categories;
+    }
+
+    /**
+     * Parse categories from XML-file
+     * @param array filepath to file
+     * @return array parsed array
+     */
+    private function getCategoryFromXmlFile($localFile) {
+        $categories = [];
+        if ($xmlData = file_get_contents($localFile)){
+            $categories = $this->getCategoryFromXml($xmlData);
+        }
+        return $categories;
     }
     
     public function addTextInfo($request, $product){
