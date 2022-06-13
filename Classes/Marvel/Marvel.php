@@ -171,7 +171,7 @@ class Marvel extends Supplier
 
                     $oneboxResponse = $this->onebox->request('/product/add/', $request);
 
-                    if ($oneboxResponse->status == 'ok') {
+                    if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
 
                         $this->new_product[] = $oneboxResponse->productid;
                         Logger::Log('success', 'Добавился товар с артикулом: ' . $product['WareArticle']);
@@ -390,7 +390,7 @@ class Marvel extends Supplier
         // добавление категории
         $oneboxResponse = $this->onebox->request('/category/get/', '&code=' . $product_category_id);
 
-        if ($oneboxResponse->status == 'error') {
+        if (isset($oneboxResponse->status) && $oneboxResponse->status == 'error') {
             // если нет категории
 
             $categoriesTree = $this->getCategoryTree($product_category_id);
@@ -408,7 +408,7 @@ class Marvel extends Supplier
 
                     $oneboxResponse = $this->onebox->request('/category/get/', '&code=' . $category['category_id']);
 
-                    if ($oneboxResponse->status == 'error') {
+                    if (isset($oneboxResponse->status) && $oneboxResponse->status == 'error') {
 
                         $request = '&name=' . $category['name'] . '&code=' . $category['category_id'];
                         if ($parent_id) {
@@ -417,7 +417,7 @@ class Marvel extends Supplier
 
                         $oneboxResponse = $this->onebox->request('/category/add/', $request);
 
-                        if ($oneboxResponse->status == 'ok') {
+                        if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
 
                             $parent_id = $oneboxResponse->categoryid;
 

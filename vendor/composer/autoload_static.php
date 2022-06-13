@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitbb814ecceb739efcceb9d06b670b1917
 {
     public static $prefixLengthsPsr4 = array (
+        'E' => 
+        array (
+            'Export\\' => 7,
+        ),
         'C' => 
         array (
             'Classes\\' => 8,
@@ -14,6 +18,10 @@ class ComposerStaticInitbb814ecceb739efcceb9d06b670b1917
     );
 
     public static $prefixDirsPsr4 = array (
+        'Export\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Export',
+        ),
         'Classes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Classes',
@@ -21,6 +29,17 @@ class ComposerStaticInitbb814ecceb739efcceb9d06b670b1917
     );
 
     public static $classMap = array (
+        'Classes\\Akcent\\Akcent' => __DIR__ . '/../..' . '/Classes/Akcent/Akcent.php',
+        'Classes\\Alstyle\\Alstyle' => __DIR__ . '/../..' . '/Classes/Alstyle/Alstyle.php',
+        'Classes\\Asbis\\Asbis' => __DIR__ . '/../..' . '/Classes/Asbis/Asbis.php',
+        'Classes\\Azerti\\Azerti' => __DIR__ . '/../..' . '/Classes/Azerti/Azerti.php',
+        'Classes\\ComPortal\\ComPortal' => __DIR__ . '/../..' . '/Classes/ComPortal/ComPortal.php',
+        'Classes\\Export\\Jusan' => __DIR__ . '/../..' . '/Classes/Export/Jusan.php',
+        'Classes\\Ftp' => __DIR__ . '/../..' . '/Classes/Ftp.php',
+        'Classes\\Logger' => __DIR__ . '/../..' . '/Classes/Logger.php',
+        'Classes\\Marvel\\Marvel' => __DIR__ . '/../..' . '/Classes/Marvel/Marvel.php',
+        'Classes\\Onebox\\Onebox' => __DIR__ . '/../..' . '/Classes/Onebox/Onebox.php',
+        'Classes\\Supplier' => __DIR__ . '/../..' . '/Classes/Supplier.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

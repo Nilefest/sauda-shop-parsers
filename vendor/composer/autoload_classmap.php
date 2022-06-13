@@ -6,5 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Classes\\Akcent\\Akcent' => $baseDir . '/Classes/Akcent/Akcent.php',
+    'Classes\\Alstyle\\Alstyle' => $baseDir . '/Classes/Alstyle/Alstyle.php',
+    'Classes\\Asbis\\Asbis' => $baseDir . '/Classes/Asbis/Asbis.php',
+    'Classes\\Azerti\\Azerti' => $baseDir . '/Classes/Azerti/Azerti.php',
+    'Classes\\ComPortal\\ComPortal' => $baseDir . '/Classes/ComPortal/ComPortal.php',
+    'Classes\\Export\\Jusan' => $baseDir . '/Classes/Export/Jusan.php',
+    'Classes\\Ftp' => $baseDir . '/Classes/Ftp.php',
+    'Classes\\Logger' => $baseDir . '/Classes/Logger.php',
+    'Classes\\Marvel\\Marvel' => $baseDir . '/Classes/Marvel/Marvel.php',
+    'Classes\\Onebox\\Onebox' => $baseDir . '/Classes/Onebox/Onebox.php',
+    'Classes\\Supplier' => $baseDir . '/Classes/Supplier.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

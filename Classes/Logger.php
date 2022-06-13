@@ -13,22 +13,42 @@ class Logger
      * @param bool $display - if need print (cli or screen)
      */
     public static function log($type = 'default', $content = '', $display = false) {
-        $filename = 'log_' . date('Y-m-d');
-
-        if (self::$folder){
-            $filename = self::$folder . '/' .$filename;
-        }
-
-        $filePath = $_SERVER["DOCUMENT_ROOT"];
-
         $msg = date('d.m.Y H:i:s ') . '[' . $type . '] ' . $_SERVER['SCRIPT_FILENAME'] . " # $content\n";
 
-        $fullFileName = $filePath .'/logs/'. $filename . '.log';
+        $filename = 'log_' . date('Y-m-d') . '.log';
+        $dir = $_SERVER["DOCUMENT_ROOT"].'/logs/';
+        if (self::$folder){
+            $dir .= self::$folder . '/';
+        }
+        if (!is_dir($dir) && !mkdir($dir, 0777, true)) {
+            error_log(date('d.m.Y H:i:s ')."[warning] ".__FILE__.':'.__LINE__
+                ." # failed to create log dir: {$dir}\n", 3, $filename);
+            error_log($msg, 3, $filename);
+            return;
+        }
+
+        $fullFileName = $dir . $filename;
 
         error_log($msg, 3, $fullFileName);
         if($display || 1) { // @TODO
             self::write($msg);
         }
+    }
+
+    public static function warning($content = '', $display = false) {
+        static::log('warning', $content, $display);
+    }
+
+    public static function success($content = '', $display = false) {
+        static::log('success', $content, $display);
+    }
+
+    public static function error($content = '', $display = false) {
+        static::log('error', $content, $display);
+    }
+
+    public static function notice($content = '', $display = false) {
+        static::log('notice', $content, $display);
     }
 
     /**
@@ -38,6 +58,7 @@ class Logger
     public static function deleteOldLogs($days = 3) {
         if (self::$folder){
             $filePath = $_SERVER["DOCUMENT_ROOT"] . '/logs/' . self::$folder;
+            if (!is_dir($filePath)) return;
             $files = scandir($filePath);
 
             unset($files[0]);
@@ -62,4 +83,5 @@ class Logger
         print_r($data);
         echo $end;
     }
+
 }

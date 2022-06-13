@@ -1,2 +1,6 @@
 # ignore import/export logs
 /logs/**/*.log
+
+# ignore .lock files
+*.lock
+vendor/

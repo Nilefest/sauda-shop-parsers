@@ -1,0 +1,7 @@
+24.05.2022 00:18:47 [success] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Синхронизация запущена
+24.05.2022 00:18:47 [success] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # FTP Connection: SUCCESS
+24.05.2022 00:18:47 [error] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Undefined index: dir = /var/www/www-root/data/www/sup.sauda24.kz/Classes/Azerti/Azerti.php = 251
+24.05.2022 00:21:15 [success] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Синхронизация запущена
+24.05.2022 00:21:15 [error] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Undefined index: offer = /var/www/www-root/data/www/sup.sauda24.kz/Classes/Azerti/Azerti.php = 60
+24.05.2022 00:21:34 [success] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Синхронизация запущена
+24.05.2022 00:21:34 [error] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Undefined index: offer = /var/www/www-root/data/www/sup.sauda24.kz/Classes/Azerti/Azerti.php = 60
