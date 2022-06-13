@@ -1,4 +1,4 @@
-<?php
+<?
 
 namespace Classes\Onebox;
 
@@ -6,13 +6,9 @@ use Classes\Logger;
 
 class Onebox{
 
-    /**
-     * Send request
-     * @param string $url
-     * @param string $data request params
-     * @return mixed response data
-     */
-    public function request($url, $data="") {
+    // Отправить запрос в OneBox
+    public function request($url, $data="")
+    {
 
         /*$api_url = 'https://1vikavas3.crm-onebox.com/api'.$url;
         $api_key = '6d222c654e1d603db3ddb2e4be487598';
@@ -40,4 +36,6 @@ class Onebox{
 
         return $response;
     }
+
+
 }

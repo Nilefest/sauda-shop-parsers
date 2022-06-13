@@ -15,10 +15,10 @@ class Ftp
     function __construct($settings) {
         $this->settings = $settings;
         if(!$this->getConnection()){
-            Logger::Log('error', 'FTP Connection: FAIL', true);
+            Logger::Log('error', 'FTP Connection: FAIL');
             exit;
         } else {
-            Logger::Log('success', 'FTP Connection: SUCCESS', true);
+            Logger::Log('success', 'FTP Connection: SUCCESS');
         }
     }
 
@@ -55,7 +55,7 @@ class Ftp
      * @return bool result of operation
      */
     public function download($fileLocal, $fileRemote) {
-        return ftp_get($this->ftp, $fileLocal, $fileRemote);
+        return ftp_get($this->ftp, $fileLocal, $fileRemote, FTP_BINARY);
     }
 
     /** Read file from FTP to local file
@@ -65,7 +65,8 @@ class Ftp
      */
     public function read($fileLocal, $fileRemote) {
         if($handle = fopen($fileLocal, 'w')) {
-            $result = ftp_fget($this->ftp, $handle, $fileRemote);
+            // print_r($fileRemote); exit('*1*');
+            $result = ftp_fget($this->ftp, $handle, $fileRemote, FTP_ASCII, 0);
             fclose($handle);
             return $result;
         }
@@ -74,17 +75,30 @@ class Ftp
 
     /** Download all files from FTP-dir
      * @param string local path for save
-     * @param string remote path fro downloads
+     * @param string remote path for downloads
+     * @param string id need force or update only new files
+     * @param string if ftp has limit, reconnect every n-items
      */
-    public function downloadFromDir($pathLocal, $pathRemote): void {
+    public function downloadFromDir($pathLocal, $pathRemote, $force = false, $chank = 0) {
         $list = $this->getList($pathRemote);
         if(!is_dir($pathLocal)){
             mkdir($pathLocal);
         }
+        $count = 0;
         foreach($list as $item){
             if(in_array($item[1], ['', 'dir'])) continue;
+            
+            if(file_exists($pathLocal . '/' . $item[0])) continue;
+            // if(!file_exists($pathRemote . '/' . $item[0])) continue;
             if($this->download($pathLocal . '/' . $item[0], $pathRemote . '/' . $item[0])){
+                $count++;
                 $this->log(sprintf("Download: %s", $item[0]));
+            }
+
+            if($chank && $count === $chank){
+                $count = 0;
+                $this->close();
+                $this->getConnection();
             }
         }
     }
@@ -95,10 +109,16 @@ class Ftp
      */
     protected function convertRawInfo($rowInfo): array {
         $splitString = array_values(array_filter(explode(' ', $rowInfo)));
-        $mtime = sprintf('%s %s %s', $splitString[5], $splitString[6], $splitString[7]);
-        $name = implode(' ', array_slice($splitString, 8));
-        $type = explode('.', $name)[1] ?? 'dir';
-        return [$name, $type, \DateTime::createFromFormat('M j H:i', $mtime)];
+        if(count($splitString) > 8) {
+            $mtime = sprintf('%s %s %s', $splitString[5] ?? '-', $splitString[6] ?? '-', $splitString[7] ?? '-');
+            $name = implode(' ', array_slice($splitString, 8));
+            $type = explode('.', $name)[1] ?? 'dir';
+        } else {
+            $mtime = sprintf('%s %s', $splitString[0] ?? '0-0-0', $splitString[1] ?? '0:0AM');
+            $name = $splitString[3];
+            $type = explode('.', $name)[1] ?? 'dir';
+        }
+        return [$name, $type, \DateTime::createFromFormat('m-d-y h:ia', $mtime)];
     }
 
     /** Close FTP-connection */

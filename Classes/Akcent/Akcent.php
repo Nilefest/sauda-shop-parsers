@@ -29,11 +29,15 @@ class Akcent extends Supplier
     private $api_link_catalog = 'https://www.ak-cent.kz/export/Exchange/article/Ware_article.xml';
     private $api_link_catalog_with_dimensions = 'https://www.ak-cent.kz/export/Exchange/codetnwed1/Ware090921.xml';
 
+
+
     public function __construct(){
+
         parent::__construct();
         Logger::$folder = 'akcent';
 
     }
+
 
     public function testingProduct(){
 
@@ -49,7 +53,9 @@ class Akcent extends Supplier
         return false;
     }
 
-    public function getData(){
+
+    public function getData()
+    {
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -235,6 +241,7 @@ class Akcent extends Supplier
         return false;
     }
 
+
     public function getAllProductsFromOnebox($part){
 
         $products = [];
@@ -253,6 +260,7 @@ class Akcent extends Supplier
 
     }
 
+
     public function replaceSymbol($stock){
 
         $stock = str_replace('&lt;', '<', $stock);
@@ -260,6 +268,7 @@ class Akcent extends Supplier
 
         return $stock;
     }
+
 
     public function getPrice($prices){
 
@@ -274,6 +283,7 @@ class Akcent extends Supplier
 
         return false;
     }
+
 
     public function addTextInfo($request, $product){
 
@@ -332,6 +342,7 @@ class Akcent extends Supplier
 
         return $request;
     }
+
 
     public function saveAndGetCatalog(){
 
@@ -392,6 +403,7 @@ class Akcent extends Supplier
 
     }
 
+
     public function getDataFromFile($file_path_name){
         if ($response = file_get_contents($file_path_name)){
             $catalog = new SimpleXMLElement($response);
@@ -402,4 +414,5 @@ class Akcent extends Supplier
             return false;
         }
     }
+
 }

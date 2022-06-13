@@ -7,6 +7,8 @@ use Classes\Marvel\Marvel;
 use Classes\Asbis\Asbis;
 use Classes\Akcent\Akcent;
 use Classes\Alstyle\Alstyle;
+
+use Classes\ComPortal\ComPortal;
 use Classes\Azerti\Azerti;
 
 // * определение поставщика
@@ -44,6 +46,14 @@ switch($_GET['sup']){
         $sup = new Azerti;
         Logger::$folder = 'azerti';
     
+        break;
+    
+    
+    case 'comportal':
+        
+        $sup = new Comportal;
+        Logger::$folder = 'comportal';
+        
         break;
 
     default:

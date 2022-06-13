@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Classes\Asbis;
 
 use Classes\Supplier;
@@ -9,6 +10,8 @@ use \ZipArchive;
 
 class Asbis extends Supplier
 {
+
+
     public $supplier_id = 13; // в настоящем onebox 13
     public $currency = 'Тенге';
 
@@ -62,6 +65,7 @@ class Asbis extends Supplier
         Logger::$folder = 'asbis';
 
     }
+
 
     public function testingProduct(){
 

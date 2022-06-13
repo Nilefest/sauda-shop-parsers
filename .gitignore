@@ -1,0 +1,2 @@
+# ignore import/export logs
+/logs/**/*.log

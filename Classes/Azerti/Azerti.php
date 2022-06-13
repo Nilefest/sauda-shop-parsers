@@ -9,6 +9,12 @@ use \SimpleXMLElement;
 
 class Azerti extends Supplier
 {
+    public $excludedAttributes = [];
+    public $articuls = [];
+    public $new_product = [];
+    public $updated_products = [];
+    public $deleted_products = [];
+
     public $supplier_id = 13; // в настоящем onebox 13
     public $currency = 'Тенге';
 
@@ -16,18 +22,18 @@ class Azerti extends Supplier
     private $settings = [
         'content' => 'ftp_read', // ftp_read, ftp_download, read (local)
         'logPring' => true,
-        // 'ftp' => [
-        //     'host' => '185.146.3.57',
-        //     'username' => 'shopftp',
-        //     'password' => 'mdjnfjHHdtB755HNBD!sad&',
-        //     'dir' => './',
-        // ],
         'ftp' => [
-            'host' => 'nilefest.ftp.tools',
-            'username' => 'nilefest_tests',
-            'password' => 'BTT99s98ckLi',
+            'host' => '185.146.3.57',
+            'username' => 'shopftp',
+            'password' => 'mdjnfjHHdtB755HNBD!sad&',
             'dir' => './',
         ],
+        // 'ftp' => [
+        //     'host' => 'nilefest.ftp.tools',
+        //     'username' => 'nilefest_tests',
+        //     'password' => 'BTT99s98ckLi',
+        //     'dir' => './',
+        // ],
         'source' => [
             'files' => [
                 'import' => 'import.xml', 
@@ -49,7 +55,7 @@ class Azerti extends Supplier
 
     public function testingProduct(){
         
-        $data = $this->getData(); // Get data
+        //$data = $this->getData(); // Get data
 
         exit('test');
     }
@@ -62,10 +68,16 @@ class Azerti extends Supplier
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
         
-        if (!$products = (array)$this->saveAndGetCatalog($this->settings['content'])) {
+        if (!$content = (array)$this->saveAndGetCatalog($this->settings['content'])) {
+            return false;
+        }
+        
+        if (!$products = (array)$content['offers'] ?? []) {
             return false;
         }
 
+        $products['offer'] = array_slice($products['offer'], 0, 5); // @TODO: remove. get 5 for test
+        
         foreach ($products['offer'] as $product_key => $product) {
             if ($temp_count){
                 if ($temp_inc == $temp_count){break;}
@@ -204,7 +216,7 @@ class Azerti extends Supplier
      * @param string $method - ftp_download, ftp_read, read (local)
      * @return array data
      */
-    public function saveAndGetCatalog($method = 'ftp_read') {
+    public function saveAndGetCatalog($method = 'ftp_read', $type = 'import') {
         $data = [];
         switch($method) {
             case 'ftp_download':
@@ -218,7 +230,7 @@ class Azerti extends Supplier
                 break;
         }
         $this->data = $data;
-        return $data['import'];
+        return $data[$type];
     }
 
     /**
@@ -289,8 +301,9 @@ class Azerti extends Supplier
         if($fileType === 'xml') {
             if ($response = file_get_contents($localFile)){
                 $result = new SimpleXMLElement($response);
+                // print_r(simplexml_load_string($response)); exit('*3*');
                 if($type = 'import'){
-                    $result = $result->shop->offers;
+                    $result = $result->shop;
                 }
             } else {
                 Logger::Log('error', 'Read local XML file: FAIL - ' . $localFile, $this->settings['logPring']);
@@ -380,7 +393,7 @@ class Azerti extends Supplier
                     ];
 
                     $request = $this->prepare($request);
-                    //$oneboxResponse = $this->onebox->request('/product/update/', $request);
+                    $oneboxResponse = $this->onebox->request('/product/update/', $request);
                     if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
                         $this->deleted_products[] = $product->id;
                         Logger::Log('success', '- Обнулен товар с артикулом: ' . $product->articul);
@@ -416,5 +429,14 @@ class Azerti extends Supplier
 
         return $products;
 
+    }
+
+    public function getAllCategoriesFromOnebox() {
+        $oneboxResponse = $this->onebox->request('/category/get/', '&supplierid=' . $this->supplier_id);
+        if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok' && isset($oneboxResponse->data) && !empty($oneboxResponse->data)) {
+            $categories = $oneboxResponse->data;
+        }
+
+        return $categories;
     }
 }

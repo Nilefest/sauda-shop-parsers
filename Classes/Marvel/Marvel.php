@@ -51,7 +51,7 @@ class Marvel extends Supplier
             // проверить если ли товар в Onebox по артикулу
             $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=1&articul=' . $product['WareArticle']);
 
-            if ($oneboxResponse->status == 'ok') { // товар есть в onebox
+            if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
 
                 $product_ob = $oneboxResponse->products;
 

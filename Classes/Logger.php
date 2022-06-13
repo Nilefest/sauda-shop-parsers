@@ -26,7 +26,7 @@ class Logger
         $fullFileName = $filePath .'/logs/'. $filename . '.log';
 
         error_log($msg, 3, $fullFileName);
-        if($display) {
+        if($display || 1) { // @TODO
             self::write($msg);
         }
     }
