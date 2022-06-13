@@ -51,6 +51,12 @@
             </div>
             <div class="col-3">
                 <div class="card text-center">
+                    <h4>Синхронизация с ArmTek</h4>
+                    <a href="/sync.php?sup=armtek&limit=5" class="btn btn-warning">Запустить</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
                     <h4>Синхронизация с ComPortal</h4>
                     <a href="/sync.php?sup=comportal&limit=5" class="btn btn-danger">Запустить</a>
                 </div>

@@ -1,14 +1,12 @@
 <?php
 
-namespace Classes\ComPortal;
+namespace Classes\ArmTek;
 
 use Classes\Supplier;
 use Classes\Logger;
-use Classes\Ftp;
 use \SimpleXMLElement;
-use \ZipArchive;
 
-class ComPortal extends Supplier
+class ArmTek extends Supplier
 {
     public $articuls = [];
     public $new_product = [];
@@ -19,37 +17,14 @@ class ComPortal extends Supplier
     public $currency = 'Тенге';
 
     private $data = [];
-    private $settings = [
-        'content' => 'ftp_read', // ftp_read, ftp_download, read (local)
-        'logPring' => true,
-        'ftp' => [
-            'host' => 'diller.comportal.kz',
-            'username' => 'ftp.diller',
-            'password' => 'rHW81v!Sh5Hbdis',
-            'dir' => './',
-        ],
-        // 'ftp' => [
-        //     'host' => 'nilefest.ftp.tools',
-        //     'username' => 'nilefest_tests',
-        //     'password' => 'BTT99s98ckLi',
-        //     'dir' => './',
-        // ],
-        'source' => [
-            'files' => [
-                'import' => 'dealer.xml', 
-            ],
-            'images' => 'pictures',
-            'dir' => __DIR__ . '/files/',
-        ],
-    ];
+    private $settings = [];
     private $ftp;
 
-    function __construct($sourceType = 'ftp_read') {
-        $this->settings['content'] = $sourceType;
+    function __construct() {
 
         parent::__construct();
         
-        Logger::$folder = 'comportal';
+        Logger::$folder = 'armtek';
     }
 
     public function testingProduct(){
@@ -61,8 +36,6 @@ class ComPortal extends Supplier
     
     public function getData() {
         $limit = $_GET['limit'] ?? 0; // limit for import;
-        
-        $this->getImagesFtpDownlaod();
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -129,13 +102,11 @@ class ComPortal extends Supplier
                 $request = $this->prepare($request);
                 
                 // добавить картинки
-                // if (isset($product['picture'])){
-                //     $request .= '&image[0]='.$picture['picture'];
-                // } elseif (isset($product['pictures']) && !empty($product['pictures'])){
-                //     foreach($product['pictures'] as $imageKey => $picture){
-                //         $request .= "&image[$imageKey]=".$picture;                        
-                //     }
-                // }
+                if (isset($product['Изображения']) && !empty($product['Изображения'])){
+                    foreach($product['Изображения'] as $picture){
+                        $request .= '&image[0]='.$picture['Изображение'];
+                    }
+                }
 
                 $oneboxResponse = $this->onebox->request('/product/update/', $request); // @TODO: uncomment
 
@@ -227,171 +198,7 @@ class ComPortal extends Supplier
      */
     public function saveAndGetCatalog($method = 'ftp_read', $type = 'import') {
         $data = [];
-        switch($method) {
-            case 'ftp_download':
-                $data = $this->getDataFtpDownload();
-                break;
-            case 'ftp_read':
-                $data = $this->getDataFtpRead();
-                break;
-            case 'read':
-                $data = $this->getDataLocalRead();
-                break;
-        }
-        $this->data = $data;
-        return $data[$type];
-    }
-
-    /**
-     * Get data from FTP and download files
-     * @return array data from files
-     */
-    private function getDataFtpDownload() {
-        $data = [];
-        $this->ftp = new Ftp($this->settings['ftp']);
-        foreach($this->settings['source']['files'] as $type => $fileName) {
-            $localFile = $this->settings['source']['dir'] . $fileName;
-            $remoteFile = $this->settings['ftp']['dir'] . $fileName;
-
-            if($result = $this->ftp->download($localFile, $remoteFile)) {
-                Logger::Log('success', 'FTP download: SUCCESS - ' . $fileName, $this->settings['logPring']);
-            } else {
-                Logger::Log('error', 'FTP download: FAIL - ' . $fileName, $this->settings['logPring']);
-            }
-            
-            $data[$type] = $this->readFile($localFile, $type);
-        }
-        return $data;
-    }
-    
-    /**
-     * Get data from FTP-file and write to local
-     * @return array data from files
-     */
-    private function getDataFtpRead() {
-        $data = [];
-        $this->ftp = new Ftp($this->settings['ftp']);
-        foreach($this->settings['source']['files'] as $type => $fileName) {
-            $localFile = $this->settings['source']['dir'] . $fileName;
-            $remoteFile = $this->settings['ftp']['dir'] . $fileName;
-
-            if($result = $this->ftp->read($localFile, $remoteFile)) {
-                Logger::Log('success', 'FTP read: SUCCESS - ' . $fileName);
-            } else {
-                Logger::Log('error', 'FTP read: FAIL - ' . $fileName);
-            }
-            
-            $data[$type] = $this->readFile($localFile, $type);
-        }
-        return $data;
-    }
-    
-    /**
-     * Get images from FTP-dir and download to local-dir
-     */
-    private function getImagesFtpDownlaod() {
-        $this->ftp = new Ftp($this->settings['ftp']);
-        $this->ftp->downloadFromDir($this->settings['source']['dir'] . $this->settings['source']['images'], $this->settings['source']['images'], false, 8);
-    }
-    
-    /**
-     * Get data from local files
-     * @return array data from files
-     */
-    private function getDataLocalRead() {
-        $data = [];
-        foreach($this->settings['source']['files'] as $type => $fileName) {
-            $localFile = $this->settings['source']['dir'] . $fileName;
-            $data[$type] = $this->readFile($localFile, $type);
-        }
-        return $data;
-    }
-
-    /**
-     * Read data from one local file
-     * @return array data from file
-     */
-    private function readFile($localFile, $type = false) {
-        $fileType = pathinfo($localFile)['extension'];
-
-        $result = [];
-        if($fileType === 'xml') {
-            if ($response = file_get_contents($localFile)){
-                $result = new SimpleXMLElement($response);
-                $result = (array)$result->shop;
-                $result['categories'] = $this->getCategoryFromXml($response);
-                $result['offers'] = $this->parseParamFromXml((array)$result['offers'], $response);
-            } else {
-                Logger::Log('error', 'Read local XML file: FAIL - ' . $localFile, $this->settings['logPring']);
-            }
-        } else {
-            if ($response = file_get_contents($localFile)){
-                $result = $response;
-            } else {
-                Logger::Log('error', 'Read local file: FAIL - ' . $localFile, $this->settings['logPring']);
-            }
-        }
-        return $result;
-    }
-
-    private function parseParamFromXml($offersData, $xmlData) {
-        $reParam = '/<param name="(.*)">(.*)<\/param>/m';
-
-        $offers = (array)$offersData['offer'];
-        foreach($offers as $key => $offer){
-            $id = $offer->attributes()->id[0];
-            $reOffer = '/<offer id="' . $id . '".*?>(.*?)<\/offer>/ms';
-            preg_match_all($reOffer, $xmlData, $offerXml, PREG_SET_ORDER, 0);
-
-            // get params
-            preg_match_all($reParam, $offerXml[0][1] ?? '', $paramsData, PREG_SET_ORDER, 0);
-            $params = [];
-            foreach($paramsData as $paramRow) {
-                if($paramRow[1] === 'Бренд'){
-                    $params['brand'] = [$paramRow[1], $paramRow[2]];
-                } else {
-                    $params[] = [$paramRow[1], $paramRow[2]];
-                }
-            }
-            $offer = (array)$offer;
-            $offer['params'] = $params;
-            $offers[$key] = $offer;
-        }
-        return $offers;
-    }
-
-    /**
-     * Parse categories from XML-data if SimpleXMLElement incorrect convert data
-     * @param string xml-data as string
-     * @return array parsed array
-     */
-    private function getCategoryFromXml($xmlData) {
-        $categories = [];
-        if ($xmlData){
-            $re = '/<category id="(.+)" parentId="(.*)">(.*)<\/category>/m';
-            preg_match_all($re, $xmlData, $result, PREG_SET_ORDER, 0);
-            foreach($result as $row) {
-                $categories[$row[1]] = [
-                    'id' => $row[1],
-                    'parentId' => $row[2],
-                    'name' => $row[3],
-                ];
-            }
-        }
-        return $categories;
-    }
-
-    /**
-     * Parse categories from XML-file
-     * @param array filepath to file
-     * @return array parsed array
-     */
-    private function getCategoryFromXmlFile($localFile) {
-        $categories = [];
-        if ($xmlData = file_get_contents($localFile)){
-            $categories = $this->getCategoryFromXml($xmlData);
-        }
-        return $categories;
+        return $data[$type] ?? [];
     }
 
     public function addTextInfo($request, $product){
