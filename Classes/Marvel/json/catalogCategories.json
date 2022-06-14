@@ -672,7 +672,7 @@
                     "WareProducerCode": "LG",
                     "S_WareProducerCode": "lg",
                     "WareProducerName": "LG",
-                    "WareProducerQtyWithNa": 69,
+                    "WareProducerQtyWithNa": 63,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -828,7 +828,7 @@
                 "WareProducerCode": "LG",
                 "S_WareProducerCode": "lg",
                 "WareProducerName": "LG",
-                "WareProducerQtyWithNa": 403,
+                "WareProducerQtyWithNa": 397,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -930,7 +930,7 @@
             "WareProducerCode": "LG",
             "S_WareProducerCode": "lg",
             "WareProducerName": "LG",
-            "WareProducerQtyWithNa": 403,
+            "WareProducerQtyWithNa": 397,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -990,7 +990,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 2198,
+                    "WareProducerQtyWithNa": 2098,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1028,7 +1028,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 444,
+                    "WareProducerQtyWithNa": 394,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -1052,7 +1052,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 2642,
+                "WareProducerQtyWithNa": 2492,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1532,7 +1532,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 3070,
+            "WareProducerQtyWithNa": 2920,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1630,7 +1630,7 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 100,
+                    "WareProducerQtyWithNa": 90,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1730,7 +1730,7 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 1254,
+                "WareProducerQtyWithNa": 1244,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1778,6 +1778,14 @@
             "S_ParentCategoryId": "периферия_пк",
             "SubCategories": [],
             "Vendors": [
+              {
+                "WareProducerCode": "Hikvision",
+                "S_WareProducerCode": "hikvision",
+                "WareProducerName": "Hikvision",
+                "WareProducerQtyWithNa": 211,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": true
+              },
               {
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
@@ -1887,7 +1895,7 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 3,
+                "WareProducerQtyWithNa": 18,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -1899,6 +1907,14 @@
           }
         ],
         "Vendors": [
+          {
+            "WareProducerCode": "Hikvision",
+            "S_WareProducerCode": "hikvision",
+            "WareProducerName": "Hikvision",
+            "WareProducerQtyWithNa": 211,
+            "HideInB2B": false,
+            "HasVendorAvailableItems": true
+          },
           {
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
@@ -1927,7 +1943,7 @@
             "WareProducerCode": "Logitech",
             "S_WareProducerCode": "logitech",
             "WareProducerName": "Logitech",
-            "WareProducerQtyWithNa": 1834,
+            "WareProducerQtyWithNa": 1839,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2315,7 +2331,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 50,
+                "WareProducerQtyWithNa": 16,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2371,7 +2387,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 53,
+            "WareProducerQtyWithNa": 19,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2579,7 +2595,7 @@
                 "WareProducerCode": "Synology",
                 "S_WareProducerCode": "synology",
                 "WareProducerName": "Synology",
-                "WareProducerQtyWithNa": 10,
+                "WareProducerQtyWithNa": 4,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -2679,7 +2695,7 @@
             "WareProducerCode": "Synology",
             "S_WareProducerCode": "synology",
             "WareProducerName": "Synology",
-            "WareProducerQtyWithNa": 10,
+            "WareProducerQtyWithNa": 4,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3888,7 +3904,7 @@
                 "WareProducerCode": "Accesstyle",
                 "S_WareProducerCode": "accesstyle",
                 "WareProducerName": "Accesstyle",
-                "WareProducerQtyWithNa": 345,
+                "WareProducerQtyWithNa": 299,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -4138,7 +4154,7 @@
             "WareProducerCode": "Accesstyle",
             "S_WareProducerCode": "accesstyle",
             "WareProducerName": "Accesstyle",
-            "WareProducerQtyWithNa": 656,
+            "WareProducerQtyWithNa": 610,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4373,7 +4389,7 @@
                         "WareProducerCode": "Dreame",
                         "S_WareProducerCode": "dreame",
                         "WareProducerName": "Dreame",
-                        "WareProducerQtyWithNa": 136,
+                        "WareProducerQtyWithNa": 133,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -4427,7 +4443,7 @@
                     "WareProducerCode": "Dreame",
                     "S_WareProducerCode": "dreame",
                     "WareProducerName": "Dreame",
-                    "WareProducerQtyWithNa": 184,
+                    "WareProducerQtyWithNa": 181,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4459,7 +4475,7 @@
                 "WareProducerCode": "Dreame",
                 "S_WareProducerCode": "dreame",
                 "WareProducerName": "Dreame",
-                "WareProducerQtyWithNa": 184,
+                "WareProducerQtyWithNa": 181,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4594,7 +4610,7 @@
                     "WareProducerCode": "YUNMAI",
                     "S_WareProducerCode": "yunmai",
                     "WareProducerName": "YUNMAI",
-                    "WareProducerQtyWithNa": 52,
+                    "WareProducerQtyWithNa": 51,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -4618,7 +4634,7 @@
                 "WareProducerCode": "YUNMAI",
                 "S_WareProducerCode": "yunmai",
                 "WareProducerName": "YUNMAI",
-                "WareProducerQtyWithNa": 52,
+                "WareProducerQtyWithNa": 51,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -4647,7 +4663,7 @@
                     "WareProducerCode": "Yandex",
                     "S_WareProducerCode": "yandex",
                     "WareProducerName": "Yandex",
-                    "WareProducerQtyWithNa": 290,
+                    "WareProducerQtyWithNa": 256,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -4663,7 +4679,7 @@
                 "WareProducerCode": "Yandex",
                 "S_WareProducerCode": "yandex",
                 "WareProducerName": "Yandex",
-                "WareProducerQtyWithNa": 290,
+                "WareProducerQtyWithNa": 256,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -4687,7 +4703,7 @@
             "WareProducerCode": "Dreame",
             "S_WareProducerCode": "dreame",
             "WareProducerName": "Dreame",
-            "WareProducerQtyWithNa": 184,
+            "WareProducerQtyWithNa": 181,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4711,7 +4727,7 @@
             "WareProducerCode": "Yandex",
             "S_WareProducerCode": "yandex",
             "WareProducerName": "Yandex",
-            "WareProducerQtyWithNa": 2040,
+            "WareProducerQtyWithNa": 2006,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4719,7 +4735,7 @@
             "WareProducerCode": "YUNMAI",
             "S_WareProducerCode": "yunmai",
             "WareProducerName": "YUNMAI",
-            "WareProducerQtyWithNa": 52,
+            "WareProducerQtyWithNa": 51,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
@@ -5596,7 +5612,7 @@
                     "WareProducerCode": "Synology",
                     "S_WareProducerCode": "synology",
                     "WareProducerName": "Synology",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 3,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -5650,7 +5666,7 @@
                 "WareProducerCode": "Synology",
                 "S_WareProducerCode": "synology",
                 "WareProducerName": "Synology",
-                "WareProducerQtyWithNa": 8,
+                "WareProducerQtyWithNa": 7,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -5690,7 +5706,7 @@
             "WareProducerCode": "Synology",
             "S_WareProducerCode": "synology",
             "WareProducerName": "Synology",
-            "WareProducerQtyWithNa": 12,
+            "WareProducerQtyWithNa": 11,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
@@ -5818,7 +5834,7 @@
                     "WareProducerCode": "Vertiv",
                     "S_WareProducerCode": "vertiv",
                     "WareProducerName": "Vertiv",
-                    "WareProducerQtyWithNa": 20,
+                    "WareProducerQtyWithNa": 19,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -5933,7 +5949,7 @@
                 "WareProducerCode": "Vertiv",
                 "S_WareProducerCode": "vertiv",
                 "WareProducerName": "Vertiv",
-                "WareProducerQtyWithNa": 99,
+                "WareProducerQtyWithNa": 98,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -6018,7 +6034,7 @@
             "WareProducerCode": "Vertiv",
             "S_WareProducerCode": "vertiv",
             "WareProducerName": "Vertiv",
-            "WareProducerQtyWithNa": 99,
+            "WareProducerQtyWithNa": 98,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
@@ -6121,7 +6137,7 @@
                         "WareProducerCode": "HPE",
                         "S_WareProducerCode": "hpe",
                         "WareProducerName": "HPE",
-                        "WareProducerQtyWithNa": 8,
+                        "WareProducerQtyWithNa": 7,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -6167,7 +6183,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 14,
+                    "WareProducerQtyWithNa": 13,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -6224,14 +6240,6 @@
                     "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "TP-Link",
-                    "S_WareProducerCode": "tp-link",
-                    "WareProducerName": "TP-Link",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
                   }
                 ],
                 "ConfiguratorActive": false,
@@ -6427,7 +6435,7 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 38,
+                "WareProducerQtyWithNa": 37,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6765,7 +6773,7 @@
             "WareProducerCode": "HPE",
             "S_WareProducerCode": "hpe",
             "WareProducerName": "HPE",
-            "WareProducerQtyWithNa": 45,
+            "WareProducerQtyWithNa": 44,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -6864,7 +6872,7 @@
                         "WareProducerCode": "Huawei",
                         "S_WareProducerCode": "huawei",
                         "WareProducerName": "Huawei",
-                        "WareProducerQtyWithNa": 1,
+                        "WareProducerQtyWithNa": 2,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
@@ -6896,7 +6904,7 @@
                     "WareProducerCode": "Huawei",
                     "S_WareProducerCode": "huawei",
                     "WareProducerName": "Huawei",
-                    "WareProducerQtyWithNa": 1,
+                    "WareProducerQtyWithNa": 2,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7021,7 +7029,7 @@
                 "WareProducerCode": "Huawei",
                 "S_WareProducerCode": "huawei",
                 "WareProducerName": "Huawei",
-                "WareProducerQtyWithNa": 1,
+                "WareProducerQtyWithNa": 2,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -7164,7 +7172,7 @@
                         "WareProducerCode": "Cisco",
                         "S_WareProducerCode": "cisco",
                         "WareProducerName": "Cisco",
-                        "WareProducerQtyWithNa": 2,
+                        "WareProducerQtyWithNa": 1,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -7196,7 +7204,7 @@
                     "WareProducerCode": "Cisco",
                     "S_WareProducerCode": "cisco",
                     "WareProducerName": "Cisco",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -7236,7 +7244,7 @@
                 "WareProducerCode": "Cisco",
                 "S_WareProducerCode": "cisco",
                 "WareProducerName": "Cisco",
-                "WareProducerQtyWithNa": 2,
+                "WareProducerQtyWithNa": 1,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -7276,7 +7284,7 @@
             "WareProducerCode": "Cisco",
             "S_WareProducerCode": "cisco",
             "WareProducerName": "Cisco",
-            "WareProducerQtyWithNa": 97,
+            "WareProducerQtyWithNa": 96,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7300,7 +7308,7 @@
             "WareProducerCode": "Huawei",
             "S_WareProducerCode": "huawei",
             "WareProducerName": "Huawei",
-            "WareProducerQtyWithNa": 1,
+            "WareProducerQtyWithNa": 2,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7485,6 +7493,51 @@
             "CategoryOrder": 14100,
             "CategoryTreeId": 463,
             "PermissionForCategoryView": null
+          },
+          {
+            "CategoryID": "Безопасность",
+            "S_CategoryID": "безопасность",
+            "CategoryName": "Безопасность",
+            "ParentCategoryId": "ВНабл_и_Безопасность",
+            "S_ParentCategoryId": "внабл_и_безопасность",
+            "SubCategories": [
+              {
+                "CategoryID": "Скуд_и_домофония",
+                "S_CategoryID": "скуд_и_домофония",
+                "CategoryName": "СКУД и домофония",
+                "ParentCategoryId": "Безопасность",
+                "S_ParentCategoryId": "безопасность",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "Hikvision",
+                    "S_WareProducerCode": "hikvision",
+                    "WareProducerName": "Hikvision",
+                    "WareProducerQtyWithNa": 5,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 15040,
+                "CategoryTreeId": 468,
+                "PermissionForCategoryView": null
+              }
+            ],
+            "Vendors": [
+              {
+                "WareProducerCode": "Hikvision",
+                "S_WareProducerCode": "hikvision",
+                "WareProducerName": "Hikvision",
+                "WareProducerQtyWithNa": 5,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": true
+              }
+            ],
+            "ConfiguratorActive": false,
+            "CategoryOrder": 15000,
+            "CategoryTreeId": 467,
+            "PermissionForCategoryView": null
           }
         ],
         "Vendors": [
@@ -7492,7 +7545,7 @@
             "WareProducerCode": "Hikvision",
             "S_WareProducerCode": "hikvision",
             "WareProducerName": "Hikvision",
-            "WareProducerQtyWithNa": 925,
+            "WareProducerQtyWithNa": 930,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7627,7 +7680,7 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 785,
+                    "WareProducerQtyWithNa": 784,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7689,7 +7742,7 @@
                 "WareProducerCode": "Microsoft",
                 "S_WareProducerCode": "microsoft",
                 "WareProducerName": "Microsoft",
-                "WareProducerQtyWithNa": 857,
+                "WareProducerQtyWithNa": 856,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -7718,7 +7771,7 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 301,
+                    "WareProducerQtyWithNa": 501,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7734,7 +7787,7 @@
                 "WareProducerCode": "Microsoft",
                 "S_WareProducerCode": "microsoft",
                 "WareProducerName": "Microsoft",
-                "WareProducerQtyWithNa": 301,
+                "WareProducerQtyWithNa": 501,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -7811,7 +7864,7 @@
             "WareProducerCode": "Microsoft",
             "S_WareProducerCode": "microsoft",
             "WareProducerName": "Microsoft",
-            "WareProducerQtyWithNa": 1194,
+            "WareProducerQtyWithNa": 1393,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }

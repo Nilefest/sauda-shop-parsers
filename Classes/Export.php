@@ -3,12 +3,9 @@
 namespace Classes;
 
 use Classes\Onebox\Onebox;
-use function htmlentities;
-use const false;
 
 class Export
 {
-
     public static function makeXml()
     {
         $onebox = new Onebox();
@@ -72,11 +69,13 @@ class Export
         static::kaspi($products, $export_dir);
         static::jusan($products, $export_dir);
         static::forte($products, $export_dir);
+        static::halyk($products, $export_dir);
     }
     private static function kaspi($products, $export_dir)
     {
-        Logger::notice('started '.__FUNCTION__);
-        $file_name = $export_dir .'/kaspi_tmp.xml';
+        $export_name = __FUNCTION__;
+        Logger::notice('started '.$export_name);
+        $file_name = $export_dir . '/' . $export_name . '_tmp.xml';
         $file = fopen($file_name, 'w');
         if ($file === false) {
             Logger::error("failed to open file: $file_name");
@@ -117,13 +116,15 @@ EOF;
 EOF;
         fwrite($file, $output);
         fclose($file);
-        rename($file_name, $export_dir .'/kaspi.xml') || Logger::error('failed to overwrite kaspi.xml');
+        rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
+        Logger::notice('ended '.__FUNCTION__);
     }
 
     private static function jusan($products, $export_dir)
     {
-        Logger::notice('started '.__FUNCTION__);
-        $file_name = $export_dir .'/jusan_tmp.xml';
+        $export_name = __FUNCTION__;
+        Logger::notice('started '.$export_name);
+        $file_name = $export_dir . '/' . $export_name . '_tmp.xml';
         $file = fopen($file_name, 'w');
         if ($file === false) {
             Logger::error("failed to open file: $file_name");
@@ -167,14 +168,15 @@ EOF;
 EOF;
         fwrite($file, $output);
         fclose($file);
-        rename($file_name, $export_dir .'/jusan.xml') || Logger::error('failed to overwrite jusan.xml');
+        rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
         Logger::notice('ended '.__FUNCTION__.' offers: '.$c);
     }
 
     private static function forte($products, $export_dir)
     {
-        Logger::notice('started '.__FUNCTION__);
-        $file_name = $export_dir .'/forte_tmp.xml';
+        $export_name = __FUNCTION__;
+        Logger::notice('started '.$export_name);
+        $file_name = $export_dir . '/' . $export_name . '_tmp.xml';
         $file = fopen($file_name, 'w');
         if ($file === false) {
             Logger::error("failed to open file: $file_name");
@@ -219,8 +221,63 @@ EOF;
 EOF;
         fwrite($file, $output);
         fclose($file);
-        rename($file_name, $export_dir .'/forte.xml') || Logger::error('failed to overwrite forte.xml');
+        rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
         Logger::notice('ended '.__FUNCTION__.' offers: '.$c);
     }
 
+    private static function halyk($products, $export_dir)
+    {
+        $export_name = __FUNCTION__;
+        Logger::notice('started '.$export_name);
+        $file_name = $export_dir . '/' . $export_name . '_tmp.xml';
+        $file = fopen($file_name, 'w');
+        if ($file === false) {
+            Logger::error("failed to open file: $file_name");
+            return;
+        }
+
+        $date = date('c');
+        $output = <<<EOF
+<?xml version="1.0" encoding="utf-8"?>
+<merchant_offers date="$date"
+              xmlns="halyk_market"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <company>Сауда-24</company>
+    <merchantid>080940017165</merchantid>
+    <offers>
+
+EOF;
+        fwrite($file, $output);
+        $c = 0;
+        foreach ($products as $sku => $product) {
+            if (!$product['avail']) {
+                continue;
+            }
+            //$avail = $product['avail'] ? 'yes' : 'no';
+            $brand = empty($product['brand'])?'':'<brand>'.$product['brand'].'</brand>';
+            $output = <<<EOF
+        <offer sku="$sku">
+            <model>{$product['name']}</model>
+            $brand
+            <stocks>
+                <stock available="yes" storeId="2953" isPP="yes"/>
+            </stocks>
+            <price>{$product['price']}</price>
+        </offer>
+
+EOF;
+            fwrite($file, $output);
+            $c += 1;
+        }
+
+        $output = <<<'EOF'
+    </offers>
+</merchant_offers>
+
+EOF;
+        fwrite($file, $output);
+        fclose($file);
+        rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
+        Logger::notice('ended '.__FUNCTION__.' offers: '.$c);
+    }
 }

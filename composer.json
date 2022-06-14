@@ -11,7 +11,8 @@
         "ext-json": "*",
         "ext-curl": "*",
         "ext-SimpleXML": "*",
-        "ext-zip": "*"
+        "ext-zip": "*",
+      "ext-posix": "*"
     },
     "autoload": {
         "psr-4": {

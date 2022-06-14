@@ -1,6 +1,8 @@
-# ignore import/export logs
 /logs/**/*.log
-
-# ignore .lock files
+/*.lock
+!/composer.lock
+/vendor/
+/.idea/
+/Classes/**/*.*
+!/Classes/**/*.php
 *.lock
-vendor/
