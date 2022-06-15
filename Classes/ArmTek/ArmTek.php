@@ -6,6 +6,12 @@ use Classes\Supplier;
 use Classes\Logger;
 use \SimpleXMLElement;
 
+require_once __DIR__ . '/ArmtekRestClient/autoloader.php';
+
+use ArmtekRestClient\Http\Exception\ArmtekException as ArmtekException; 
+use ArmtekRestClient\Http\Config\Config as ArmtekRestClientConfig;
+use ArmtekRestClient\Http\ArmtekRestClient as ArmtekRestClient; 
+
 class ArmTek extends Supplier
 {
     public $articuls = [];
@@ -40,7 +46,7 @@ class ArmTek extends Supplier
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
         
-        if (!$content = (array)$this->saveAndGetCatalog($this->settings['content'])) {
+        if (!$content = (array)$this->saveAndGetCatalog()) {
             return false;
         }
 
@@ -198,6 +204,13 @@ class ArmTek extends Supplier
      */
     public function saveAndGetCatalog($method = 'ftp_read', $type = 'import') {
         $data = [];
+
+        $result = $this->requestPing();
+
+        print_r($result);
+
+        exit('*0*');
+        
         return $data[$type] ?? [];
     }
 
@@ -313,4 +326,47 @@ class ArmTek extends Supplier
 
         return $categories;
     }
+
+     // Отправить запрос в OneBox
+     public function request($url, $data="") {
+        require_once __DIR__ . '/config.php';
+ 
+        try {
+
+            // init configuration 
+            $armtek_client_config = new ArmtekRestClientConfig($user_settings);  
+        
+            // init client
+            $armtek_client = new ArmtekRestClient($armtek_client_config);
+        
+            // requeest params for send
+            $request_params = [
+                'url' => $url,
+            ];
+        
+            // send data
+            $response = $armtek_client->get($request_params);
+        
+            // in case of json
+            $json_responce_data = $response->json();
+        
+        
+        } catch (ArmtekException $e) {
+        
+            $json_responce_data = $e -> getMessage(); 
+        
+        }
+         return $json_responce_data;
+     }
+
+     public function requestPing() {
+        $url = 'ping/index';
+        $result = (array)$this->request($url);
+        return $result['RESP'] ?? [];
+     }
+     public function requestGetVKORG() {
+        $url = 'ws_user/getUserVkorgList';
+        $result = (array)$this->request($url);
+        return $result['RESP'] ?? $result['MESSAGES'] ?? [];
+     }
 }
