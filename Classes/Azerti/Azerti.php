@@ -165,6 +165,7 @@ class Azerti extends Supplier
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
                         'brandname' => (string)$product['vendor'],
+                        'articul' => $product['article'],
                         'unit' => 'шт.',
     
                         'suppliercurrency' => $this->currency,

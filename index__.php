@@ -45,14 +45,14 @@
         <div class="row justify-content-center">
             <div class="col-3">
                 <div class="card text-center">
-                    <h4>Синхронизация с Azertu</h4>
-                    <a href="/sync.php?sup=azerti&limit=5" class="btn btn-primary">Запустить</a>
+                    <h4>Синхронизация с ArmTek</h4>
+                    <a href="/sync.php?sup=armtek&limit=5" class="btn btn-warning">Запустить</a>
                 </div>
             </div>
             <div class="col-3">
                 <div class="card text-center">
-                    <h4>Синхронизация с ArmTek</h4>
-                    <a href="/sync.php?sup=armtek&limit=5" class="btn btn-warning">Запустить</a>
+                    <h4>Синхронизация с Azertu</h4>
+                    <a href="/sync.php?sup=azerti&limit=5" class="btn btn-primary">Запустить</a>
                 </div>
             </div>
             <div class="col-3">

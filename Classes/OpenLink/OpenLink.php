@@ -21,13 +21,13 @@ class OpenLink extends Supplier
         'content' => 'url', // ftp_read, ftp_download, read (local)
         'logPring' => true,
         'source' => [
+            'url' => 'https://moonb2b.kz/yml/offers.yml',
             'files' => [
-                'import' => 'dealer.xml', 
+                'import' => 'offers.xml', 
             ],
             'dir' => __DIR__ . '/files/',
         ],
     ];
-    private $ftp;
 
     function __construct($sourceType = 'url') {
         $this->settings['content'] = $sourceType;
@@ -37,9 +37,7 @@ class OpenLink extends Supplier
         Logger::$folder = 'openlink';
     }
 
-    public function testingProduct(){
-        exit('test');
-    }
+    public function testingProduct(){ }
     
     public function getData() {
         $limit = $_GET['limit'] ?? 0; // limit for import;
@@ -48,7 +46,6 @@ class OpenLink extends Supplier
         $temp_inc = 0;
         
 
-        exit('*1*');
         if (!$content = (array)$this->saveAndGetCatalog($this->settings['content'])) {
             return false;
         }
@@ -70,11 +67,18 @@ class OpenLink extends Supplier
             $product_obj = $product;
             $product = (array) $product;
 
-            // получить артикул
-            $product['article'] = $product['articul'];
+            $product['description'] = str_replace('Описание отсутствует.', '', $product['description']);
+            $product['description'] = trim($product['description']);
 
+            // получить артикул
+            $product['article'] = $product['articul'] ?? $product['@attributes']['id'];
+            if($articul = $product['params']['code'][1] ?? ''){
+                $product['article'] = $articul;
+            }
             $this->articuls[] = $product['article'];
 
+            $product['vendor'] = implode(', ', (array)$product['vendor'] ?? []);
+            
             // Цена "Дилерская цена"
             $price = 0;
             if (isset($product['price'])){
@@ -83,9 +87,10 @@ class OpenLink extends Supplier
 
             // Кол-во товаров на складе
             $stock = 0;
-            if (isset($product['stock'])){
-                $stock = preg_replace("/[^0-9]/", '', $product['stock']);
+            if (isset($product['quantity'])){
+                $stock = preg_replace("/[^0-9]/", '', $product['quantity']);
             }
+            $product['stock'] = $stock;
 
             $product['pictures'] = [];
             if($product['picture'] ?? false){
@@ -106,11 +111,13 @@ class OpenLink extends Supplier
             $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
 
             if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
-                
                 $product_ob = $oneboxResponse->products;
 
-                if($brandname = $product['params']['brand'][1] ?? ''){
-                    $product['brandname'] = $brandname;
+                if($warranty = $product['params']['warranty'][1] ?? ''){
+                    $product['warranty'] = $warranty;
+                }
+                if($fullname = $product['params']['fullname'][1] ?? ''){
+                    $product['fullname'] = $fullname;
                 }
                 $request = [
                     'id' => $product_ob->id,
@@ -118,7 +125,7 @@ class OpenLink extends Supplier
                     'supplierid' => $this->supplier_id,
                     'suppliercode' => $product['article'],
 
-                    'brandname' => $product['brandname'],
+                    'brandname' => $product['vendor'],
                     'unit' => 'шт.',
                     
                     'suppliercurrency' => $this->currency,
@@ -139,7 +146,7 @@ class OpenLink extends Supplier
                 }
 
                 // дополнительная информация по продукту
-                $request = $this->addTextInfo($request, $product_obj); 
+                $request = $this->addTextInfo($request, $product);
                 $request = $this->prepare($request);
                 
                 // добавить картинки
@@ -147,7 +154,7 @@ class OpenLink extends Supplier
                     $request .= "&image[$imageKey]=".$picture;
                 }
 
-                $oneboxResponse = $this->onebox->request('/product/update/', $request); // @TODO: uncomment
+                $oneboxResponse = $this->onebox->request('/product/update/', $request);
 
                 if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
                     $this->updated_products[] = $product_ob->id;
@@ -166,25 +173,28 @@ class OpenLink extends Supplier
                 // проверить если ди товар в наличии и есть ли у него цена
                 if (isset($product['stock']) && isset($price) && $stock > 0 && $price > 0) {
 
-                    if($brandname = $product['params']['brand'][1] ?? ''){
-                        $product['brandname'] = $brandname;
+                    if($warranty = $product['params']['warranty'][1] ?? ''){
+                        $product['warranty'] = $warranty;
                     }
-                    // добавление информации о новом продукте
+                    if($fullname = $product['params']['fullname'][1] ?? ''){
+                        $product['fullname'] = $fullname;
+                    }
                     $request = [
-                        'name' => $product_ob->name,
+                        'name' => $product['name'],
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
+                        'articul' => $product['article'],
 
-                        'brandname' => $product['brandname'],
+                        'brandname' => $product['vendor'],
                         'unit' => 'шт.',
                         
                         'suppliercurrency' => $this->currency,
                         'currencyname' => $this->currency,
-    
+
                         'price' => $price ? round($price) : 0,
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
-    
+
                         'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
@@ -195,14 +205,14 @@ class OpenLink extends Supplier
                         $request['avail'] = $stock > 0 ? 1 : 0;
                     }
 
-                    $request = $this->addTextInfo($request, $product_obj);
+                    $request = $this->addTextInfo($request, $product);
                     $request = $this->prepare($request);
 
                     foreach($product['pictures'] as $imageKey => $picture){
                         $request .= "&image[$imageKey]=".$picture;
                     }
 
-                    $oneboxResponse = $this->onebox->request('/product/add/', $request);// @TODO: uncomment
+                    $oneboxResponse = $this->onebox->request('/product/add/', $request);
 
                     if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
 
@@ -240,7 +250,7 @@ class OpenLink extends Supplier
      * @param string $method - ftp_download, ftp_read, read (local)
      * @return array data
      */
-    public function saveAndGetCatalog($method = 'ftp_read', $type = 'import') {
+    public function saveAndGetCatalog($method = 'url', $type = 'import') {
         $data = [];
         switch($method) {
             case 'ftp_download':
@@ -251,6 +261,9 @@ class OpenLink extends Supplier
                 break;
             case 'read':
                 $data = $this->getDataLocalRead();
+                break;
+            case 'url':
+                $data = $this->getDataUrlRead();
                 break;
         }
         $this->data = $data;
@@ -276,6 +289,25 @@ class OpenLink extends Supplier
             
             $data[$type] = $this->readFile($localFile, $type);
         }
+        return $data;
+    }
+    
+    /**
+     * Get data from URL and write to local
+     * @return array data from files
+     */
+    private function getDataUrlRead($download = false) {
+        $data = [];
+
+        $type = 'import';
+        $sourceUrl = $this->settings['source']['url'];
+        $localFile = $this->settings['source']['dir'] . $this->settings['source']['files'][$type];
+
+        if ($download && $response = file_get_contents($sourceUrl)){
+            file_put_contents($localFile, $response);
+        }
+        $data[$type] = $this->readFile($localFile, $type);
+
         return $data;
     }
     
@@ -362,8 +394,12 @@ class OpenLink extends Supplier
             preg_match_all($reParam, $offerXml[0][1] ?? '', $paramsData, PREG_SET_ORDER, 0);
             $params = [];
             foreach($paramsData as $paramRow) {
-                if($paramRow[1] === 'Бренд'){
-                    $params['brand'] = [$paramRow[1], $paramRow[2]];
+                if($paramRow[1] === 'Код'){
+                    $params['code'] = [$paramRow[1], $paramRow[2]];
+                } elseif($paramRow[1] === 'Срок гарантии'){
+                    $params['warranty'] = [$paramRow[1], $paramRow[2]];
+                } elseif($paramRow[1] === 'Полное наименование'){
+                    $params['fullname'] = [$paramRow[1], $paramRow[2]];
                 } else {
                     $params[] = [$paramRow[1], $paramRow[2]];
                 }
@@ -464,21 +500,28 @@ class OpenLink extends Supplier
             foreach ($products as $product) {
 
                 if ($product->supplierid == $this->supplier_id && !in_array($product->articul, $this->articuls)){
+                    
+                    if($warranty = $product['params']['warranty'][1] ?? ''){
+                        $product['warranty'] = $warranty;
+                    }
+                    if($fullname = $product['params']['fullname'][1] ?? ''){
+                        $product['fullname'] = $fullname;
+                    }
                     $request = [
                         'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
 
-                        'brandname' => $product['brandname'],
+                        'brandname' => $product['vendor'],
                         'unit' => 'шт.',
                         
                         'suppliercurrency' => $this->currency,
                         'currencyname' => $this->currency,
-    
+
                         'price' => $price ? round($price) : 0,
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
-    
+
                         'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,

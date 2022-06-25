@@ -190,6 +190,7 @@ class ComPortal extends Supplier
                         'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
+                        'articul' => $product['article'],
 
                         'brandname' => $product['brandname'],
                         'unit' => 'шт.',
