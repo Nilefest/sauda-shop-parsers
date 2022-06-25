@@ -296,7 +296,7 @@ class OpenLink extends Supplier
      * Get data from URL and write to local
      * @return array data from files
      */
-    private function getDataUrlRead($download = false) {
+    private function getDataUrlRead($download = true) {
         $data = [];
 
         $type = 'import';
