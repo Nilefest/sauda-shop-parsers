@@ -61,6 +61,12 @@
                     <a href="/sync.php?sup=comportal&limit=5" class="btn btn-danger">Запустить</a>
                 </div>
             </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <h4>Синхронизация с OpenLink</h4>
+                    <a href="/sync.php?sup=openlink&limit=5" class="btn btn-success">Запустить</a>
+                </div>
+            </div>
         </div>
     </div>
 

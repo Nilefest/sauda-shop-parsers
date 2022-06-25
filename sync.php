@@ -11,6 +11,7 @@ use Classes\Alstyle\Alstyle;
 use Classes\ComPortal\ComPortal;
 use Classes\Azerti\Azerti;
 use Classes\ArmTek\ArmTek;
+use Classes\OpenLink\OpenLink;
 use Classes\WorkUnit;
 
 // * определение поставщика
@@ -41,6 +42,10 @@ switch($_GET['sup']){
 
     case 'armtek':
         $sup = new ArmTek;
+        break;
+
+    case 'openlink':
+        $sup = new OpenLink;
         break;
 
     default:
