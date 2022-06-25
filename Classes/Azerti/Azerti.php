@@ -110,12 +110,26 @@ class Azerti extends Supplier
                     'name' => $product_ob->name,
                     'supplierid' => $this->supplier_id,
                     'suppliercode' => $product['article'],
+                    'brandname' => (string)$product['vendor'],
+                    'unit' => 'шт.',
+
                     'suppliercurrency' => $this->currency,
+                    'currencyname' => $this->currency,
+
+                    'price' => $price ? round($price) : 0,
+                    'pricebase' => $price ? round($price) : 0,
                     'supplierprice' => $price ? round($price) : 0,
+
+                    'supplieravail' => $stock > 0 ? 1 : 0,
                     'supplieravail' => $stock > 0 ? 1 : 0,
                     'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
-                    'brandname' => (string)$product['vendor'],
+                    'syncpricesup' => 1,
+                    'syncavailsup' => 1,
                 ];
+                if($stock){
+                    $request['storaged'] = (int)$stock;
+                    $request['avail'] = $stock > 0 ? 1 : 0;
+                }
 
                 // дополнительная информация по продукту
                 $request = $this->addTextInfo($request, $product_obj); 
@@ -147,22 +161,30 @@ class Azerti extends Supplier
 
                     // добавление информации о новом продукте
                     $request = [
-
-                        'name' => $product['name'],
-                        'brandname' => $product['vendor'],
-                        'articul' => $product['article'],
-                        'unit' => 'шт.',
-
+                        'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
+                        'brandname' => (string)$product['vendor'],
+                        'unit' => 'шт.',
+    
                         'suppliercurrency' => $this->currency,
+                        'currencyname' => $this->currency,
+    
+                        'price' => $price ? round($price) : 0,
+                        'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
+    
+                        'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
                         'syncavailsup' => 1,
 
                     ];
+                    if($stock){
+                        $request['storaged'] = $stock;
+                        $request['avail'] = $stock > 0 ? 1 : 0;
+                    }
 
                     $request = $this->addTextInfo($request, $product_obj);
                     $request = $this->prepare($request);
@@ -413,13 +435,29 @@ class Azerti extends Supplier
                 if ($product->supplierid == $this->supplier_id && !in_array($product->articul, $this->articuls)){
                     $request = [
                         'id' => $product->id,
-                        'name' => $product->name,
+                        'name' => $products->name,
                         'supplierid' => $this->supplier_id,
-                        'supplieravail' => 0,
-                        'supplieravailtext' => 0,
-                        'suppliercode' => $product->articul,
+                        'suppliercode' => $product['article'],
+                        'brandname' => (string)$product['vendor'],
+                        'unit' => 'шт.',
+    
                         'suppliercurrency' => $this->currency,
+                        'currencyname' => $this->currency,
+    
+                        'price' => $price ? round($price) : 0,
+                        'pricebase' => $price ? round($price) : 0,
+                        'supplierprice' => $price ? round($price) : 0,
+    
+                        'supplieravail' => $stock > 0 ? 1 : 0,
+                        'supplieravail' => $stock > 0 ? 1 : 0,
+                        'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
+                        'syncpricesup' => 1,
+                        'syncavailsup' => 1,
                     ];
+                    if($stock){
+                        $request['storaged'] = $stock;
+                        $request['avail'] = $stock > 0 ? 1 : 0;
+                    }
 
                     $request = $this->prepare($request);
                     $oneboxResponse = $this->onebox->request('/product/update/', $request);
