@@ -18,6 +18,7 @@ class ComPortal extends Supplier
     public $supplier_id = 13; // в настоящем onebox 13
     public $currency = 'Тенге';
 
+    private $filesUrl = 'https://sup.sauda24.kz/Classes/ComPortal/files';
     private $data = [];
     private $settings = [
         'content' => 'ftp_read', // ftp_read, ftp_download, read (local)
@@ -53,9 +54,6 @@ class ComPortal extends Supplier
     }
 
     public function testingProduct(){
-        
-        //$data = $this->getData(); // Get data
-
         exit('test');
     }
     
@@ -89,7 +87,7 @@ class ComPortal extends Supplier
             $product = (array) $product;
 
             // получить артикул
-            $product['article'] = $product['articul'] ?? $product['stock'];
+            $product['article'] = $product['articul'];
 
             $this->articuls[] = $product['article'];
 
@@ -105,6 +103,21 @@ class ComPortal extends Supplier
                 $stock = preg_replace("/[^0-9]/", '', $product['stock']);
             }
 
+            $product['pictures'] = [];
+            if($product['picture'] ?? false){
+                $product['pictures'][] = $product['picture'];
+                unset($product['picture']);
+            }
+            foreach($product['pictures'] as $pictureKey => $picturePath){
+                if(is_string($picturePath)) {
+                    $product['pictures'][$pictureKey] = $this->filesUrl . $picturePath;
+                } elseif(is_array($picturePath)) {
+                    foreach($picturePath as $picturePathItem){
+                        $product['pictures'][$pictureKey] = $this->filesUrl . $picturePathItem;
+                    }
+                }
+            }
+
             // проверить если ли товар в Onebox по артикулу
             $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
 
@@ -112,16 +125,31 @@ class ComPortal extends Supplier
                 
                 $product_ob = $oneboxResponse->products;
 
+                if($brandname = $product['params']['brand'][1] ?? ''){
+                    $product['brandname'] = $brandname;
+                }
                 $request = [
                     'id' => $product_ob->id,
                     'name' => $product_ob->name,
                     'supplierid' => $this->supplier_id,
                     'suppliercode' => $product['article'],
+
+                    'brandname' => $product['brandname'],
+                    'unit' => 'шт.',
+                    
                     'suppliercurrency' => $this->currency,
+                    'currencyname' => $this->currency,
+
+                    'price' => $price ? round($price) : 0,
+                    'pricebase' => $price ? round($price) : 0,
                     'supplierprice' => $price ? round($price) : 0,
+
+                    'storaged' => $stock,
                     'supplieravail' => $stock > 0 ? 1 : 0,
+                    'avail' => $stock > 0 ? 1 : 0,
                     'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
-                    'brandname' => $product['params']['brand'][1] ?? '', // ?? !!
+                    'syncpricesup' => 1,
+                    'syncavailsup' => 1,
                 ];
 
                 // дополнительная информация по продукту
@@ -129,13 +157,9 @@ class ComPortal extends Supplier
                 $request = $this->prepare($request);
                 
                 // добавить картинки
-                // if (isset($product['picture'])){
-                //     $request .= '&image[0]='.$picture['picture'];
-                // } elseif (isset($product['pictures']) && !empty($product['pictures'])){
-                //     foreach($product['pictures'] as $imageKey => $picture){
-                //         $request .= "&image[$imageKey]=".$picture;                        
-                //     }
-                // }
+                foreach($product['pictures'] as $imageKey => $picture){
+                    $request .= "&image[$imageKey]=".$picture;
+                }
 
                 $oneboxResponse = $this->onebox->request('/product/update/', $request); // @TODO: uncomment
 
@@ -156,36 +180,39 @@ class ComPortal extends Supplier
                 // проверить если ди товар в наличии и есть ли у него цена
                 if (isset($product['stock']) && isset($price) && $stock > 0 && $price > 0) {
 
+                    if($brandname = $product['params']['brand'][1] ?? ''){
+                        $product['brandname'] = $brandname;
+                    }
                     // добавление информации о новом продукте
                     $request = [
-
-                        'name' => $product['name'],
-                        'brandname' => $product['params']['brand'][1] ?? '', // ?? !!
-                        'articul' => $product['article'],
-                        'unit' => 'шт.',
-
+                        'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
+
+                        'brandname' => $product['brandname'],
+                        'unit' => 'шт.',
+                        
                         'suppliercurrency' => $this->currency,
+                        'currencyname' => $this->currency,
+    
+                        'price' => $price ? round($price) : 0,
+                        'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
+    
+                        'storaged' => $stock,
                         'supplieravail' => $stock > 0 ? 1 : 0,
+                        'avail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
                         'syncavailsup' => 1,
-
                     ];
 
                     $request = $this->addTextInfo($request, $product_obj);
                     $request = $this->prepare($request);
 
-                    // собрать картинки
-                    // if (isset($product['picture'])){
-                    //     $request .= '&image[0]='.$picture['picture'];
-                    // } elseif (isset($product['pictures']) && !empty($product['pictures'])){
-                    //     foreach($product['pictures'] as $imageKey => $picture){
-                    //         $request .= "&image[$imageKey]=".$picture;
-                    //     }
-                    // }
+                    foreach($product['pictures'] as $imageKey => $picture){
+                        $request .= "&image[$imageKey]=".$picture;
+                    }
 
                     $oneboxResponse = $this->onebox->request('/product/add/', $request);// @TODO: uncomment
 
@@ -450,13 +477,26 @@ class ComPortal extends Supplier
 
                 if ($product->supplierid == $this->supplier_id && !in_array($product->articul, $this->articuls)){
                     $request = [
-                        'id' => $product->id,
-                        'name' => $product->name,
+                        'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
-                        'supplieravail' => 0,
-                        'supplieravailtext' => 0,
-                        'suppliercode' => $product->articul,
+                        'suppliercode' => $product['article'],
+
+                        'brandname' => $product['brandname'],
+                        'unit' => 'шт.',
+                        
                         'suppliercurrency' => $this->currency,
+                        'currencyname' => $this->currency,
+    
+                        'price' => $price ? round($price) : 0,
+                        'pricebase' => $price ? round($price) : 0,
+                        'supplierprice' => $price ? round($price) : 0,
+    
+                        'storaged' => $stock,
+                        'supplieravail' => $stock > 0 ? 1 : 0,
+                        'avail' => $stock > 0 ? 1 : 0,
+                        'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
+                        'syncpricesup' => 1,
+                        'syncavailsup' => 1,
                     ];
 
                     $request = $this->prepare($request);
