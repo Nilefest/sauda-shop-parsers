@@ -144,13 +144,15 @@ class ComPortal extends Supplier
                     'pricebase' => $price ? round($price) : 0,
                     'supplierprice' => $price ? round($price) : 0,
 
-                    'storaged' => $stock,
                     'supplieravail' => $stock > 0 ? 1 : 0,
-                    'avail' => $stock > 0 ? 1 : 0,
                     'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                     'syncpricesup' => 1,
                     'syncavailsup' => 1,
                 ];
+                if($stock){
+                    $request['storaged'] = $stock;
+                    $request['avail'] = $stock > 0 ? 1 : 0;
+                }
 
                 // дополнительная информация по продукту
                 $request = $this->addTextInfo($request, $product_obj); 
@@ -199,13 +201,15 @@ class ComPortal extends Supplier
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
     
-                        'storaged' => $stock,
                         'supplieravail' => $stock > 0 ? 1 : 0,
-                        'avail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
                         'syncavailsup' => 1,
                     ];
+                    if($stock){
+                        $request['storaged'] = $stock;
+                        $request['avail'] = $stock > 0 ? 1 : 0;
+                    }
 
                     $request = $this->addTextInfo($request, $product_obj);
                     $request = $this->prepare($request);
@@ -491,13 +495,15 @@ class ComPortal extends Supplier
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
     
-                        'storaged' => $stock,
                         'supplieravail' => $stock > 0 ? 1 : 0,
-                        'avail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
                         'syncavailsup' => 1,
                     ];
+                    if($stock){
+                        $request['storaged'] = $stock;
+                        $request['avail'] = $stock > 0 ? 1 : 0;
+                    }
 
                     $request = $this->prepare($request);
                     $oneboxResponse = $this->onebox->request('/product/update/', $request);
