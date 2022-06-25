@@ -1,5 +1,7 @@
 <?php
+
 // antonlee0@gmail.com
+
 namespace Classes;
 
 use Classes\Onebox\Onebox;
@@ -26,27 +28,61 @@ class Export
         $part = 1;
         $tries_left = 3;
         $products = [];
+        $names = [];
+        $duplicated_names = [];
+        $orig_info = [];
+        $flawed = [];
         while ($part) {
-            $response = $onebox->request('/product/get/', '&hidden=0&part='.$part);//&avail=1
-            if (is_object($response)){
-                foreach($response->products as $product){
+            $response = $onebox->request('/product/get/', '&avail=1&hidden=0&part='.$part);
+            if (is_object($response)) {
+                foreach ($response->products as $product) {
+                    if (!$product->avail) {
+                        continue;
+                    }
+                    $price = ceil($product->price);
+                    $sku_len = mb_strlen($product->articul, 'UTF-8');
+                    $name_len = mb_strlen($product->name, 'UTF-8');
+                    if ($price <= 0) {
+                        $flawed[] = ['Цена', $product->articul, $price, $product->name];
+                        continue;
+                    }
+                    if ($sku_len > 20) {
+                        $flawed[] = ['Halyk: артикул длиннее 20 символов', $product->articul, $price, $product->name];
+                    }
+                    if ($name_len > 250) {
+                        $flawed[] = ['Halyk: название длиннее 250 символов', $product->articul, $price, $product->name];
+                    }
+                    if (empty($product->articul)) {
+                        $flawed[] = ['пустой артикул', $product->articul, $price, $product->name];
+                        continue;
+                    }
+
                     $name = htmlentities($product->name, $flags, null, false);
                     $sku = htmlentities($product->articul, $flags, null, false);
-                    $avail = boolval($product->avail);
-                    $price = ceil($product->price);
 
-                    if (!isset($products[$sku])
-                        || ($avail && !$products[$sku]['avail'])
-                        || ($avail && $products[$sku]['avail'] && $price > $products[$sku]['price'])
-                    ) {
+
+                    if (!isset($products[$sku]) || $price > $products[$sku]['price']) {
                         $products[$sku] = [
-                            'avail' => $avail,
                             'name'  => $name,
                             'price' => $price,
                             'brand' => $brands[$product->brandid] ?? '',
+                            'sku_len' => $sku_len,
+                            'name_len' => $name_len,
                         ];
-                    }
+                        $orig_info[$sku] = [
+                            'articul' => $product->articul,
+                            'name' => $product->name,
+                        ];
 
+                        if (isset($names[$name])) {
+                            if (!isset($duplicated_names[$name])) {
+                                $duplicated_names[$name] = [$names[$name]];
+                            }
+                            $duplicated_names[$name][] = $sku;
+                        } else {
+                            $names[$name] = $sku;
+                        }
+                    }
                 }
                 if (sizeof($response->products) != 1000) {
                     break;
@@ -64,7 +100,32 @@ class Export
                 sleep(1);
             }
         }
+        Logger::warning('duplicated names: '.sizeof($duplicated_names));
+        foreach ($duplicated_names as $skus) {
+            foreach ($skus as $sku) {
+                if (isset($products[$sku])) {
+                    $flawed[] = ['одинаковое название', $orig_info[$sku]['articul'], $products[$sku]['price'], $orig_info[$sku]['name']];
+                }
+                unset($products[$sku]);
+            }
+        }
+        unset($orig_info);
+        Logger::warning('removed duplicated products: '.array_sum(array_map('sizeof', $duplicated_names)));
+        unset($names);
+        unset($duplicated_names);
         Logger::notice('product count: '.sizeof($products));
+        Logger::notice('flaws count: '.sizeof($flawed));
+        $fh = fopen($export_dir.'/errors.csv', 'w');
+        if ($fh) {
+            fwrite($fh, "\xEF\xBB\xBF");// UTF-8 BOM
+            fputcsv($fh, ['Ошибка', 'Артикул', 'Цена', 'Название', date('r')], ';');
+            foreach ($flawed as $it) {
+                fputcsv($fh, $it, ';');
+            }
+        }
+        fclose($fh);
+        unset($flawed);
+
 
         static::kaspi($products, $export_dir);
         static::jusan($products, $export_dir);
@@ -96,12 +157,12 @@ class Export
 EOF;
         fwrite($file, $output);
         foreach ($products as $sku => $product) {
-            $avail = $product['avail'] ? 'yes' : 'no';
+            //$avail = $product['avail'] ? 'yes' : 'no';
             $output = <<<EOF
-        <offer sku="{$sku}">
+        <offer sku="$sku">
             <model>{$product['name']}</model>
             <availabilities>
-                <availability available="{$avail}" storeId="PP1"/>
+                <availability available="yes" storeId="PP1" preOrder="1"/>
             </availabilities>
             <price>{$product['price']}</price>
         </offer>
@@ -117,7 +178,7 @@ EOF;
         fwrite($file, $output);
         fclose($file);
         rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
-        Logger::notice('ended '.__FUNCTION__);
+        Logger::notice('ended '.__FUNCTION__.' offers: '.sizeof($products));
     }
 
     private static function jusan($products, $export_dir)
@@ -141,11 +202,7 @@ EOF;
 
 EOF;
         fwrite($file, $output);
-        $c = 0;
         foreach ($products as $sku => $product) {
-            if (!$product['avail']) {
-                continue;
-            }
             //$avail = $product['avail'] ? 'yes' : 'no';
             $output = <<<EOF
         <offer sku="$sku">
@@ -158,7 +215,6 @@ EOF;
 
 EOF;
             fwrite($file, $output);
-            $c += 1;
         }
 
 
@@ -169,7 +225,7 @@ EOF;
         fwrite($file, $output);
         fclose($file);
         rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
-        Logger::notice('ended '.__FUNCTION__.' offers: '.$c);
+        Logger::notice('ended '.__FUNCTION__.' offers: '.sizeof($products));
     }
 
     private static function forte($products, $export_dir)
@@ -193,11 +249,7 @@ EOF;
 
 EOF;
         fwrite($file, $output);
-        $c = 0;
         foreach ($products as $sku => $product) {
-            if (!$product['avail']) {
-                continue;
-            }
             //$avail = $product['avail'] ? 'yes' : 'no';
             $output = <<<EOF
         <offer sku="$sku">
@@ -211,7 +263,6 @@ EOF;
 
 EOF;
             fwrite($file, $output);
-            $c += 1;
         }
 
         $output = <<<'EOF'
@@ -222,7 +273,7 @@ EOF;
         fwrite($file, $output);
         fclose($file);
         rename($file_name, $export_dir .'/' . $export_name . '.xml') || Logger::error('failed to overwrite ' . $export_name . '.xml');
-        Logger::notice('ended '.__FUNCTION__.' offers: '.$c);
+        Logger::notice('ended '.__FUNCTION__.' offers: '.sizeof($products));
     }
 
     private static function halyk($products, $export_dir)
@@ -250,19 +301,20 @@ EOF;
         fwrite($file, $output);
         $c = 0;
         foreach ($products as $sku => $product) {
-            if (!$product['avail']) {
+            if ($product['sku_len'] > 20 || $product['name_len'] > 250) {
                 continue;
             }
             //$avail = $product['avail'] ? 'yes' : 'no';
-            $brand = empty($product['brand'])?'':'<brand>'.$product['brand'].'</brand>';
+            $brand = empty($product['brand']) ? '' : '<brand>'.$product['brand'].'</brand>';
             $output = <<<EOF
         <offer sku="$sku">
             <model>{$product['name']}</model>
             $brand
             <stocks>
-                <stock available="yes" storeId="2953" isPP="yes"/>
+                <stock available="yes" storeId="sauda24_pp1" isPP="yes" stockLevel="5"/>
             </stocks>
             <price>{$product['price']}</price>
+            <loanPeriod>6</loanPeriod>
         </offer>
 
 EOF;
