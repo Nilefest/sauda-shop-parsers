@@ -13,7 +13,7 @@ class OpenLink extends Supplier
     public $updated_products = [];
     public $deleted_products = [];
 
-    public $supplier_id = 13; // в настоящем onebox 13
+    public $supplier_id = 22; // в настоящем onebox 13
     public $currency = 'Тенге';
 
     private $data = [];
@@ -30,6 +30,9 @@ class OpenLink extends Supplier
     ];
 
     function __construct($sourceType = 'url') {
+        if($_GET['content'] ?? false) {
+            $sourceType = $_GET['content'];
+        }
         $this->settings['content'] = $sourceType;
 
         parent::__construct();
@@ -41,6 +44,7 @@ class OpenLink extends Supplier
     
     public function getData() {
         $limit = $_GET['limit'] ?? 0; // limit for import;
+        $skip = $_GET['skip'] ?? 0; // limit for import;
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -55,7 +59,7 @@ class OpenLink extends Supplier
         }
 
         if($limit ?? 0) {
-            $products = array_slice($products, 0, $limit);
+            $products = array_slice($products, $skip*1, $limit*1);
         }
         
         foreach ($products as $product_key => $product) {
@@ -75,8 +79,12 @@ class OpenLink extends Supplier
             if($articul = $product['params']['code'][1] ?? ''){
                 $product['article'] = $articul;
             }
-            $this->articuls[] = $product['article'];
 
+            $product['code'] = $product['article'];
+
+            $product['article'] = $product['model'];
+            $this->articuls[] = $product['article'];
+            
             $product['vendor'] = implode(', ', (array)$product['vendor'] ?? []);
             
             // Цена "Дилерская цена"
@@ -92,26 +100,38 @@ class OpenLink extends Supplier
             }
             $product['stock'] = $stock;
 
+            
             $product['pictures'] = [];
             if($product['picture'] ?? false){
                 $product['pictures'][] = $product['picture'];
                 unset($product['picture']);
             }
+            $pictures = [];
             foreach($product['pictures'] as $pictureKey => $picturePath){
                 if(is_string($picturePath)) {
-                    $product['pictures'][$pictureKey] = $this->filesUrl . $picturePath;
+                    $pictures[] = $this->filesUrl . $picturePath;
                 } elseif(is_array($picturePath)) {
                     foreach($picturePath as $picturePathItem){
-                        $product['pictures'][$pictureKey] = $this->filesUrl . $picturePathItem;
+                        $pictures[] = $this->filesUrl . $picturePathItem;
                     }
                 }
             }
+            $product['pictures'] = $pictures;
+
+            if($_GET['delete'] ?? 0) {
+                $oneboxResponse = $this->onebox->request('/product/delete/', '&articul=' . $product['article']);
+                // continue; // if need only delete
+            }
 
             // проверить если ли товар в Onebox по артикулу
-            $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
+            $oneboxResponse = $this->onebox->request('/product/get/', '&articul=' . $product['article']);
 
             if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
                 $product_ob = $oneboxResponse->products;
+                
+                if(is_array($product_ob) && isset($product_ob[0])){
+                    $product_ob = $product_ob[0];
+                }
 
                 if($warranty = $product['params']['warranty'][1] ?? ''){
                     $product['warranty'] = $warranty;
@@ -123,15 +143,17 @@ class OpenLink extends Supplier
                     'id' => $product_ob->id,
                     'name' => $product_ob->name,
                     'supplierid' => $this->supplier_id,
-                    'suppliercode' => $product['article'],
+                    'suppliercode' => $product['code'] ??  $product['article'],
 
                     'brandname' => $product['vendor'],
                     'unit' => 'шт.',
+
+                    'customfield_0AsiteUpdate' => 1,
                     
                     'suppliercurrency' => $this->currency,
                     'currencyname' => $this->currency,
 
-                    'price' => $price ? round($price) : 0,
+                    'price' => $product_ob->price ? round($price) : 0,
                     'pricebase' => $price ? round($price) : 0,
                     'supplierprice' => $price ? round($price) : 0,
 
@@ -139,6 +161,8 @@ class OpenLink extends Supplier
                     'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                     'syncpricesup' => 1,
                     'syncavailsup' => 1,
+
+                    'suppliercurrent' => true,
                 ];
                 if($stock){
                     $request['storaged'] = $stock;
@@ -182,19 +206,21 @@ class OpenLink extends Supplier
                     $request = [
                         'name' => $product['name'],
                         'supplierid' => $this->supplier_id,
-                        'suppliercode' => $product['article'],
+                        'suppliercode' => $product['code'] ??  $product['article'],
                         'articul' => $product['article'],
 
                         'brandname' => $product['vendor'],
                         'unit' => 'шт.',
-                        
+
+                        'customfield_0AsiteUpdate' => 1,
+    
                         'suppliercurrency' => $this->currency,
                         'currencyname' => $this->currency,
-
+        
                         'price' => $price ? round($price) : 0,
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
-
+        
                         'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
@@ -510,7 +536,7 @@ class OpenLink extends Supplier
                     $request = [
                         'name' => $product_ob->name,
                         'supplierid' => $this->supplier_id,
-                        'suppliercode' => $product['article'],
+                        'suppliercode' => $product['code'] ??  $product['article'],
 
                         'brandname' => $product['vendor'],
                         'unit' => 'шт.',

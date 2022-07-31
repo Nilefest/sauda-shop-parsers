@@ -73,9 +73,17 @@ class Asbis extends Supplier
             return false;
         }
 
+        $products = (array)$products;
+        $products = $products['Product'];
+
         foreach ($products as $product_key => $product) {
             $product = (array)$product;
-            if ($product['ProductCode'] == 'JBLT500BTPIK'){
+
+            echo '<pre>';
+            print_r($product_key);
+            echo '</pre>';
+
+            if ($product['ProductCode'] == 'L989-000171' || $product['ProductCode'] == 'L989-000405'){
 
                 // проверить если ли товар в Onebox по артикулу
                 /*$oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&imageadditional=1&articul=' . $product['ProductCode']);
@@ -109,7 +117,20 @@ class Asbis extends Supplier
             return false;
         }
 
+        $products = (array)$products;
+        $products = $products['Product'];
+
+        $startIndex = 0;
+        if (file_exists(__DIR__.'/last.json')){
+            $last_sync_part = file_get_contents(__DIR__.'/last.json');
+            $startIndex = json_decode($last_sync_part, true)['index'];
+        }
+
         foreach ($products as $product_key => $product) {
+
+            if ($product_key < $startIndex){
+                continue;
+            }
 
             if ($temp_count){
                 if ($temp_inc == $temp_count){break;}
@@ -140,43 +161,47 @@ class Asbis extends Supplier
 
                 $product_ob = $oneboxResponse->products;
 
-                $request = [
-                    'id' => $product_ob->id,
-                    'name' => $product_ob->name,
-                    'supplierid' => $this->supplier_id,
-                    'suppliercode' => $product['ProductCode'],
-                    'suppliercurrency' => $this->currency,
-                    'supplierprice' => round($product['price']['MY_PRICE']),
-                    'supplieravail' => $product['price']['AVAIL'] > 0 ? 1 : 0,
-                    'supplieravailtext' => $product['price']['AVAIL'],
-                    'brandname' => $product['Vendor'],
-                ];
+                if (!empty($product_ob) && isset($product_ob->id) && isset($product_ob->name)){
+                    $request = [
+                        'id' => $product_ob->id,
+                        'name' => $product_ob->name,
+                        'supplierid' => $this->supplier_id,
+                        'suppliercode' => $product['ProductCode'],
+                        'suppliercurrency' => $this->currency,
+                        'supplierprice' => isset($product['price']['MY_PRICE']) ? round($product['price']['MY_PRICE']) : 0,
+                        'supplieravail' => $product['price']['AVAIL'] > 0 ? 1 : 0,
+                        'supplieravailtext' => $product['price']['AVAIL'],
+                        'brandname' => $product['Vendor'],
+                    ];
 
-                // дополнительная информация по продукту
-                // если нет характеристик то по смыслу товар был добавлен через excel вручную, значит нужно обноавить доп инфу о нем
-                if (!$product_ob->characteristic) { $request = $this->addTextInfo($request, $product, true); }
-                $request = $this->prepare($request);
+                    // дополнительная информация по продукту
+                    // если нет характеристик то по смыслу товар был добавлен через excel вручную, значит нужно обноавить доп инфу о нем
+                    if (!$product_ob->characteristic) { $request = $this->addTextInfo($request, $product, true); }
+                    $request = $this->prepare($request);
 
-                // добавить картинки
-                $images = '';
-                if (empty($product_ob->image) && isset($product['Images']) && !empty($product['Images'])){
-                    $images = $this->makeImagesString((array)$product['Images']);
-                    $request .= $images;
-                }
-
-                $oneboxResponse = $this->onebox->request('/product/update/', $request);
-
-                if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
-                    $this->updated_products[] = $product_ob->id;
-                    Logger::Log('success', 'Обновился товар с артикулом: ' . $product['ProductCode']);
-                } else {
-                    if (isset($oneboxResponse->errors)){
-                        $errors = json_encode($oneboxResponse->errors);
-                    }else{
-                        $errors = json_encode($oneboxResponse);
+                    // добавить картинки
+                    $images = '';
+                    if (empty($product_ob->image) && isset($product['Images']) && !empty($product['Images'])){
+                        $images = $this->makeImagesString((array)$product['Images']);
+                        $request .= $images;
                     }
-                    Logger::Log('error', 'Не удалось обновить товар с артикулом: ' . $product['ProductCode'] . ' и id onebox: ' . $product_ob->id . ' || Ошибки: ' . $errors);
-                    //return false;
+
+                    $oneboxResponse = $this->onebox->request('/product/update/', $request);
+
+                    if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
+                        $this->updated_products[] = $product_ob->id;
+                        Logger::Log('success', 'Обновился товар с артикулом: ' . $product['ProductCode']);
+                    } else {
+                        if (isset($oneboxResponse->errors)){
+                            $errors = json_encode($oneboxResponse->errors);
+                        }else{
+                            $errors = json_encode($oneboxResponse);
+                        }
+                        Logger::Log('error', 'Не удалось обновить товар с артикулом: ' . $product['ProductCode'] . ' и id onebox: ' . $product_ob->id . ' || Ошибки: ' . $errors);
+                        //return false;
+                    }
+                }else{
+                    Logger::Log('error', 'Не удалось обновить товар с артикулом: ' . $product['ProductCode'] . ' и не веррнулся id Или name продукта');
                 }
 
             }else{ // товара нет в onebox
@@ -237,8 +262,12 @@ class Asbis extends Supplier
                     continue;
                 }
             }
+
+            // записать в файл с какой части начать синхронизацю в следующий раз
+            file_put_contents(__DIR__.'/last.json', json_encode(['index' => $product_key, 'count' => count($products)]));
         }
 
+        unlink(__DIR__.'/last.json');
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products));
 
         return true;

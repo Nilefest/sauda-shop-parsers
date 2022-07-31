@@ -32,7 +32,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -70,7 +70,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 51,
+                    "WareProducerQtyWithNa": 93,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -100,7 +100,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 150,
+                    "WareProducerQtyWithNa": 127,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -108,7 +108,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 1553,
+                    "WareProducerQtyWithNa": 1477,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -130,7 +130,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -162,7 +162,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 155,
+                "WareProducerQtyWithNa": 131,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -170,7 +170,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 1606,
+                "WareProducerQtyWithNa": 1571,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -192,7 +192,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 146,
+                "WareProducerQtyWithNa": 55,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -232,7 +232,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 155,
+            "WareProducerQtyWithNa": 131,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -240,7 +240,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 1752,
+            "WareProducerQtyWithNa": 1626,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -292,17 +292,9 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "Lenovo",
-                    "S_WareProducerCode": "lenovo",
-                    "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
                   }
                 ],
                 "ConfiguratorActive": false,
@@ -341,10 +333,18 @@
                 "SubCategories": [],
                 "Vendors": [
                   {
+                    "WareProducerCode": "HP",
+                    "S_WareProducerCode": "hp",
+                    "WareProducerName": "HP",
+                    "WareProducerQtyWithNa": 87,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  },
+                  {
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 160,
+                    "WareProducerQtyWithNa": 128,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -374,7 +374,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 11,
+                    "WareProducerQtyWithNa": 9,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -390,7 +390,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 4,
+                "WareProducerQtyWithNa": 88,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -398,7 +398,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 175,
+                "WareProducerQtyWithNa": 141,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -420,7 +420,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 3,
+                "WareProducerQtyWithNa": 100,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -428,7 +428,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 4,
+                "WareProducerQtyWithNa": 235,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -450,7 +450,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 120,
+                "WareProducerQtyWithNa": 95,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -488,7 +488,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 8,
+            "WareProducerQtyWithNa": 189,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -496,7 +496,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 299,
+            "WareProducerQtyWithNa": 471,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
@@ -532,7 +532,7 @@
                     "WareProducerCode": "Hikvision",
                     "S_WareProducerCode": "hikvision",
                     "WareProducerName": "Hikvision",
-                    "WareProducerQtyWithNa": 43,
+                    "WareProducerQtyWithNa": 784,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -540,7 +540,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 144,
+                    "WareProducerQtyWithNa": 213,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -548,7 +548,7 @@
                     "WareProducerCode": "IIYAMA",
                     "S_WareProducerCode": "iiyama",
                     "WareProducerName": "IIYAMA",
-                    "WareProducerQtyWithNa": 39,
+                    "WareProducerQtyWithNa": 317,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -556,7 +556,7 @@
                     "WareProducerCode": "LG",
                     "S_WareProducerCode": "lg",
                     "WareProducerName": "LG",
-                    "WareProducerQtyWithNa": 106,
+                    "WareProducerQtyWithNa": 98,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -586,7 +586,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 92,
+                    "WareProducerQtyWithNa": 291,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -594,7 +594,7 @@
                     "WareProducerCode": "IIYAMA",
                     "S_WareProducerCode": "iiyama",
                     "WareProducerName": "IIYAMA",
-                    "WareProducerQtyWithNa": 142,
+                    "WareProducerQtyWithNa": 297,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -602,15 +602,15 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 0,
+                    "WareProducerQtyWithNa": 14,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": false
+                    "HasVendorAvailableItems": true
                   },
                   {
                     "WareProducerCode": "LG",
                     "S_WareProducerCode": "lg",
                     "WareProducerName": "LG",
-                    "WareProducerQtyWithNa": 205,
+                    "WareProducerQtyWithNa": 251,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -618,7 +618,7 @@
                     "WareProducerCode": "PHILIPS",
                     "S_WareProducerCode": "philips",
                     "WareProducerName": "PHILIPS",
-                    "WareProducerQtyWithNa": 347,
+                    "WareProducerQtyWithNa": 339,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -626,7 +626,7 @@
                     "WareProducerCode": "SAMSUNG",
                     "S_WareProducerCode": "samsung",
                     "WareProducerName": "SAMSUNG",
-                    "WareProducerQtyWithNa": 830,
+                    "WareProducerQtyWithNa": 596,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -648,7 +648,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 56,
+                    "WareProducerQtyWithNa": 230,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -656,7 +656,7 @@
                     "WareProducerCode": "IIYAMA",
                     "S_WareProducerCode": "iiyama",
                     "WareProducerName": "IIYAMA",
-                    "WareProducerQtyWithNa": 98,
+                    "WareProducerQtyWithNa": 119,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -672,7 +672,7 @@
                     "WareProducerCode": "LG",
                     "S_WareProducerCode": "lg",
                     "WareProducerName": "LG",
-                    "WareProducerQtyWithNa": 30,
+                    "WareProducerQtyWithNa": 145,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -680,7 +680,7 @@
                     "WareProducerCode": "PHILIPS",
                     "S_WareProducerCode": "philips",
                     "WareProducerName": "PHILIPS",
-                    "WareProducerQtyWithNa": 205,
+                    "WareProducerQtyWithNa": 367,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -688,7 +688,7 @@
                     "WareProducerCode": "SAMSUNG",
                     "S_WareProducerCode": "samsung",
                     "WareProducerName": "SAMSUNG",
-                    "WareProducerQtyWithNa": 69,
+                    "WareProducerQtyWithNa": 52,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -726,15 +726,15 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 0,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": true
+                    "HasVendorAvailableItems": false
                   },
                   {
                     "WareProducerCode": "LG",
                     "S_WareProducerCode": "lg",
                     "WareProducerName": "LG",
-                    "WareProducerQtyWithNa": 20,
+                    "WareProducerQtyWithNa": 23,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -750,7 +750,7 @@
                     "WareProducerCode": "SAMSUNG",
                     "S_WareProducerCode": "samsung",
                     "WareProducerName": "SAMSUNG",
-                    "WareProducerQtyWithNa": 20,
+                    "WareProducerQtyWithNa": 18,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -796,7 +796,7 @@
                 "WareProducerCode": "Hikvision",
                 "S_WareProducerCode": "hikvision",
                 "WareProducerName": "Hikvision",
-                "WareProducerQtyWithNa": 60,
+                "WareProducerQtyWithNa": 801,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -804,7 +804,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 292,
+                "WareProducerQtyWithNa": 734,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -812,7 +812,7 @@
                 "WareProducerCode": "IIYAMA",
                 "S_WareProducerCode": "iiyama",
                 "WareProducerName": "IIYAMA",
-                "WareProducerQtyWithNa": 297,
+                "WareProducerQtyWithNa": 751,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -820,7 +820,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 7,
+                "WareProducerQtyWithNa": 17,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -828,7 +828,7 @@
                 "WareProducerCode": "LG",
                 "S_WareProducerCode": "lg",
                 "WareProducerName": "LG",
-                "WareProducerQtyWithNa": 361,
+                "WareProducerQtyWithNa": 517,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -836,7 +836,7 @@
                 "WareProducerCode": "PHILIPS",
                 "S_WareProducerCode": "philips",
                 "WareProducerName": "PHILIPS",
-                "WareProducerQtyWithNa": 572,
+                "WareProducerQtyWithNa": 726,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -844,7 +844,7 @@
                 "WareProducerCode": "SAMSUNG",
                 "S_WareProducerCode": "samsung",
                 "WareProducerName": "SAMSUNG",
-                "WareProducerQtyWithNa": 920,
+                "WareProducerQtyWithNa": 667,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -866,9 +866,9 @@
                 "WareProducerCode": "IIYAMA",
                 "S_WareProducerCode": "iiyama",
                 "WareProducerName": "IIYAMA",
-                "WareProducerQtyWithNa": 5,
+                "WareProducerQtyWithNa": 0,
                 "HideInB2B": false,
-                "HasVendorAvailableItems": true
+                "HasVendorAvailableItems": false
               },
               {
                 "WareProducerCode": "LG",
@@ -882,7 +882,7 @@
                 "WareProducerCode": "SAMSUNG",
                 "S_WareProducerCode": "samsung",
                 "WareProducerName": "SAMSUNG",
-                "WareProducerQtyWithNa": 817,
+                "WareProducerQtyWithNa": 134,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -898,7 +898,7 @@
             "WareProducerCode": "Hikvision",
             "S_WareProducerCode": "hikvision",
             "WareProducerName": "Hikvision",
-            "WareProducerQtyWithNa": 60,
+            "WareProducerQtyWithNa": 801,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -906,7 +906,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 292,
+            "WareProducerQtyWithNa": 734,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -914,7 +914,7 @@
             "WareProducerCode": "IIYAMA",
             "S_WareProducerCode": "iiyama",
             "WareProducerName": "IIYAMA",
-            "WareProducerQtyWithNa": 302,
+            "WareProducerQtyWithNa": 751,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -922,7 +922,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 7,
+            "WareProducerQtyWithNa": 17,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -930,7 +930,7 @@
             "WareProducerCode": "LG",
             "S_WareProducerCode": "lg",
             "WareProducerName": "LG",
-            "WareProducerQtyWithNa": 361,
+            "WareProducerQtyWithNa": 517,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -938,7 +938,7 @@
             "WareProducerCode": "PHILIPS",
             "S_WareProducerCode": "philips",
             "WareProducerName": "PHILIPS",
-            "WareProducerQtyWithNa": 572,
+            "WareProducerQtyWithNa": 726,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -946,7 +946,7 @@
             "WareProducerCode": "SAMSUNG",
             "S_WareProducerCode": "samsung",
             "WareProducerName": "SAMSUNG",
-            "WareProducerQtyWithNa": 1737,
+            "WareProducerQtyWithNa": 801,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
@@ -982,7 +982,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 116,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -990,7 +990,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 2058,
+                    "WareProducerQtyWithNa": 1775,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1005,7 +1005,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1920,
-                "CategoryTreeId": 31,
+                "CategoryTreeId": 32,
                 "PermissionForCategoryView": null
               },
               {
@@ -1020,7 +1020,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 79,
+                    "WareProducerQtyWithNa": 54,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1028,14 +1028,14 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 309,
+                    "WareProducerQtyWithNa": 400,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1930,
-                "CategoryTreeId": 32,
+                "CategoryTreeId": 33,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1044,7 +1044,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 83,
+                "WareProducerQtyWithNa": 170,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1052,7 +1052,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 2367,
+                "WareProducerQtyWithNa": 2175,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1067,7 +1067,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1910,
-            "CategoryTreeId": 30,
+            "CategoryTreeId": 31,
             "PermissionForCategoryView": null
           },
           {
@@ -1089,7 +1089,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 30,
+                    "WareProducerQtyWithNa": 13,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1097,7 +1097,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 321,
+                    "WareProducerQtyWithNa": 139,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1112,7 +1112,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1950,
-                "CategoryTreeId": 34,
+                "CategoryTreeId": 35,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1121,7 +1121,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 30,
+                "WareProducerQtyWithNa": 13,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1129,7 +1129,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 321,
+                "WareProducerQtyWithNa": 139,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1144,7 +1144,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1940,
-            "CategoryTreeId": 33,
+            "CategoryTreeId": 34,
             "PermissionForCategoryView": null
           },
           {
@@ -1173,7 +1173,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1981,
-                "CategoryTreeId": 37,
+                "CategoryTreeId": 38,
                 "PermissionForCategoryView": null
               },
               {
@@ -1188,7 +1188,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 14,
+                    "WareProducerQtyWithNa": 8,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1203,7 +1203,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1982,
-                "CategoryTreeId": 38,
+                "CategoryTreeId": 39,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1212,7 +1212,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 14,
+                "WareProducerQtyWithNa": 8,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1227,7 +1227,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1980,
-            "CategoryTreeId": 36,
+            "CategoryTreeId": 37,
             "PermissionForCategoryView": null
           },
           {
@@ -1249,7 +1249,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 24,
+                    "WareProducerQtyWithNa": 27,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1264,7 +1264,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2020,
-                "CategoryTreeId": 41,
+                "CategoryTreeId": 45,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1273,7 +1273,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 24,
+                "WareProducerQtyWithNa": 27,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1288,7 +1288,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2010,
-            "CategoryTreeId": 40,
+            "CategoryTreeId": 44,
             "PermissionForCategoryView": null
           },
           {
@@ -1303,7 +1303,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 18,
+                "WareProducerQtyWithNa": 4,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1318,7 +1318,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2050,
-            "CategoryTreeId": 43,
+            "CategoryTreeId": 47,
             "PermissionForCategoryView": null
           },
           {
@@ -1340,7 +1340,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2054,
-            "CategoryTreeId": 44,
+            "CategoryTreeId": 48,
             "PermissionForCategoryView": null
           },
           {
@@ -1370,7 +1370,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2060,
-            "CategoryTreeId": 45,
+            "CategoryTreeId": 49,
             "PermissionForCategoryView": null
           },
           {
@@ -1406,7 +1406,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 2190,
-                    "CategoryTreeId": 79,
+                    "CategoryTreeId": 83,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -1422,7 +1422,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2095,
-                "CategoryTreeId": 70,
+                "CategoryTreeId": 74,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1438,7 +1438,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2065,
-            "CategoryTreeId": 46,
+            "CategoryTreeId": 50,
             "PermissionForCategoryView": null
           },
           {
@@ -1460,7 +1460,7 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 199,
+                    "WareProducerQtyWithNa": 145,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1483,7 +1483,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2085,
-                "CategoryTreeId": 85,
+                "CategoryTreeId": 89,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1492,7 +1492,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 199,
+                "WareProducerQtyWithNa": 145,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1515,7 +1515,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2070,
-            "CategoryTreeId": 80,
+            "CategoryTreeId": 84,
             "PermissionForCategoryView": null
           }
         ],
@@ -1524,7 +1524,7 @@
             "WareProducerCode": "Canon",
             "S_WareProducerCode": "canon",
             "WareProducerName": "Canon",
-            "WareProducerQtyWithNa": 379,
+            "WareProducerQtyWithNa": 378,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1532,7 +1532,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 2695,
+            "WareProducerQtyWithNa": 2321,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1547,7 +1547,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 950,
-        "CategoryTreeId": 29,
+        "CategoryTreeId": 30,
         "PermissionForCategoryView": null
       },
       {
@@ -1576,15 +1576,15 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 0,
+                    "WareProducerQtyWithNa": 244,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": false
+                    "HasVendorAvailableItems": true
                   },
                   {
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 948,
+                    "WareProducerQtyWithNa": 1222,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1592,14 +1592,14 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 103,
+                    "WareProducerQtyWithNa": 97,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2240,
-                "CategoryTreeId": 90,
+                "CategoryTreeId": 94,
                 "PermissionForCategoryView": null
               },
               {
@@ -1622,7 +1622,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 1247,
+                    "WareProducerQtyWithNa": 1216,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1630,7 +1630,7 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 123,
+                    "WareProducerQtyWithNa": 4000,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -1645,7 +1645,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2250,
-                "CategoryTreeId": 91,
+                "CategoryTreeId": 95,
                 "PermissionForCategoryView": null
               },
               {
@@ -1676,14 +1676,14 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 106,
+                    "WareProducerQtyWithNa": 600,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2260,
-                "CategoryTreeId": 92,
+                "CategoryTreeId": 96,
                 "PermissionForCategoryView": null
               },
               {
@@ -1698,14 +1698,14 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 15,
+                    "WareProducerQtyWithNa": 200,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2270,
-                "CategoryTreeId": 93,
+                "CategoryTreeId": 97,
                 "PermissionForCategoryView": null
               }
             ],
@@ -1722,7 +1722,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 1247,
+                "WareProducerQtyWithNa": 1460,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1730,7 +1730,7 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 1192,
+                "WareProducerQtyWithNa": 6022,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1738,14 +1738,14 @@
                 "WareProducerCode": "Microsoft",
                 "S_WareProducerCode": "microsoft",
                 "WareProducerName": "Microsoft",
-                "WareProducerQtyWithNa": 124,
+                "WareProducerQtyWithNa": 118,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2220,
-            "CategoryTreeId": 89,
+            "CategoryTreeId": 93,
             "PermissionForCategoryView": null
           },
           {
@@ -1760,14 +1760,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 52,
+                "WareProducerQtyWithNa": 48,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2225,
-            "CategoryTreeId": 94,
+            "CategoryTreeId": 98,
             "PermissionForCategoryView": null
           },
           {
@@ -1782,7 +1782,7 @@
                 "WareProducerCode": "Hikvision",
                 "S_WareProducerCode": "hikvision",
                 "WareProducerName": "Hikvision",
-                "WareProducerQtyWithNa": 210,
+                "WareProducerQtyWithNa": 185,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1790,14 +1790,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 444,
+                "WareProducerQtyWithNa": 441,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2275,
-            "CategoryTreeId": 95,
+            "CategoryTreeId": 99,
             "PermissionForCategoryView": null
           },
           {
@@ -1820,14 +1820,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 69,
+                "WareProducerQtyWithNa": 454,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2280,
-            "CategoryTreeId": 96,
+            "CategoryTreeId": 100,
             "PermissionForCategoryView": null
           },
           {
@@ -1837,6 +1837,36 @@
             "ParentCategoryId": "Периферия_ПК",
             "S_ParentCategoryId": "периферия_пк",
             "SubCategories": [
+              {
+                "CategoryID": "AV_Системы 2_0",
+                "S_CategoryID": "av_системы 2_0",
+                "CategoryName": "Системы 2.0",
+                "ParentCategoryId": "AV_Ак ПК_ДомКин",
+                "S_ParentCategoryId": "av_ак пк_домкин",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "Lenovo",
+                    "S_WareProducerCode": "lenovo",
+                    "WareProducerName": "Lenovo",
+                    "WareProducerQtyWithNa": 4,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  },
+                  {
+                    "WareProducerCode": "Logitech",
+                    "S_WareProducerCode": "logitech",
+                    "WareProducerName": "Logitech",
+                    "WareProducerQtyWithNa": 12,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 3010,
+                "CategoryTreeId": 102,
+                "PermissionForCategoryView": null
+              },
               {
                 "CategoryID": "AV_Системы 2_1",
                 "S_CategoryID": "av_системы 2_1",
@@ -1856,23 +1886,31 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3020,
-                "CategoryTreeId": 100,
+                "CategoryTreeId": 103,
                 "PermissionForCategoryView": null
               }
             ],
             "Vendors": [
               {
+                "WareProducerCode": "Lenovo",
+                "S_WareProducerCode": "lenovo",
+                "WareProducerName": "Lenovo",
+                "WareProducerQtyWithNa": 4,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": true
+              },
+              {
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 2,
+                "WareProducerQtyWithNa": 14,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 3000,
-            "CategoryTreeId": 98,
+            "CategoryTreeId": 101,
             "PermissionForCategoryView": null
           },
           {
@@ -1887,7 +1925,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 234,
+                "WareProducerQtyWithNa": 198,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -1895,14 +1933,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 17,
+                "WareProducerQtyWithNa": 58,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 3015,
-            "CategoryTreeId": 103,
+            "CategoryTreeId": 106,
             "PermissionForCategoryView": null
           }
         ],
@@ -1911,7 +1949,7 @@
             "WareProducerCode": "Hikvision",
             "S_WareProducerCode": "hikvision",
             "WareProducerName": "Hikvision",
-            "WareProducerQtyWithNa": 210,
+            "WareProducerQtyWithNa": 185,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1935,7 +1973,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 1481,
+            "WareProducerQtyWithNa": 1662,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1943,7 +1981,7 @@
             "WareProducerCode": "Logitech",
             "S_WareProducerCode": "logitech",
             "WareProducerName": "Logitech",
-            "WareProducerQtyWithNa": 1776,
+            "WareProducerQtyWithNa": 7037,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -1951,14 +1989,14 @@
             "WareProducerCode": "Microsoft",
             "S_WareProducerCode": "microsoft",
             "WareProducerName": "Microsoft",
-            "WareProducerQtyWithNa": 124,
+            "WareProducerQtyWithNa": 118,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 951,
-        "CategoryTreeId": 88,
+        "CategoryTreeId": 92,
         "PermissionForCategoryView": null
       },
       {
@@ -1987,7 +2025,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2200,
-            "CategoryTreeId": 105,
+            "CategoryTreeId": 108,
             "PermissionForCategoryView": null
           },
           {
@@ -2025,7 +2063,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2205,
-            "CategoryTreeId": 106,
+            "CategoryTreeId": 109,
             "PermissionForCategoryView": null
           },
           {
@@ -2047,7 +2085,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2210,
-            "CategoryTreeId": 107,
+            "CategoryTreeId": 110,
             "PermissionForCategoryView": null
           },
           {
@@ -2077,7 +2115,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2215,
-            "CategoryTreeId": 108,
+            "CategoryTreeId": 111,
             "PermissionForCategoryView": null
           },
           {
@@ -2099,7 +2137,7 @@
                     "WareProducerCode": "Seagate",
                     "S_WareProducerCode": "seagate",
                     "WareProducerName": "Seagate",
-                    "WareProducerQtyWithNa": 84,
+                    "WareProducerQtyWithNa": 47,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -2114,7 +2152,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2225,
-                "CategoryTreeId": 110,
+                "CategoryTreeId": 113,
                 "PermissionForCategoryView": null
               },
               {
@@ -2129,7 +2167,7 @@
                     "WareProducerCode": "Seagate",
                     "S_WareProducerCode": "seagate",
                     "WareProducerName": "Seagate",
-                    "WareProducerQtyWithNa": 105,
+                    "WareProducerQtyWithNa": 200,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -2137,7 +2175,7 @@
                     "WareProducerCode": "TOSHIBA",
                     "S_WareProducerCode": "toshiba",
                     "WareProducerName": "TOSHIBA",
-                    "WareProducerQtyWithNa": 443,
+                    "WareProducerQtyWithNa": 439,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -2145,14 +2183,14 @@
                     "WareProducerCode": "WD",
                     "S_WareProducerCode": "wd",
                     "WareProducerName": "WD",
-                    "WareProducerQtyWithNa": 233,
+                    "WareProducerQtyWithNa": 209,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2230,
-                "CategoryTreeId": 111,
+                "CategoryTreeId": 114,
                 "PermissionForCategoryView": null
               },
               {
@@ -2183,7 +2221,7 @@
                     "WareProducerCode": "SAMSUNG",
                     "S_WareProducerCode": "samsung",
                     "WareProducerName": "SAMSUNG",
-                    "WareProducerQtyWithNa": 12,
+                    "WareProducerQtyWithNa": 6,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -2199,22 +2237,22 @@
                     "WareProducerCode": "Synology",
                     "S_WareProducerCode": "synology",
                     "WareProducerName": "Synology",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 0,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": true
+                    "HasVendorAvailableItems": false
                   },
                   {
                     "WareProducerCode": "WD",
                     "S_WareProducerCode": "wd",
                     "WareProducerName": "WD",
-                    "WareProducerQtyWithNa": 3,
+                    "WareProducerQtyWithNa": 2,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2235,
-                "CategoryTreeId": 112,
+                "CategoryTreeId": 115,
                 "PermissionForCategoryView": null
               },
               {
@@ -2237,22 +2275,14 @@
                     "WareProducerCode": "SAMSUNG",
                     "S_WareProducerCode": "samsung",
                     "WareProducerName": "SAMSUNG",
-                    "WareProducerQtyWithNa": 120,
+                    "WareProducerQtyWithNa": 114,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "WD",
-                    "S_WareProducerCode": "wd",
-                    "WareProducerName": "WD",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2240,
-                "CategoryTreeId": 113,
+                "CategoryTreeId": 116,
                 "PermissionForCategoryView": null
               }
             ],
@@ -2277,7 +2307,7 @@
                 "WareProducerCode": "SAMSUNG",
                 "S_WareProducerCode": "samsung",
                 "WareProducerName": "SAMSUNG",
-                "WareProducerQtyWithNa": 132,
+                "WareProducerQtyWithNa": 120,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2285,7 +2315,7 @@
                 "WareProducerCode": "Seagate",
                 "S_WareProducerCode": "seagate",
                 "WareProducerName": "Seagate",
-                "WareProducerQtyWithNa": 199,
+                "WareProducerQtyWithNa": 257,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2293,15 +2323,15 @@
                 "WareProducerCode": "Synology",
                 "S_WareProducerCode": "synology",
                 "WareProducerName": "Synology",
-                "WareProducerQtyWithNa": 2,
+                "WareProducerQtyWithNa": 0,
                 "HideInB2B": false,
-                "HasVendorAvailableItems": true
+                "HasVendorAvailableItems": false
               },
               {
                 "WareProducerCode": "TOSHIBA",
                 "S_WareProducerCode": "toshiba",
                 "WareProducerName": "TOSHIBA",
-                "WareProducerQtyWithNa": 443,
+                "WareProducerQtyWithNa": 439,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2309,14 +2339,14 @@
                 "WareProducerCode": "WD",
                 "S_WareProducerCode": "wd",
                 "WareProducerName": "WD",
-                "WareProducerQtyWithNa": 236,
+                "WareProducerQtyWithNa": 211,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2220,
-            "CategoryTreeId": 109,
+            "CategoryTreeId": 112,
             "PermissionForCategoryView": null
           },
           {
@@ -2346,7 +2376,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2260,
-            "CategoryTreeId": 116,
+            "CategoryTreeId": 120,
             "PermissionForCategoryView": null
           }
         ],
@@ -2419,7 +2449,7 @@
             "WareProducerCode": "SAMSUNG",
             "S_WareProducerCode": "samsung",
             "WareProducerName": "SAMSUNG",
-            "WareProducerQtyWithNa": 132,
+            "WareProducerQtyWithNa": 120,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2427,7 +2457,7 @@
             "WareProducerCode": "Seagate",
             "S_WareProducerCode": "seagate",
             "WareProducerName": "Seagate",
-            "WareProducerQtyWithNa": 199,
+            "WareProducerQtyWithNa": 257,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2435,15 +2465,15 @@
             "WareProducerCode": "Synology",
             "S_WareProducerCode": "synology",
             "WareProducerName": "Synology",
-            "WareProducerQtyWithNa": 2,
+            "WareProducerQtyWithNa": 0,
             "HideInB2B": false,
-            "HasVendorAvailableItems": true
+            "HasVendorAvailableItems": false
           },
           {
             "WareProducerCode": "TOSHIBA",
             "S_WareProducerCode": "toshiba",
             "WareProducerName": "TOSHIBA",
-            "WareProducerQtyWithNa": 443,
+            "WareProducerQtyWithNa": 439,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2451,14 +2481,14 @@
             "WareProducerCode": "WD",
             "S_WareProducerCode": "wd",
             "WareProducerName": "WD",
-            "WareProducerQtyWithNa": 236,
+            "WareProducerQtyWithNa": 211,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 952,
-        "CategoryTreeId": 104,
+        "CategoryTreeId": 107,
         "PermissionForCategoryView": null
       },
       {
@@ -2483,6 +2513,14 @@
                 "S_ParentCategoryId": "нинф_вн жесткие диск",
                 "SubCategories": [],
                 "Vendors": [
+                  {
+                    "WareProducerCode": "Hikvision",
+                    "S_WareProducerCode": "hikvision",
+                    "WareProducerName": "Hikvision",
+                    "WareProducerQtyWithNa": 0,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": false
+                  },
                   {
                     "WareProducerCode": "Seagate",
                     "S_WareProducerCode": "seagate",
@@ -2510,7 +2548,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 51,
-                "CategoryTreeId": 119,
+                "CategoryTreeId": 123,
                 "PermissionForCategoryView": null
               },
               {
@@ -2522,6 +2560,14 @@
                 "SubCategories": [],
                 "Vendors": [
                   {
+                    "WareProducerCode": "Hikvision",
+                    "S_WareProducerCode": "hikvision",
+                    "WareProducerName": "Hikvision",
+                    "WareProducerQtyWithNa": 0,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": false
+                  },
+                  {
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
@@ -2532,11 +2578,19 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 52,
-                "CategoryTreeId": 120,
+                "CategoryTreeId": 124,
                 "PermissionForCategoryView": null
               }
             ],
             "Vendors": [
+              {
+                "WareProducerCode": "Hikvision",
+                "S_WareProducerCode": "hikvision",
+                "WareProducerName": "Hikvision",
+                "WareProducerQtyWithNa": 0,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": false
+              },
               {
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
@@ -2572,7 +2626,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 50,
-            "CategoryTreeId": 118,
+            "CategoryTreeId": 122,
             "PermissionForCategoryView": null
           },
           {
@@ -2595,14 +2649,14 @@
                 "WareProducerCode": "Synology",
                 "S_WareProducerCode": "synology",
                 "WareProducerName": "Synology",
-                "WareProducerQtyWithNa": 5,
+                "WareProducerQtyWithNa": 4,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 54,
-            "CategoryTreeId": 121,
+            "CategoryTreeId": 125,
             "PermissionForCategoryView": null
           },
           {
@@ -2624,7 +2678,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 55,
-            "CategoryTreeId": 122,
+            "CategoryTreeId": 126,
             "PermissionForCategoryView": null
           },
           {
@@ -2646,7 +2700,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 60,
-            "CategoryTreeId": 123,
+            "CategoryTreeId": 127,
             "PermissionForCategoryView": null
           }
         ],
@@ -2695,7 +2749,7 @@
             "WareProducerCode": "Synology",
             "S_WareProducerCode": "synology",
             "WareProducerName": "Synology",
-            "WareProducerQtyWithNa": 5,
+            "WareProducerQtyWithNa": 4,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2718,7 +2772,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 953,
-        "CategoryTreeId": 117,
+        "CategoryTreeId": 121,
         "PermissionForCategoryView": null
       },
       {
@@ -2740,7 +2794,7 @@
                 "WareProducerCode": "Nokia",
                 "S_WareProducerCode": "nokia",
                 "WareProducerName": "Nokia",
-                "WareProducerQtyWithNa": 360,
+                "WareProducerQtyWithNa": 295,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2748,7 +2802,7 @@
                 "WareProducerCode": "SAMSUNG",
                 "S_WareProducerCode": "samsung",
                 "WareProducerName": "SAMSUNG",
-                "WareProducerQtyWithNa": 517,
+                "WareProducerQtyWithNa": 364,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -2759,11 +2813,19 @@
                 "WareProducerQtyWithNa": 4,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
+              },
+              {
+                "WareProducerCode": "WIKO",
+                "S_WareProducerCode": "wiko",
+                "WareProducerName": "WIKO",
+                "WareProducerQtyWithNa": 400,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1610,
-            "CategoryTreeId": 125,
+            "CategoryTreeId": 129,
             "PermissionForCategoryView": null
           },
           {
@@ -2786,14 +2848,14 @@
                 "WareProducerCode": "Nokia",
                 "S_WareProducerCode": "nokia",
                 "WareProducerName": "Nokia",
-                "WareProducerQtyWithNa": 3556,
+                "WareProducerQtyWithNa": 3542,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1620,
-            "CategoryTreeId": 126,
+            "CategoryTreeId": 130,
             "PermissionForCategoryView": null
           }
         ],
@@ -2810,7 +2872,7 @@
             "WareProducerCode": "Nokia",
             "S_WareProducerCode": "nokia",
             "WareProducerName": "Nokia",
-            "WareProducerQtyWithNa": 3916,
+            "WareProducerQtyWithNa": 3837,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2818,7 +2880,7 @@
             "WareProducerCode": "SAMSUNG",
             "S_WareProducerCode": "samsung",
             "WareProducerName": "SAMSUNG",
-            "WareProducerQtyWithNa": 517,
+            "WareProducerQtyWithNa": 364,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -2829,11 +2891,19 @@
             "WareProducerQtyWithNa": 4,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
+          },
+          {
+            "WareProducerCode": "WIKO",
+            "S_WareProducerCode": "wiko",
+            "WareProducerName": "WIKO",
+            "WareProducerQtyWithNa": 400,
+            "HideInB2B": false,
+            "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 1300,
-        "CategoryTreeId": 124,
+        "CategoryTreeId": 128,
         "PermissionForCategoryView": null
       },
       {
@@ -2851,6 +2921,28 @@
             "S_ParentCategoryId": "фвидео",
             "SubCategories": [
               {
+                "CategoryID": "ФВидео_Компк ф см_об",
+                "S_CategoryID": "фвидео_компк ф см_об",
+                "CategoryName": "Компактные фотоаппараты со сменными объективами",
+                "ParentCategoryId": "ФВидео_Фотокамеры",
+                "S_ParentCategoryId": "фвидео_фотокамеры",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "Canon",
+                    "S_WareProducerCode": "canon",
+                    "WareProducerName": "Canon",
+                    "WareProducerQtyWithNa": 1,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 1330,
+                "CategoryTreeId": 134,
+                "PermissionForCategoryView": null
+              },
+              {
                 "CategoryID": "ФВидео_Зеркальные ф",
                 "S_CategoryID": "фвидео_зеркальные ф",
                 "CategoryName": "Зеркальные фотокамеры",
@@ -2862,14 +2954,14 @@
                     "WareProducerCode": "Canon",
                     "S_WareProducerCode": "canon",
                     "WareProducerName": "Canon",
-                    "WareProducerQtyWithNa": 20,
+                    "WareProducerQtyWithNa": 4,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1340,
-                "CategoryTreeId": 130,
+                "CategoryTreeId": 135,
                 "PermissionForCategoryView": null
               }
             ],
@@ -2878,14 +2970,14 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 20,
+                "WareProducerQtyWithNa": 5,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1310,
-            "CategoryTreeId": 128,
+            "CategoryTreeId": 132,
             "PermissionForCategoryView": null
           },
           {
@@ -2914,7 +3006,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1370,
-                "CategoryTreeId": 133,
+                "CategoryTreeId": 138,
                 "PermissionForCategoryView": null
               }
             ],
@@ -2930,7 +3022,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 1360,
-            "CategoryTreeId": 132,
+            "CategoryTreeId": 137,
             "PermissionForCategoryView": null
           },
           {
@@ -2959,7 +3051,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1410,
-                "CategoryTreeId": 135,
+                "CategoryTreeId": 140,
                 "PermissionForCategoryView": null
               },
               {
@@ -2989,7 +3081,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1430,
-                "CategoryTreeId": 136,
+                "CategoryTreeId": 141,
                 "PermissionForCategoryView": null
               },
               {
@@ -3001,6 +3093,14 @@
                 "SubCategories": [],
                 "Vendors": [
                   {
+                    "WareProducerCode": "Canon",
+                    "S_WareProducerCode": "canon",
+                    "WareProducerName": "Canon",
+                    "WareProducerQtyWithNa": 1,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  },
+                  {
                     "WareProducerCode": "DJI",
                     "S_WareProducerCode": "dji",
                     "WareProducerName": "DJI",
@@ -3011,7 +3111,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1490,
-                "CategoryTreeId": 140,
+                "CategoryTreeId": 145,
                 "PermissionForCategoryView": null
               }
             ],
@@ -3020,7 +3120,7 @@
                 "WareProducerCode": "Canon",
                 "S_WareProducerCode": "canon",
                 "WareProducerName": "Canon",
-                "WareProducerQtyWithNa": 13,
+                "WareProducerQtyWithNa": 14,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3035,7 +3135,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30040,
-            "CategoryTreeId": 134,
+            "CategoryTreeId": 139,
             "PermissionForCategoryView": null
           }
         ],
@@ -3044,7 +3144,7 @@
             "WareProducerCode": "Canon",
             "S_WareProducerCode": "canon",
             "WareProducerName": "Canon",
-            "WareProducerQtyWithNa": 33,
+            "WareProducerQtyWithNa": 19,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3059,7 +3159,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 1600,
-        "CategoryTreeId": 127,
+        "CategoryTreeId": 131,
         "PermissionForCategoryView": null
       },
       {
@@ -3081,14 +3181,14 @@
                 "WareProducerCode": "KIVI",
                 "S_WareProducerCode": "kivi",
                 "WareProducerName": "KIVI",
-                "WareProducerQtyWithNa": 2150,
+                "WareProducerQtyWithNa": 2149,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2000,
-            "CategoryTreeId": 142,
+            "CategoryTreeId": 147,
             "PermissionForCategoryView": null
           },
           {
@@ -3110,7 +3210,7 @@
                     "WareProducerCode": "Accesstyle",
                     "S_WareProducerCode": "accesstyle",
                     "WareProducerName": "Accesstyle",
-                    "WareProducerQtyWithNa": 180,
+                    "WareProducerQtyWithNa": 76,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -3125,7 +3225,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2,
-                "CategoryTreeId": 146,
+                "CategoryTreeId": 150,
                 "PermissionForCategoryView": null
               },
               {
@@ -3137,25 +3237,17 @@
                 "SubCategories": [],
                 "Vendors": [
                   {
-                    "WareProducerCode": "JBL",
-                    "S_WareProducerCode": "jbl",
-                    "WareProducerName": "JBL",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
-                  },
-                  {
                     "WareProducerCode": "MARSHALL",
                     "S_WareProducerCode": "marshall",
                     "WareProducerName": "MARSHALL",
-                    "WareProducerQtyWithNa": 15,
+                    "WareProducerQtyWithNa": 10,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4,
-                "CategoryTreeId": 147,
+                "CategoryTreeId": 151,
                 "PermissionForCategoryView": null
               },
               {
@@ -3166,14 +3258,6 @@
                 "S_ParentCategoryId": "акс_наушн_гарнитуры",
                 "SubCategories": [],
                 "Vendors": [
-                  {
-                    "WareProducerCode": "HP",
-                    "S_WareProducerCode": "hp",
-                    "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
-                  },
                   {
                     "WareProducerCode": "JBL",
                     "S_WareProducerCode": "jbl",
@@ -3186,7 +3270,7 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 24,
+                    "WareProducerQtyWithNa": 154,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -3201,7 +3285,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6,
-                "CategoryTreeId": 148,
+                "CategoryTreeId": 152,
                 "PermissionForCategoryView": null
               },
               {
@@ -3231,7 +3315,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 8,
-                "CategoryTreeId": 149,
+                "CategoryTreeId": 153,
                 "PermissionForCategoryView": null
               },
               {
@@ -3254,14 +3338,14 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 69,
+                    "WareProducerQtyWithNa": 454,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2280,
-                "CategoryTreeId": 151,
+                "CategoryTreeId": 155,
                 "PermissionForCategoryView": null
               }
             ],
@@ -3270,17 +3354,9 @@
                 "WareProducerCode": "Accesstyle",
                 "S_WareProducerCode": "accesstyle",
                 "WareProducerName": "Accesstyle",
-                "WareProducerQtyWithNa": 180,
+                "WareProducerQtyWithNa": 76,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
-              },
-              {
-                "WareProducerCode": "HP",
-                "S_WareProducerCode": "hp",
-                "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 0,
-                "HideInB2B": false,
-                "HasVendorAvailableItems": false
               },
               {
                 "WareProducerCode": "JBL",
@@ -3294,7 +3370,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 24,
+                "WareProducerQtyWithNa": 154,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3302,7 +3378,7 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 69,
+                "WareProducerQtyWithNa": 454,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3310,7 +3386,7 @@
                 "WareProducerCode": "MARSHALL",
                 "S_WareProducerCode": "marshall",
                 "WareProducerName": "MARSHALL",
-                "WareProducerQtyWithNa": 15,
+                "WareProducerQtyWithNa": 10,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3325,7 +3401,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2080,
-            "CategoryTreeId": 145,
+            "CategoryTreeId": 149,
             "PermissionForCategoryView": null
           },
           {
@@ -3348,7 +3424,7 @@
                 "WareProducerCode": "JBL",
                 "S_WareProducerCode": "jbl",
                 "WareProducerName": "JBL",
-                "WareProducerQtyWithNa": 25,
+                "WareProducerQtyWithNa": 5,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3356,14 +3432,14 @@
                 "WareProducerCode": "MARSHALL",
                 "S_WareProducerCode": "marshall",
                 "WareProducerName": "MARSHALL",
-                "WareProducerQtyWithNa": 19,
+                "WareProducerQtyWithNa": 14,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2090,
-            "CategoryTreeId": 152,
+            "CategoryTreeId": 156,
             "PermissionForCategoryView": null
           }
         ],
@@ -3372,23 +3448,15 @@
             "WareProducerCode": "Accesstyle",
             "S_WareProducerCode": "accesstyle",
             "WareProducerName": "Accesstyle",
-            "WareProducerQtyWithNa": 180,
+            "WareProducerQtyWithNa": 76,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
-          },
-          {
-            "WareProducerCode": "HP",
-            "S_WareProducerCode": "hp",
-            "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 0,
-            "HideInB2B": false,
-            "HasVendorAvailableItems": false
           },
           {
             "WareProducerCode": "JBL",
             "S_WareProducerCode": "jbl",
             "WareProducerName": "JBL",
-            "WareProducerQtyWithNa": 28,
+            "WareProducerQtyWithNa": 8,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3396,7 +3464,7 @@
             "WareProducerCode": "KIVI",
             "S_WareProducerCode": "kivi",
             "WareProducerName": "KIVI",
-            "WareProducerQtyWithNa": 2150,
+            "WareProducerQtyWithNa": 2149,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3404,7 +3472,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 24,
+            "WareProducerQtyWithNa": 154,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3412,7 +3480,7 @@
             "WareProducerCode": "Logitech",
             "S_WareProducerCode": "logitech",
             "WareProducerName": "Logitech",
-            "WareProducerQtyWithNa": 69,
+            "WareProducerQtyWithNa": 454,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3420,7 +3488,7 @@
             "WareProducerCode": "MARSHALL",
             "S_WareProducerCode": "marshall",
             "WareProducerName": "MARSHALL",
-            "WareProducerQtyWithNa": 34,
+            "WareProducerQtyWithNa": 24,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -3435,7 +3503,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 1650,
-        "CategoryTreeId": 141,
+        "CategoryTreeId": 146,
         "PermissionForCategoryView": null
       },
       {
@@ -3471,14 +3539,14 @@
                         "WareProducerCode": "Belkin",
                         "S_WareProducerCode": "belkin",
                         "WareProducerName": "Belkin",
-                        "WareProducerQtyWithNa": 7,
+                        "WareProducerQtyWithNa": 6,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 370,
-                    "CategoryTreeId": 157,
+                    "CategoryTreeId": 161,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -3487,14 +3555,14 @@
                     "WareProducerCode": "Belkin",
                     "S_WareProducerCode": "belkin",
                     "WareProducerName": "Belkin",
-                    "WareProducerQtyWithNa": 7,
+                    "WareProducerQtyWithNa": 6,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 30060,
-                "CategoryTreeId": 156,
+                "CategoryTreeId": 160,
                 "PermissionForCategoryView": null
               }
             ],
@@ -3503,14 +3571,14 @@
                 "WareProducerCode": "Belkin",
                 "S_WareProducerCode": "belkin",
                 "WareProducerName": "Belkin",
-                "WareProducerQtyWithNa": 7,
+                "WareProducerQtyWithNa": 6,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30010,
-            "CategoryTreeId": 154,
+            "CategoryTreeId": 158,
             "PermissionForCategoryView": null
           },
           {
@@ -3539,7 +3607,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 590,
-                "CategoryTreeId": 161,
+                "CategoryTreeId": 165,
                 "PermissionForCategoryView": null
               },
               {
@@ -3554,7 +3622,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 9,
+                    "WareProducerQtyWithNa": 1010,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -3562,14 +3630,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 1,
+                    "WareProducerQtyWithNa": 16,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 620,
-                "CategoryTreeId": 163,
+                "CategoryTreeId": 167,
                 "PermissionForCategoryView": null
               },
               {
@@ -3579,36 +3647,6 @@
                 "ParentCategoryId": "АКС_Ноутбуки",
                 "S_ParentCategoryId": "акс_ноутбуки",
                 "SubCategories": [
-                  {
-                    "CategoryID": "Ноут_Сумки 13-14",
-                    "S_CategoryID": "ноут_сумки 13-14",
-                    "CategoryName": "Сумки для ноутбуков с экраном 13 - 14''",
-                    "ParentCategoryId": "Ноут_Сумки для ноутб",
-                    "S_ParentCategoryId": "ноут_сумки для ноутб",
-                    "SubCategories": [],
-                    "Vendors": [
-                      {
-                        "WareProducerCode": "HP",
-                        "S_WareProducerCode": "hp",
-                        "WareProducerName": "HP",
-                        "WareProducerQtyWithNa": 8,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": true
-                      },
-                      {
-                        "WareProducerCode": "Lenovo",
-                        "S_WareProducerCode": "lenovo",
-                        "WareProducerName": "Lenovo",
-                        "WareProducerQtyWithNa": 0,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": false
-                      }
-                    ],
-                    "ConfiguratorActive": false,
-                    "CategoryOrder": 20,
-                    "CategoryTreeId": 165,
-                    "PermissionForCategoryView": null
-                  },
                   {
                     "CategoryID": "Ноут_Сумки 15-16",
                     "S_CategoryID": "ноут_сумки 15-16",
@@ -3621,7 +3659,7 @@
                         "WareProducerCode": "HP",
                         "S_WareProducerCode": "hp",
                         "WareProducerName": "HP",
-                        "WareProducerQtyWithNa": 115,
+                        "WareProducerQtyWithNa": 76,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -3629,14 +3667,36 @@
                         "WareProducerCode": "Lenovo",
                         "S_WareProducerCode": "lenovo",
                         "WareProducerName": "Lenovo",
-                        "WareProducerQtyWithNa": 399,
+                        "WareProducerQtyWithNa": 379,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 30,
-                    "CategoryTreeId": 166,
+                    "CategoryTreeId": 170,
+                    "PermissionForCategoryView": null
+                  },
+                  {
+                    "CategoryID": "Ноут_Сумки 17",
+                    "S_CategoryID": "ноут_сумки 17",
+                    "CategoryName": "Сумки для ноутбуков с экраном 17'' и более",
+                    "ParentCategoryId": "Ноут_Сумки для ноутб",
+                    "S_ParentCategoryId": "ноут_сумки для ноутб",
+                    "SubCategories": [],
+                    "Vendors": [
+                      {
+                        "WareProducerCode": "HP",
+                        "S_WareProducerCode": "hp",
+                        "WareProducerName": "HP",
+                        "WareProducerQtyWithNa": 4,
+                        "HideInB2B": false,
+                        "HasVendorAvailableItems": true
+                      }
+                    ],
+                    "ConfiguratorActive": false,
+                    "CategoryOrder": 40,
+                    "CategoryTreeId": 171,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -3645,7 +3705,7 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 123,
+                    "WareProducerQtyWithNa": 80,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -3653,14 +3713,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 399,
+                    "WareProducerQtyWithNa": 379,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 640,
-                "CategoryTreeId": 164,
+                "CategoryTreeId": 168,
                 "PermissionForCategoryView": null
               },
               {
@@ -3683,9 +3743,9 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 70,
+                    "WareProducerQtyWithNa": 0,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": true
+                    "HasVendorAvailableItems": false
                   },
                   {
                     "WareProducerCode": "Logitech",
@@ -3698,7 +3758,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 645,
-                "CategoryTreeId": 169,
+                "CategoryTreeId": 173,
                 "PermissionForCategoryView": null
               }
             ],
@@ -3707,7 +3767,7 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 142,
+                "WareProducerQtyWithNa": 1100,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3715,7 +3775,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 472,
+                "WareProducerQtyWithNa": 397,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3730,7 +3790,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30011,
-            "CategoryTreeId": 160,
+            "CategoryTreeId": 164,
             "PermissionForCategoryView": null
           },
           {
@@ -3766,7 +3826,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 55,
-                    "CategoryTreeId": 175,
+                    "CategoryTreeId": 179,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -3782,7 +3842,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 50,
-                "CategoryTreeId": 174,
+                "CategoryTreeId": 178,
                 "PermissionForCategoryView": null
               },
               {
@@ -3811,7 +3871,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 70,
-                    "CategoryTreeId": 177,
+                    "CategoryTreeId": 181,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -3826,14 +3886,14 @@
                         "WareProducerCode": "Accesstyle",
                         "S_WareProducerCode": "accesstyle",
                         "WareProducerName": "Accesstyle",
-                        "WareProducerQtyWithNa": 11,
+                        "WareProducerQtyWithNa": 9,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 80,
-                    "CategoryTreeId": 178,
+                    "CategoryTreeId": 182,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -3848,14 +3908,14 @@
                         "WareProducerCode": "Accesstyle",
                         "S_WareProducerCode": "accesstyle",
                         "WareProducerName": "Accesstyle",
-                        "WareProducerQtyWithNa": 278,
+                        "WareProducerQtyWithNa": 477,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 90,
-                    "CategoryTreeId": 179,
+                    "CategoryTreeId": 183,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -3864,7 +3924,7 @@
                     "WareProducerCode": "Accesstyle",
                     "S_WareProducerCode": "accesstyle",
                     "WareProducerName": "Accesstyle",
-                    "WareProducerQtyWithNa": 289,
+                    "WareProducerQtyWithNa": 486,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -3887,7 +3947,29 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 60,
-                "CategoryTreeId": 176,
+                "CategoryTreeId": 180,
+                "PermissionForCategoryView": null
+              },
+              {
+                "CategoryID": "Мобил_Акс_Прочее",
+                "S_CategoryID": "мобил_акс_прочее",
+                "CategoryName": "Прочие аксессуары для смартфонов и планшетов",
+                "ParentCategoryId": "АКС_Мобил",
+                "S_ParentCategoryId": "акс_мобил",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "Logitech",
+                    "S_WareProducerCode": "logitech",
+                    "WareProducerName": "Logitech",
+                    "WareProducerQtyWithNa": 24,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 80,
+                "CategoryTreeId": 185,
                 "PermissionForCategoryView": null
               }
             ],
@@ -3896,7 +3978,7 @@
                 "WareProducerCode": "Accesstyle",
                 "S_WareProducerCode": "accesstyle",
                 "WareProducerName": "Accesstyle",
-                "WareProducerQtyWithNa": 289,
+                "WareProducerQtyWithNa": 486,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -3907,14 +3989,6 @@
                 "WareProducerQtyWithNa": 70,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
-              },
-              {
-                "WareProducerCode": "DJI",
-                "S_WareProducerCode": "dji",
-                "WareProducerName": "DJI",
-                "WareProducerQtyWithNa": 0,
-                "HideInB2B": false,
-                "HasVendorAvailableItems": false
               },
               {
                 "WareProducerCode": "Kolner",
@@ -3928,14 +4002,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 0,
+                "WareProducerQtyWithNa": 24,
                 "HideInB2B": false,
-                "HasVendorAvailableItems": false
+                "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30012,
-            "CategoryTreeId": 170,
+            "CategoryTreeId": 174,
             "PermissionForCategoryView": null
           },
           {
@@ -3950,14 +4024,14 @@
                 "WareProducerCode": "Accesstyle",
                 "S_WareProducerCode": "accesstyle",
                 "WareProducerName": "Accesstyle",
-                "WareProducerQtyWithNa": 200,
+                "WareProducerQtyWithNa": 599,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30013,
-            "CategoryTreeId": 182,
+            "CategoryTreeId": 186,
             "PermissionForCategoryView": null
           },
           {
@@ -3993,7 +4067,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 1380,
-                    "CategoryTreeId": 187,
+                    "CategoryTreeId": 191,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -4009,7 +4083,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 1740,
-                "CategoryTreeId": 185,
+                "CategoryTreeId": 189,
                 "PermissionForCategoryView": null
               },
               {
@@ -4024,14 +4098,14 @@
                     "WareProducerCode": "Yandex",
                     "S_WareProducerCode": "yandex",
                     "WareProducerName": "Yandex",
-                    "WareProducerQtyWithNa": 3348,
+                    "WareProducerQtyWithNa": 3151,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85360,
-                "CategoryTreeId": 189,
+                "CategoryTreeId": 193,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4048,14 +4122,14 @@
                 "WareProducerCode": "Yandex",
                 "S_WareProducerCode": "yandex",
                 "WareProducerName": "Yandex",
-                "WareProducerQtyWithNa": 3348,
+                "WareProducerQtyWithNa": 3151,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30050,
-            "CategoryTreeId": 183,
+            "CategoryTreeId": 187,
             "PermissionForCategoryView": null
           },
           {
@@ -4077,14 +4151,14 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 8,
+                    "WareProducerQtyWithNa": 200,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 30075,
-                "CategoryTreeId": 204,
+                "CategoryTreeId": 206,
                 "PermissionForCategoryView": null
               },
               {
@@ -4113,7 +4187,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 30090,
-                    "CategoryTreeId": 207,
+                    "CategoryTreeId": 209,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -4129,7 +4203,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 30080,
-                "CategoryTreeId": 205,
+                "CategoryTreeId": 207,
                 "PermissionForCategoryView": null
               },
               {
@@ -4144,7 +4218,7 @@
                     "WareProducerCode": "GameSir",
                     "S_WareProducerCode": "gamesir",
                     "WareProducerName": "GameSir",
-                    "WareProducerQtyWithNa": 16,
+                    "WareProducerQtyWithNa": 15,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4159,7 +4233,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 30085,
-                "CategoryTreeId": 208,
+                "CategoryTreeId": 210,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4176,7 +4250,7 @@
                 "WareProducerCode": "GameSir",
                 "S_WareProducerCode": "gamesir",
                 "WareProducerName": "GameSir",
-                "WareProducerQtyWithNa": 16,
+                "WareProducerQtyWithNa": 15,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4184,14 +4258,14 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 18,
+                "WareProducerQtyWithNa": 210,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 30075,
-            "CategoryTreeId": 203,
+            "CategoryTreeId": 205,
             "PermissionForCategoryView": null
           }
         ],
@@ -4200,7 +4274,7 @@
             "WareProducerCode": "Accesstyle",
             "S_WareProducerCode": "accesstyle",
             "WareProducerName": "Accesstyle",
-            "WareProducerQtyWithNa": 489,
+            "WareProducerQtyWithNa": 1085,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4208,7 +4282,7 @@
             "WareProducerCode": "Belkin",
             "S_WareProducerCode": "belkin",
             "WareProducerName": "Belkin",
-            "WareProducerQtyWithNa": 77,
+            "WareProducerQtyWithNa": 76,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4224,7 +4298,7 @@
             "WareProducerCode": "GameSir",
             "S_WareProducerCode": "gamesir",
             "WareProducerName": "GameSir",
-            "WareProducerQtyWithNa": 16,
+            "WareProducerQtyWithNa": 15,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4232,7 +4306,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 142,
+            "WareProducerQtyWithNa": 1100,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4248,7 +4322,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 472,
+            "WareProducerQtyWithNa": 397,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4256,7 +4330,7 @@
             "WareProducerCode": "Logitech",
             "S_WareProducerCode": "logitech",
             "WareProducerName": "Logitech",
-            "WareProducerQtyWithNa": 18,
+            "WareProducerQtyWithNa": 234,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4264,14 +4338,14 @@
             "WareProducerCode": "Yandex",
             "S_WareProducerCode": "yandex",
             "WareProducerName": "Yandex",
-            "WareProducerQtyWithNa": 3348,
+            "WareProducerQtyWithNa": 3151,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 5200,
-        "CategoryTreeId": 153,
+        "CategoryTreeId": 157,
         "PermissionForCategoryView": null
       },
       {
@@ -4293,14 +4367,14 @@
                 "WareProducerCode": "HIPER",
                 "S_WareProducerCode": "hiper",
                 "WareProducerName": "HIPER",
-                "WareProducerQtyWithNa": 8,
+                "WareProducerQtyWithNa": 5,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 31048,
-            "CategoryTreeId": 217,
+            "CategoryTreeId": 219,
             "PermissionForCategoryView": null
           },
           {
@@ -4315,7 +4389,7 @@
                 "WareProducerCode": "HIPER",
                 "S_WareProducerCode": "hiper",
                 "WareProducerName": "HIPER",
-                "WareProducerQtyWithNa": 2,
+                "WareProducerQtyWithNa": 16,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4323,14 +4397,14 @@
                 "WareProducerCode": "Tribe_USD",
                 "S_WareProducerCode": "tribe_usd",
                 "WareProducerName": "Tribe_USD",
-                "WareProducerQtyWithNa": 220,
+                "WareProducerQtyWithNa": 292,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 31050,
-            "CategoryTreeId": 218,
+            "CategoryTreeId": 220,
             "PermissionForCategoryView": null
           }
         ],
@@ -4339,7 +4413,7 @@
             "WareProducerCode": "HIPER",
             "S_WareProducerCode": "hiper",
             "WareProducerName": "HIPER",
-            "WareProducerQtyWithNa": 10,
+            "WareProducerQtyWithNa": 21,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4347,14 +4421,14 @@
             "WareProducerCode": "Tribe_USD",
             "S_WareProducerCode": "tribe_usd",
             "WareProducerName": "Tribe_USD",
-            "WareProducerQtyWithNa": 220,
+            "WareProducerQtyWithNa": 292,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 5300,
-        "CategoryTreeId": 215,
+        "CategoryTreeId": 217,
         "PermissionForCategoryView": null
       },
       {
@@ -4383,7 +4457,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 70,
-            "CategoryTreeId": 222,
+            "CategoryTreeId": 224,
             "PermissionForCategoryView": null
           }
         ],
@@ -4399,7 +4473,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 5500,
-        "CategoryTreeId": 220,
+        "CategoryTreeId": 222,
         "PermissionForCategoryView": null
       },
       {
@@ -4409,6 +4483,67 @@
         "ParentCategoryId": null,
         "S_ParentCategoryId": null,
         "SubCategories": [
+          {
+            "CategoryID": "УмД_ОсвещениеЭлектр",
+            "S_CategoryID": "умд_освещениеэлектр",
+            "CategoryName": "Освещение и электрика",
+            "ParentCategoryId": "УмД",
+            "S_ParentCategoryId": "умд",
+            "SubCategories": [
+              {
+                "CategoryID": "УмД_Лампы",
+                "S_CategoryID": "умд_лампы",
+                "CategoryName": "Умные лампы",
+                "ParentCategoryId": "УмД_ОсвещениеЭлектр",
+                "S_ParentCategoryId": "умд_освещениеэлектр",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "PHILIPS",
+                    "S_WareProducerCode": "philips",
+                    "WareProducerName": "PHILIPS",
+                    "WareProducerQtyWithNa": 0,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": false
+                  },
+                  {
+                    "WareProducerCode": "Yandex",
+                    "S_WareProducerCode": "yandex",
+                    "WareProducerName": "Yandex",
+                    "WareProducerQtyWithNa": 1904,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 85050,
+                "CategoryTreeId": 294,
+                "PermissionForCategoryView": null
+              }
+            ],
+            "Vendors": [
+              {
+                "WareProducerCode": "PHILIPS",
+                "S_WareProducerCode": "philips",
+                "WareProducerName": "PHILIPS",
+                "WareProducerQtyWithNa": 0,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": false
+              },
+              {
+                "WareProducerCode": "Yandex",
+                "S_WareProducerCode": "yandex",
+                "WareProducerName": "Yandex",
+                "WareProducerQtyWithNa": 1904,
+                "HideInB2B": false,
+                "HasVendorAvailableItems": true
+              }
+            ],
+            "ConfiguratorActive": false,
+            "CategoryOrder": 85010,
+            "CategoryTreeId": 288,
+            "PermissionForCategoryView": null
+          },
           {
             "CategoryID": "УмД_БытТехника",
             "S_CategoryID": "умд_быттехника",
@@ -4435,7 +4570,7 @@
                         "WareProducerCode": "Dreame",
                         "S_WareProducerCode": "dreame",
                         "WareProducerName": "Dreame",
-                        "WareProducerQtyWithNa": 132,
+                        "WareProducerQtyWithNa": 43,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -4443,14 +4578,14 @@
                         "WareProducerCode": "Kyvol",
                         "S_WareProducerCode": "kyvol",
                         "WareProducerName": "Kyvol",
-                        "WareProducerQtyWithNa": 19,
+                        "WareProducerQtyWithNa": 18,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 85190,
-                    "CategoryTreeId": 306,
+                    "CategoryTreeId": 311,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -4473,14 +4608,14 @@
                         "WareProducerCode": "Jimmy",
                         "S_WareProducerCode": "jimmy",
                         "WareProducerName": "Jimmy",
-                        "WareProducerQtyWithNa": 70,
+                        "WareProducerQtyWithNa": 66,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 85200,
-                    "CategoryTreeId": 307,
+                    "CategoryTreeId": 313,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -4489,7 +4624,7 @@
                     "WareProducerCode": "Dreame",
                     "S_WareProducerCode": "dreame",
                     "WareProducerName": "Dreame",
-                    "WareProducerQtyWithNa": 179,
+                    "WareProducerQtyWithNa": 90,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4497,7 +4632,7 @@
                     "WareProducerCode": "Jimmy",
                     "S_WareProducerCode": "jimmy",
                     "WareProducerName": "Jimmy",
-                    "WareProducerQtyWithNa": 70,
+                    "WareProducerQtyWithNa": 66,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4505,14 +4640,14 @@
                     "WareProducerCode": "Kyvol",
                     "S_WareProducerCode": "kyvol",
                     "WareProducerName": "Kyvol",
-                    "WareProducerQtyWithNa": 19,
+                    "WareProducerQtyWithNa": 18,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85185,
-                "CategoryTreeId": 305,
+                "CategoryTreeId": 310,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4521,7 +4656,7 @@
                 "WareProducerCode": "Dreame",
                 "S_WareProducerCode": "dreame",
                 "WareProducerName": "Dreame",
-                "WareProducerQtyWithNa": 179,
+                "WareProducerQtyWithNa": 90,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4529,7 +4664,7 @@
                 "WareProducerCode": "Jimmy",
                 "S_WareProducerCode": "jimmy",
                 "WareProducerName": "Jimmy",
-                "WareProducerQtyWithNa": 70,
+                "WareProducerQtyWithNa": 66,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4537,14 +4672,14 @@
                 "WareProducerCode": "Kyvol",
                 "S_WareProducerCode": "kyvol",
                 "WareProducerName": "Kyvol",
-                "WareProducerQtyWithNa": 19,
+                "WareProducerQtyWithNa": 18,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 85180,
-            "CategoryTreeId": 304,
+            "CategoryTreeId": 309,
             "PermissionForCategoryView": null
           },
           {
@@ -4573,14 +4708,14 @@
                         "WareProducerCode": "DR.BEI",
                         "S_WareProducerCode": "dr.bei",
                         "WareProducerName": "DR.BEI",
-                        "WareProducerQtyWithNa": 31,
+                        "WareProducerQtyWithNa": 29,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 85265,
-                    "CategoryTreeId": 315,
+                    "CategoryTreeId": 322,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -4589,14 +4724,14 @@
                     "WareProducerCode": "DR.BEI",
                     "S_WareProducerCode": "dr.bei",
                     "WareProducerName": "DR.BEI",
-                    "WareProducerQtyWithNa": 31,
+                    "WareProducerQtyWithNa": 29,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85260,
-                "CategoryTreeId": 314,
+                "CategoryTreeId": 321,
                 "PermissionForCategoryView": null
               },
               {
@@ -4618,14 +4753,14 @@
                         "WareProducerCode": "DR.BEI",
                         "S_WareProducerCode": "dr.bei",
                         "WareProducerName": "DR.BEI",
-                        "WareProducerQtyWithNa": 20,
+                        "WareProducerQtyWithNa": 19,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 85280,
-                    "CategoryTreeId": 317,
+                    "CategoryTreeId": 325,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -4634,14 +4769,14 @@
                     "WareProducerCode": "DR.BEI",
                     "S_WareProducerCode": "dr.bei",
                     "WareProducerName": "DR.BEI",
-                    "WareProducerQtyWithNa": 20,
+                    "WareProducerQtyWithNa": 19,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85275,
-                "CategoryTreeId": 316,
+                "CategoryTreeId": 324,
                 "PermissionForCategoryView": null
               },
               {
@@ -4656,14 +4791,14 @@
                     "WareProducerCode": "YUNMAI",
                     "S_WareProducerCode": "yunmai",
                     "WareProducerName": "YUNMAI",
-                    "WareProducerQtyWithNa": 17,
+                    "WareProducerQtyWithNa": 70,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85295,
-                "CategoryTreeId": 323,
+                "CategoryTreeId": 331,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4672,7 +4807,7 @@
                 "WareProducerCode": "DR.BEI",
                 "S_WareProducerCode": "dr.bei",
                 "WareProducerName": "DR.BEI",
-                "WareProducerQtyWithNa": 51,
+                "WareProducerQtyWithNa": 48,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -4680,14 +4815,14 @@
                 "WareProducerCode": "YUNMAI",
                 "S_WareProducerCode": "yunmai",
                 "WareProducerName": "YUNMAI",
-                "WareProducerQtyWithNa": 17,
+                "WareProducerQtyWithNa": 70,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 85255,
-            "CategoryTreeId": 313,
+            "CategoryTreeId": 320,
             "PermissionForCategoryView": null
           },
           {
@@ -4709,14 +4844,14 @@
                     "WareProducerCode": "Yandex",
                     "S_WareProducerCode": "yandex",
                     "WareProducerName": "Yandex",
-                    "WareProducerQtyWithNa": 10,
+                    "WareProducerQtyWithNa": 800,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 85330,
-                "CategoryTreeId": 328,
+                "CategoryTreeId": 335,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4725,14 +4860,14 @@
                 "WareProducerCode": "Yandex",
                 "S_WareProducerCode": "yandex",
                 "WareProducerName": "Yandex",
-                "WareProducerQtyWithNa": 10,
+                "WareProducerQtyWithNa": 800,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 85319,
-            "CategoryTreeId": 327,
+            "CategoryTreeId": 334,
             "PermissionForCategoryView": null
           }
         ],
@@ -4741,7 +4876,7 @@
             "WareProducerCode": "DR.BEI",
             "S_WareProducerCode": "dr.bei",
             "WareProducerName": "DR.BEI",
-            "WareProducerQtyWithNa": 51,
+            "WareProducerQtyWithNa": 48,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4749,7 +4884,7 @@
             "WareProducerCode": "Dreame",
             "S_WareProducerCode": "dreame",
             "WareProducerName": "Dreame",
-            "WareProducerQtyWithNa": 179,
+            "WareProducerQtyWithNa": 90,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4757,7 +4892,7 @@
             "WareProducerCode": "Jimmy",
             "S_WareProducerCode": "jimmy",
             "WareProducerName": "Jimmy",
-            "WareProducerQtyWithNa": 70,
+            "WareProducerQtyWithNa": 66,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4765,15 +4900,23 @@
             "WareProducerCode": "Kyvol",
             "S_WareProducerCode": "kyvol",
             "WareProducerName": "Kyvol",
-            "WareProducerQtyWithNa": 19,
+            "WareProducerQtyWithNa": 18,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
+          },
+          {
+            "WareProducerCode": "PHILIPS",
+            "S_WareProducerCode": "philips",
+            "WareProducerName": "PHILIPS",
+            "WareProducerQtyWithNa": 0,
+            "HideInB2B": false,
+            "HasVendorAvailableItems": false
           },
           {
             "WareProducerCode": "Yandex",
             "S_WareProducerCode": "yandex",
             "WareProducerName": "Yandex",
-            "WareProducerQtyWithNa": 1680,
+            "WareProducerQtyWithNa": 2704,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -4781,14 +4924,14 @@
             "WareProducerCode": "YUNMAI",
             "S_WareProducerCode": "yunmai",
             "WareProducerName": "YUNMAI",
-            "WareProducerQtyWithNa": 17,
+            "WareProducerQtyWithNa": 70,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 5900,
-        "CategoryTreeId": 290,
+        "CategoryTreeId": 287,
         "PermissionForCategoryView": null
       },
       {
@@ -4825,14 +4968,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 7,
+                    "WareProducerQtyWithNa": 6,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5680,
-                "CategoryTreeId": 335,
+                "CategoryTreeId": 341,
                 "PermissionForCategoryView": null
               },
               {
@@ -4870,7 +5013,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5685,
-                "CategoryTreeId": 336,
+                "CategoryTreeId": 342,
                 "PermissionForCategoryView": null
               }
             ],
@@ -4895,14 +5038,14 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 8,
+                "WareProducerQtyWithNa": 7,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 5671,
-            "CategoryTreeId": 334,
+            "CategoryTreeId": 340,
             "PermissionForCategoryView": null
           },
           {
@@ -4924,7 +5067,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 56,
+                    "WareProducerQtyWithNa": 37,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4940,14 +5083,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 0,
+                    "WareProducerQtyWithNa": 4,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": false
+                    "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5810,
-                "CategoryTreeId": 339,
+                "CategoryTreeId": 345,
                 "PermissionForCategoryView": null
               },
               {
@@ -4962,7 +5105,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 83,
+                    "WareProducerQtyWithNa": 46,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -4970,14 +5113,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 12,
+                    "WareProducerQtyWithNa": 22,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5820,
-                "CategoryTreeId": 340,
+                "CategoryTreeId": 346,
                 "PermissionForCategoryView": null
               },
               {
@@ -4999,7 +5142,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5830,
-                "CategoryTreeId": 341,
+                "CategoryTreeId": 347,
                 "PermissionForCategoryView": null
               },
               {
@@ -5014,7 +5157,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 74,
+                    "WareProducerQtyWithNa": 90,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5045,7 +5188,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5840,
-                "CategoryTreeId": 342,
+                "CategoryTreeId": 348,
                 "PermissionForCategoryView": null
               },
               {
@@ -5060,14 +5203,14 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 24,
+                    "WareProducerQtyWithNa": 2,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5860,
-                "CategoryTreeId": 344,
+                "CategoryTreeId": 350,
                 "PermissionForCategoryView": null
               },
               {
@@ -5082,15 +5225,15 @@
                     "WareProducerCode": "HP",
                     "S_WareProducerCode": "hp",
                     "WareProducerName": "HP",
-                    "WareProducerQtyWithNa": 0,
+                    "WareProducerQtyWithNa": 16,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": false
+                    "HasVendorAvailableItems": true
                   },
                   {
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 12,
+                    "WareProducerQtyWithNa": 6,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5105,7 +5248,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5870,
-                "CategoryTreeId": 345,
+                "CategoryTreeId": 351,
                 "PermissionForCategoryView": null
               },
               {
@@ -5120,14 +5263,14 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 12,
+                    "WareProducerQtyWithNa": 4,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5880,
-                "CategoryTreeId": 346,
+                "CategoryTreeId": 352,
                 "PermissionForCategoryView": null
               },
               {
@@ -5142,7 +5285,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 150,
+                    "WareProducerQtyWithNa": 288,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5150,14 +5293,14 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 9,
+                    "WareProducerQtyWithNa": 23,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5890,
-                "CategoryTreeId": 347,
+                "CategoryTreeId": 353,
                 "PermissionForCategoryView": null
               },
               {
@@ -5172,7 +5315,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 12,
+                    "WareProducerQtyWithNa": 10,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5187,73 +5330,13 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5900,
-                "CategoryTreeId": 348,
+                "CategoryTreeId": 354,
                 "PermissionForCategoryView": null
               },
               {
                 "CategoryID": "Сервер_Процессоры",
                 "S_CategoryID": "сервер_процессоры",
                 "CategoryName": "Процессоры",
-                "ParentCategoryId": "Сервер_Опции",
-                "S_ParentCategoryId": "сервер_опции",
-                "SubCategories": [],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 3,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "Lenovo",
-                    "S_WareProducerCode": "lenovo",
-                    "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 1,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 5910,
-                "CategoryTreeId": 349,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "Сервер_Серверн_шасси",
-                "S_CategoryID": "сервер_серверн_шасси",
-                "CategoryName": "Серверные шасси",
-                "ParentCategoryId": "Сервер_Опции",
-                "S_ParentCategoryId": "сервер_опции",
-                "SubCategories": [],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 2,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "Lenovo",
-                    "S_WareProducerCode": "lenovo",
-                    "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 5920,
-                "CategoryTreeId": 350,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "Сервер_Cетевые адапт",
-                "S_CategoryID": "сервер_cетевые адапт",
-                "CategoryName": "Сетевые адаптеры",
                 "ParentCategoryId": "Сервер_Опции",
                 "S_ParentCategoryId": "сервер_опции",
                 "SubCategories": [],
@@ -5270,14 +5353,74 @@
                     "WareProducerCode": "Lenovo",
                     "S_WareProducerCode": "lenovo",
                     "WareProducerName": "Lenovo",
-                    "WareProducerQtyWithNa": 3,
+                    "WareProducerQtyWithNa": 1,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 5910,
+                "CategoryTreeId": 355,
+                "PermissionForCategoryView": null
+              },
+              {
+                "CategoryID": "Сервер_Серверн_шасси",
+                "S_CategoryID": "сервер_серверн_шасси",
+                "CategoryName": "Серверные шасси",
+                "ParentCategoryId": "Сервер_Опции",
+                "S_ParentCategoryId": "сервер_опции",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "HPE",
+                    "S_WareProducerCode": "hpe",
+                    "WareProducerName": "HPE",
+                    "WareProducerQtyWithNa": 9,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  },
+                  {
+                    "WareProducerCode": "Lenovo",
+                    "S_WareProducerCode": "lenovo",
+                    "WareProducerName": "Lenovo",
+                    "WareProducerQtyWithNa": 0,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": false
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 5920,
+                "CategoryTreeId": 356,
+                "PermissionForCategoryView": null
+              },
+              {
+                "CategoryID": "Сервер_Cетевые адапт",
+                "S_CategoryID": "сервер_cетевые адапт",
+                "CategoryName": "Сетевые адаптеры",
+                "ParentCategoryId": "Сервер_Опции",
+                "S_ParentCategoryId": "сервер_опции",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "HPE",
+                    "S_WareProducerCode": "hpe",
+                    "WareProducerName": "HPE",
+                    "WareProducerQtyWithNa": 48,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  },
+                  {
+                    "WareProducerCode": "Lenovo",
+                    "S_WareProducerCode": "lenovo",
+                    "WareProducerName": "Lenovo",
+                    "WareProducerQtyWithNa": 7,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5930,
-                "CategoryTreeId": 351,
+                "CategoryTreeId": 357,
                 "PermissionForCategoryView": null
               }
             ],
@@ -5286,15 +5429,15 @@
                 "WareProducerCode": "HP",
                 "S_WareProducerCode": "hp",
                 "WareProducerName": "HP",
-                "WareProducerQtyWithNa": 0,
+                "WareProducerQtyWithNa": 16,
                 "HideInB2B": false,
-                "HasVendorAvailableItems": false
+                "HasVendorAvailableItems": true
               },
               {
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 440,
+                "WareProducerQtyWithNa": 552,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -5310,7 +5453,7 @@
                 "WareProducerCode": "Lenovo",
                 "S_WareProducerCode": "lenovo",
                 "WareProducerName": "Lenovo",
-                "WareProducerQtyWithNa": 26,
+                "WareProducerQtyWithNa": 58,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -5325,7 +5468,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 5800,
-            "CategoryTreeId": 338,
+            "CategoryTreeId": 344,
             "PermissionForCategoryView": null
           },
           {
@@ -5348,14 +5491,14 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 0,
+                "WareProducerQtyWithNa": 48,
                 "HideInB2B": false,
-                "HasVendorAvailableItems": false
+                "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 6020,
-            "CategoryTreeId": 352,
+            "CategoryTreeId": 358,
             "PermissionForCategoryView": null
           }
         ],
@@ -5372,7 +5515,7 @@
             "WareProducerCode": "HP",
             "S_WareProducerCode": "hp",
             "WareProducerName": "HP",
-            "WareProducerQtyWithNa": 1,
+            "WareProducerQtyWithNa": 17,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -5380,7 +5523,7 @@
             "WareProducerCode": "HPE",
             "S_WareProducerCode": "hpe",
             "WareProducerName": "HPE",
-            "WareProducerQtyWithNa": 462,
+            "WareProducerQtyWithNa": 622,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -5396,7 +5539,7 @@
             "WareProducerCode": "Lenovo",
             "S_WareProducerCode": "lenovo",
             "WareProducerName": "Lenovo",
-            "WareProducerQtyWithNa": 34,
+            "WareProducerQtyWithNa": 65,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -5411,7 +5554,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 6008,
-        "CategoryTreeId": 333,
+        "CategoryTreeId": 339,
         "PermissionForCategoryView": null
       },
       {
@@ -5455,7 +5598,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6070,
-                "CategoryTreeId": 357,
+                "CategoryTreeId": 363,
                 "PermissionForCategoryView": null
               },
               {
@@ -5470,7 +5613,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5485,7 +5628,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6080,
-                "CategoryTreeId": 358,
+                "CategoryTreeId": 364,
                 "PermissionForCategoryView": null
               }
             ],
@@ -5494,7 +5637,7 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 2,
+                "WareProducerQtyWithNa": 1,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -5525,7 +5668,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 6050,
-            "CategoryTreeId": 355,
+            "CategoryTreeId": 361,
             "PermissionForCategoryView": null
           },
           {
@@ -5536,9 +5679,9 @@
             "S_ParentCategoryId": "схд",
             "SubCategories": [
               {
-                "CategoryID": "СХД_Автозагрузчики",
-                "S_CategoryID": "схд_автозагрузчики",
-                "CategoryName": "Автозагрузчики",
+                "CategoryID": "СХД_Библиотеки",
+                "S_CategoryID": "схд_библиотеки",
+                "CategoryName": "Библиотеки",
                 "ParentCategoryId": "СХД_Ленточные нак",
                 "S_ParentCategoryId": "схд_ленточные нак",
                 "SubCategories": [],
@@ -5553,30 +5696,8 @@
                   }
                 ],
                 "ConfiguratorActive": false,
-                "CategoryOrder": 6110,
-                "CategoryTreeId": 361,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "СХД_Библиотеки",
-                "S_CategoryID": "схд_библиотеки",
-                "CategoryName": "Библиотеки",
-                "ParentCategoryId": "СХД_Ленточные нак",
-                "S_ParentCategoryId": "схд_ленточные нак",
-                "SubCategories": [],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 13,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
                 "CategoryOrder": 6120,
-                "CategoryTreeId": 362,
+                "CategoryTreeId": 368,
                 "PermissionForCategoryView": null
               },
               {
@@ -5598,7 +5719,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6131,
-                "CategoryTreeId": 364,
+                "CategoryTreeId": 370,
                 "PermissionForCategoryView": null
               }
             ],
@@ -5607,14 +5728,14 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 44,
+                "WareProducerQtyWithNa": 31,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 6100,
-            "CategoryTreeId": 360,
+            "CategoryTreeId": 366,
             "PermissionForCategoryView": null
           },
           {
@@ -5636,14 +5757,14 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 40,
+                    "WareProducerQtyWithNa": 28,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6160,
-                "CategoryTreeId": 366,
+                "CategoryTreeId": 372,
                 "PermissionForCategoryView": null
               },
               {
@@ -5658,14 +5779,14 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 224,
+                    "WareProducerQtyWithNa": 3,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6166,
-                "CategoryTreeId": 367,
+                "CategoryTreeId": 373,
                 "PermissionForCategoryView": null
               },
               {
@@ -5688,44 +5809,14 @@
                     "WareProducerCode": "Synology",
                     "S_WareProducerCode": "synology",
                     "WareProducerName": "Synology",
-                    "WareProducerQtyWithNa": 3,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6170,
-                "CategoryTreeId": 369,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "СХД_ПО",
-                "S_CategoryID": "схд_по",
-                "CategoryName": "Программное обеспечение",
-                "ParentCategoryId": "СХД_Опции и Аксес",
-                "S_ParentCategoryId": "схд_опции и аксес",
-                "SubCategories": [],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 4,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  },
-                  {
-                    "WareProducerCode": "Synology",
-                    "S_WareProducerCode": "synology",
-                    "WareProducerName": "Synology",
-                    "WareProducerQtyWithNa": 4,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 6180,
-                "CategoryTreeId": 370,
+                "CategoryTreeId": 375,
                 "PermissionForCategoryView": null
               }
             ],
@@ -5734,7 +5825,7 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 268,
+                "WareProducerQtyWithNa": 31,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -5742,14 +5833,14 @@
                 "WareProducerCode": "Synology",
                 "S_WareProducerCode": "synology",
                 "WareProducerName": "Synology",
-                "WareProducerQtyWithNa": 7,
+                "WareProducerQtyWithNa": 1,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 6150,
-            "CategoryTreeId": 365,
+            "CategoryTreeId": 371,
             "PermissionForCategoryView": null
           }
         ],
@@ -5758,7 +5849,7 @@
             "WareProducerCode": "HPE",
             "S_WareProducerCode": "hpe",
             "WareProducerName": "HPE",
-            "WareProducerQtyWithNa": 314,
+            "WareProducerQtyWithNa": 63,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -5782,14 +5873,14 @@
             "WareProducerCode": "Synology",
             "S_WareProducerCode": "synology",
             "WareProducerName": "Synology",
-            "WareProducerQtyWithNa": 8,
+            "WareProducerQtyWithNa": 2,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 6010,
-        "CategoryTreeId": 354,
+        "CategoryTreeId": 360,
         "PermissionForCategoryView": null
       },
       {
@@ -5818,7 +5909,7 @@
                     "WareProducerCode": "APC",
                     "S_WareProducerCode": "apc",
                     "WareProducerName": "APC",
-                    "WareProducerQtyWithNa": 100,
+                    "WareProducerQtyWithNa": 94,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5826,7 +5917,7 @@
                     "WareProducerCode": "EATON",
                     "S_WareProducerCode": "eaton",
                     "WareProducerName": "EATON",
-                    "WareProducerQtyWithNa": 9,
+                    "WareProducerQtyWithNa": 8,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5834,14 +5925,14 @@
                     "WareProducerCode": "Vertiv",
                     "S_WareProducerCode": "vertiv",
                     "WareProducerName": "Vertiv",
-                    "WareProducerQtyWithNa": 69,
+                    "WareProducerQtyWithNa": 67,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2970,
-                "CategoryTreeId": 374,
+                "CategoryTreeId": 380,
                 "PermissionForCategoryView": null
               },
               {
@@ -5856,7 +5947,7 @@
                     "WareProducerCode": "APC",
                     "S_WareProducerCode": "apc",
                     "WareProducerName": "APC",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 3,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -5872,14 +5963,14 @@
                     "WareProducerCode": "Vertiv",
                     "S_WareProducerCode": "vertiv",
                     "WareProducerName": "Vertiv",
-                    "WareProducerQtyWithNa": 4,
+                    "WareProducerQtyWithNa": 3,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2980,
-                "CategoryTreeId": 375,
+                "CategoryTreeId": 381,
                 "PermissionForCategoryView": null
               },
               {
@@ -5910,14 +6001,36 @@
                     "WareProducerCode": "Vertiv",
                     "S_WareProducerCode": "vertiv",
                     "WareProducerName": "Vertiv",
-                    "WareProducerQtyWithNa": 18,
+                    "WareProducerQtyWithNa": 30,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 2990,
-                "CategoryTreeId": 376,
+                "CategoryTreeId": 382,
+                "PermissionForCategoryView": null
+              },
+              {
+                "CategoryID": "Сбесп_ReplaceBC",
+                "S_CategoryID": "сбесп_replacebc",
+                "CategoryName": "Battery Packs & Replacement Cartridges",
+                "ParentCategoryId": "Сбесп_ИБП",
+                "S_ParentCategoryId": "сбесп_ибп",
+                "SubCategories": [],
+                "Vendors": [
+                  {
+                    "WareProducerCode": "APC",
+                    "S_WareProducerCode": "apc",
+                    "WareProducerName": "APC",
+                    "WareProducerQtyWithNa": 80,
+                    "HideInB2B": false,
+                    "HasVendorAvailableItems": true
+                  }
+                ],
+                "ConfiguratorActive": false,
+                "CategoryOrder": 3010,
+                "CategoryTreeId": 384,
                 "PermissionForCategoryView": null
               },
               {
@@ -5932,9 +6045,9 @@
                     "WareProducerCode": "APC",
                     "S_WareProducerCode": "apc",
                     "WareProducerName": "APC",
-                    "WareProducerQtyWithNa": 0,
+                    "WareProducerQtyWithNa": 2,
                     "HideInB2B": false,
-                    "HasVendorAvailableItems": false
+                    "HasVendorAvailableItems": true
                   },
                   {
                     "WareProducerCode": "Vertiv",
@@ -5947,7 +6060,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3040,
-                "CategoryTreeId": 379,
+                "CategoryTreeId": 385,
                 "PermissionForCategoryView": null
               },
               {
@@ -5969,14 +6082,14 @@
                         "WareProducerCode": "Vertiv",
                         "S_WareProducerCode": "vertiv",
                         "WareProducerName": "Vertiv",
-                        "WareProducerQtyWithNa": 2,
+                        "WareProducerQtyWithNa": 1,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 3100,
-                    "CategoryTreeId": 384,
+                    "CategoryTreeId": 388,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -5985,14 +6098,14 @@
                     "WareProducerCode": "Vertiv",
                     "S_WareProducerCode": "vertiv",
                     "WareProducerName": "Vertiv",
-                    "WareProducerQtyWithNa": 2,
+                    "WareProducerQtyWithNa": 1,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3070,
-                "CategoryTreeId": 381,
+                "CategoryTreeId": 386,
                 "PermissionForCategoryView": null
               }
             ],
@@ -6001,7 +6114,7 @@
                 "WareProducerCode": "APC",
                 "S_WareProducerCode": "apc",
                 "WareProducerName": "APC",
-                "WareProducerQtyWithNa": 108,
+                "WareProducerQtyWithNa": 183,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6009,7 +6122,7 @@
                 "WareProducerCode": "EATON",
                 "S_WareProducerCode": "eaton",
                 "WareProducerName": "EATON",
-                "WareProducerQtyWithNa": 11,
+                "WareProducerQtyWithNa": 10,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6025,14 +6138,14 @@
                 "WareProducerCode": "Vertiv",
                 "S_WareProducerCode": "vertiv",
                 "WareProducerName": "Vertiv",
-                "WareProducerQtyWithNa": 97,
+                "WareProducerQtyWithNa": 105,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 2960,
-            "CategoryTreeId": 373,
+            "CategoryTreeId": 379,
             "PermissionForCategoryView": null
           },
           {
@@ -6061,7 +6174,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3130,
-                "CategoryTreeId": 386,
+                "CategoryTreeId": 390,
                 "PermissionForCategoryView": null
               }
             ],
@@ -6077,7 +6190,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 3110,
-            "CategoryTreeId": 385,
+            "CategoryTreeId": 389,
             "PermissionForCategoryView": null
           }
         ],
@@ -6086,7 +6199,7 @@
             "WareProducerCode": "APC",
             "S_WareProducerCode": "apc",
             "WareProducerName": "APC",
-            "WareProducerQtyWithNa": 125,
+            "WareProducerQtyWithNa": 200,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -6094,7 +6207,7 @@
             "WareProducerCode": "EATON",
             "S_WareProducerCode": "eaton",
             "WareProducerName": "EATON",
-            "WareProducerQtyWithNa": 11,
+            "WareProducerQtyWithNa": 10,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -6110,14 +6223,14 @@
             "WareProducerCode": "Vertiv",
             "S_WareProducerCode": "vertiv",
             "WareProducerName": "Vertiv",
-            "WareProducerQtyWithNa": 97,
+            "WareProducerQtyWithNa": 105,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 6020,
-        "CategoryTreeId": 372,
+        "CategoryTreeId": 378,
         "PermissionForCategoryView": null
       },
       {
@@ -6168,7 +6281,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 3220,
-                    "CategoryTreeId": 390,
+                    "CategoryTreeId": 394,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -6198,7 +6311,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 3230,
-                    "CategoryTreeId": 391,
+                    "CategoryTreeId": 395,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -6213,7 +6326,7 @@
                         "WareProducerCode": "HPE",
                         "S_WareProducerCode": "hpe",
                         "WareProducerName": "HPE",
-                        "WareProducerQtyWithNa": 7,
+                        "WareProducerQtyWithNa": 1,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -6228,7 +6341,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 3250,
-                    "CategoryTreeId": 392,
+                    "CategoryTreeId": 396,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -6250,7 +6363,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 3320,
-                    "CategoryTreeId": 393,
+                    "CategoryTreeId": 397,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -6259,7 +6372,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 13,
+                    "WareProducerQtyWithNa": 7,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -6282,7 +6395,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3200,
-                "CategoryTreeId": 389,
+                "CategoryTreeId": 393,
                 "PermissionForCategoryView": null
               },
               {
@@ -6305,7 +6418,7 @@
                     "WareProducerCode": "HPE",
                     "S_WareProducerCode": "hpe",
                     "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 9,
+                    "WareProducerQtyWithNa": 2,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -6320,7 +6433,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3400,
-                "CategoryTreeId": 394,
+                "CategoryTreeId": 398,
                 "PermissionForCategoryView": null
               },
               {
@@ -6342,7 +6455,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3700,
-                "CategoryTreeId": 397,
+                "CategoryTreeId": 401,
                 "PermissionForCategoryView": null
               },
               {
@@ -6396,7 +6509,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 3850,
-                "CategoryTreeId": 399,
+                "CategoryTreeId": 403,
                 "PermissionForCategoryView": null
               },
               {
@@ -6418,7 +6531,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4100,
-                "CategoryTreeId": 402,
+                "CategoryTreeId": 406,
                 "PermissionForCategoryView": null
               },
               {
@@ -6441,14 +6554,14 @@
                     "WareProducerCode": "Fortinet",
                     "S_WareProducerCode": "fortinet",
                     "WareProducerName": "Fortinet",
-                    "WareProducerQtyWithNa": 35,
+                    "WareProducerQtyWithNa": 31,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4500,
-                "CategoryTreeId": 406,
+                "CategoryTreeId": 410,
                 "PermissionForCategoryView": null
               },
               {
@@ -6470,7 +6583,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4700,
-                "CategoryTreeId": 407,
+                "CategoryTreeId": 411,
                 "PermissionForCategoryView": null
               }
             ],
@@ -6487,7 +6600,7 @@
                 "WareProducerCode": "Fortinet",
                 "S_WareProducerCode": "fortinet",
                 "WareProducerName": "Fortinet",
-                "WareProducerQtyWithNa": 40,
+                "WareProducerQtyWithNa": 36,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6503,7 +6616,7 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 31,
+                "WareProducerQtyWithNa": 18,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6542,7 +6655,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 8000,
-            "CategoryTreeId": 388,
+            "CategoryTreeId": 392,
             "PermissionForCategoryView": null
           },
           {
@@ -6578,7 +6691,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 4200,
-                    "CategoryTreeId": 411,
+                    "CategoryTreeId": 414,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -6594,7 +6707,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4091,
-                "CategoryTreeId": 409,
+                "CategoryTreeId": 413,
                 "PermissionForCategoryView": null
               },
               {
@@ -6616,129 +6729,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 4410,
-                "CategoryTreeId": 415,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "ПасСО_ШкафСтПулт",
-                "S_CategoryID": "пассо_шкафстпулт",
-                "CategoryName": "Шкафы, стойки, пульты",
-                "ParentCategoryId": "ПасСО",
-                "S_ParentCategoryId": "пассо",
-                "SubCategories": [
-                  {
-                    "CategoryID": "ПасСО_Шк_СервШк",
-                    "S_CategoryID": "пассо_шк_сервшк",
-                    "CategoryName": "Серверные шкафы",
-                    "ParentCategoryId": "ПасСО_ШкафСтПулт",
-                    "S_ParentCategoryId": "пассо_шкафстпулт",
-                    "SubCategories": [],
-                    "Vendors": [
-                      {
-                        "WareProducerCode": "APC",
-                        "S_WareProducerCode": "apc",
-                        "WareProducerName": "APC",
-                        "WareProducerQtyWithNa": 0,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": false
-                      },
-                      {
-                        "WareProducerCode": "HPE",
-                        "S_WareProducerCode": "hpe",
-                        "WareProducerName": "HPE",
-                        "WareProducerQtyWithNa": 2,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": true
-                      }
-                    ],
-                    "ConfiguratorActive": false,
-                    "CategoryOrder": 4450,
-                    "CategoryTreeId": 417,
-                    "PermissionForCategoryView": null
-                  }
-                ],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "APC",
-                    "S_WareProducerCode": "apc",
-                    "WareProducerName": "APC",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
-                  },
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 2,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 4420,
-                "CategoryTreeId": 416,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "ПасСО_КмплШк",
-                "S_CategoryID": "пассо_кмплшк",
-                "CategoryName": "Комплектующие шкафов и стоек",
-                "ParentCategoryId": "ПасСО",
-                "S_ParentCategoryId": "пассо",
-                "SubCategories": [
-                  {
-                    "CategoryID": "ПасСО_КмплШк_Аксес",
-                    "S_CategoryID": "пассо_кмплшк_аксес",
-                    "CategoryName": "Аксессуары для шкафов и стоек",
-                    "ParentCategoryId": "ПасСО_КмплШк",
-                    "S_ParentCategoryId": "пассо_кмплшк",
-                    "SubCategories": [],
-                    "Vendors": [
-                      {
-                        "WareProducerCode": "APC",
-                        "S_WareProducerCode": "apc",
-                        "WareProducerName": "APC",
-                        "WareProducerQtyWithNa": 0,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": false
-                      },
-                      {
-                        "WareProducerCode": "HPE",
-                        "S_WareProducerCode": "hpe",
-                        "WareProducerName": "HPE",
-                        "WareProducerQtyWithNa": 4,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": true
-                      }
-                    ],
-                    "ConfiguratorActive": false,
-                    "CategoryOrder": 5390,
-                    "CategoryTreeId": 435,
-                    "PermissionForCategoryView": null
-                  }
-                ],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "APC",
-                    "S_WareProducerCode": "apc",
-                    "WareProducerName": "APC",
-                    "WareProducerQtyWithNa": 0,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": false
-                  },
-                  {
-                    "WareProducerCode": "HPE",
-                    "S_WareProducerCode": "hpe",
-                    "WareProducerName": "HPE",
-                    "WareProducerQtyWithNa": 4,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 5310,
-                "CategoryTreeId": 431,
+                "CategoryTreeId": 418,
                 "PermissionForCategoryView": null
               },
               {
@@ -6760,7 +6751,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 5640,
-                "CategoryTreeId": 439,
+                "CategoryTreeId": 440,
                 "PermissionForCategoryView": null
               }
             ],
@@ -6777,7 +6768,7 @@
                 "WareProducerCode": "HPE",
                 "S_WareProducerCode": "hpe",
                 "WareProducerName": "HPE",
-                "WareProducerQtyWithNa": 7,
+                "WareProducerQtyWithNa": 1,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -6800,7 +6791,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 9000,
-            "CategoryTreeId": 408,
+            "CategoryTreeId": 412,
             "PermissionForCategoryView": null
           }
         ],
@@ -6825,7 +6816,7 @@
             "WareProducerCode": "Fortinet",
             "S_WareProducerCode": "fortinet",
             "WareProducerName": "Fortinet",
-            "WareProducerQtyWithNa": 40,
+            "WareProducerQtyWithNa": 36,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -6841,7 +6832,7 @@
             "WareProducerCode": "HPE",
             "S_WareProducerCode": "hpe",
             "WareProducerName": "HPE",
-            "WareProducerQtyWithNa": 38,
+            "WareProducerQtyWithNa": 19,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -6888,7 +6879,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 6030,
-        "CategoryTreeId": 387,
+        "CategoryTreeId": 391,
         "PermissionForCategoryView": null
       },
       {
@@ -6947,7 +6938,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 6288,
-                    "CategoryTreeId": 444,
+                    "CategoryTreeId": 445,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -6979,7 +6970,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6220,
-                "CategoryTreeId": 442,
+                "CategoryTreeId": 443,
                 "PermissionForCategoryView": null
               },
               {
@@ -7009,14 +7000,14 @@
                         "WareProducerCode": "Cisco",
                         "S_WareProducerCode": "cisco",
                         "WareProducerName": "Cisco",
-                        "WareProducerQtyWithNa": 95,
+                        "WareProducerQtyWithNa": 19,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 6310,
-                    "CategoryTreeId": 446,
+                    "CategoryTreeId": 447,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -7033,71 +7024,18 @@
                     "WareProducerCode": "Cisco",
                     "S_WareProducerCode": "cisco",
                     "WareProducerName": "Cisco",
-                    "WareProducerQtyWithNa": 95,
+                    "WareProducerQtyWithNa": 19,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6300,
-                "CategoryTreeId": 445,
-                "PermissionForCategoryView": null
-              },
-              {
-                "CategoryID": "Тел_VOIP-шлюзы",
-                "S_CategoryID": "тел_voip-шлюзы",
-                "CategoryName": "VOIP-шлюзы",
-                "ParentCategoryId": "Тел",
-                "S_ParentCategoryId": "тел",
-                "SubCategories": [
-                  {
-                    "CategoryID": "Тел_Цифровые порты",
-                    "S_CategoryID": "тел_цифровые порты",
-                    "CategoryName": "Цифровые порты",
-                    "ParentCategoryId": "Тел_VOIP-шлюзы",
-                    "S_ParentCategoryId": "тел_voip-шлюзы",
-                    "SubCategories": [],
-                    "Vendors": [
-                      {
-                        "WareProducerCode": "AudioCodes",
-                        "S_WareProducerCode": "audiocodes",
-                        "WareProducerName": "AudioCodes",
-                        "WareProducerQtyWithNa": 1,
-                        "HideInB2B": false,
-                        "HasVendorAvailableItems": true
-                      }
-                    ],
-                    "ConfiguratorActive": false,
-                    "CategoryOrder": 6440,
-                    "CategoryTreeId": 453,
-                    "PermissionForCategoryView": null
-                  }
-                ],
-                "Vendors": [
-                  {
-                    "WareProducerCode": "AudioCodes",
-                    "S_WareProducerCode": "audiocodes",
-                    "WareProducerName": "AudioCodes",
-                    "WareProducerQtyWithNa": 1,
-                    "HideInB2B": false,
-                    "HasVendorAvailableItems": true
-                  }
-                ],
-                "ConfiguratorActive": false,
-                "CategoryOrder": 6410,
-                "CategoryTreeId": 452,
+                "CategoryTreeId": 446,
                 "PermissionForCategoryView": null
               }
             ],
             "Vendors": [
-              {
-                "WareProducerCode": "AudioCodes",
-                "S_WareProducerCode": "audiocodes",
-                "WareProducerName": "AudioCodes",
-                "WareProducerQtyWithNa": 1,
-                "HideInB2B": false,
-                "HasVendorAvailableItems": true
-              },
               {
                 "WareProducerCode": "Avaya",
                 "S_WareProducerCode": "avaya",
@@ -7110,7 +7048,7 @@
                 "WareProducerCode": "Cisco",
                 "S_WareProducerCode": "cisco",
                 "WareProducerName": "Cisco",
-                "WareProducerQtyWithNa": 95,
+                "WareProducerQtyWithNa": 19,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -7133,7 +7071,7 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 12000,
-            "CategoryTreeId": 441,
+            "CategoryTreeId": 442,
             "PermissionForCategoryView": null
           },
           {
@@ -7177,7 +7115,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 6560,
-                    "CategoryTreeId": 462,
+                    "CategoryTreeId": 461,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -7209,7 +7147,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6531,
-                "CategoryTreeId": 460,
+                "CategoryTreeId": 459,
                 "PermissionForCategoryView": null
               },
               {
@@ -7239,7 +7177,7 @@
                         "WareProducerCode": "Logitech",
                         "S_WareProducerCode": "logitech",
                         "WareProducerName": "Logitech",
-                        "WareProducerQtyWithNa": 1,
+                        "WareProducerQtyWithNa": 4,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       },
@@ -7254,7 +7192,7 @@
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 6580,
-                    "CategoryTreeId": 464,
+                    "CategoryTreeId": 463,
                     "PermissionForCategoryView": null
                   },
                   {
@@ -7265,6 +7203,14 @@
                     "S_ParentCategoryId": "вконсв_групповые сис",
                     "SubCategories": [],
                     "Vendors": [
+                      {
+                        "WareProducerCode": "Avaya",
+                        "S_WareProducerCode": "avaya",
+                        "WareProducerName": "Avaya",
+                        "WareProducerQtyWithNa": 0,
+                        "HideInB2B": false,
+                        "HasVendorAvailableItems": false
+                      },
                       {
                         "WareProducerCode": "Cisco",
                         "S_WareProducerCode": "cisco",
@@ -7277,14 +7223,14 @@
                         "WareProducerCode": "Logitech",
                         "S_WareProducerCode": "logitech",
                         "WareProducerName": "Logitech",
-                        "WareProducerQtyWithNa": 14,
+                        "WareProducerQtyWithNa": 13,
                         "HideInB2B": false,
                         "HasVendorAvailableItems": true
                       }
                     ],
                     "ConfiguratorActive": false,
                     "CategoryOrder": 6590,
-                    "CategoryTreeId": 465,
+                    "CategoryTreeId": 464,
                     "PermissionForCategoryView": null
                   }
                 ],
@@ -7309,7 +7255,7 @@
                     "WareProducerCode": "Logitech",
                     "S_WareProducerCode": "logitech",
                     "WareProducerName": "Logitech",
-                    "WareProducerQtyWithNa": 15,
+                    "WareProducerQtyWithNa": 17,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -7324,7 +7270,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6570,
-                "CategoryTreeId": 463,
+                "CategoryTreeId": 462,
                 "PermissionForCategoryView": null
               }
             ],
@@ -7349,7 +7295,7 @@
                 "WareProducerCode": "Logitech",
                 "S_WareProducerCode": "logitech",
                 "WareProducerName": "Logitech",
-                "WareProducerQtyWithNa": 15,
+                "WareProducerQtyWithNa": 17,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -7364,19 +7310,11 @@
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 13000,
-            "CategoryTreeId": 459,
+            "CategoryTreeId": 458,
             "PermissionForCategoryView": null
           }
         ],
         "Vendors": [
-          {
-            "WareProducerCode": "AudioCodes",
-            "S_WareProducerCode": "audiocodes",
-            "WareProducerName": "AudioCodes",
-            "WareProducerQtyWithNa": 1,
-            "HideInB2B": false,
-            "HasVendorAvailableItems": true
-          },
           {
             "WareProducerCode": "Avaya",
             "S_WareProducerCode": "avaya",
@@ -7389,7 +7327,7 @@
             "WareProducerCode": "Cisco",
             "S_WareProducerCode": "cisco",
             "WareProducerName": "Cisco",
-            "WareProducerQtyWithNa": 95,
+            "WareProducerQtyWithNa": 19,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7413,7 +7351,7 @@
             "WareProducerCode": "Logitech",
             "S_WareProducerCode": "logitech",
             "WareProducerName": "Logitech",
-            "WareProducerQtyWithNa": 15,
+            "WareProducerQtyWithNa": 17,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7428,7 +7366,7 @@
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 6038,
-        "CategoryTreeId": 440,
+        "CategoryTreeId": 441,
         "PermissionForCategoryView": null
       },
       {
@@ -7457,14 +7395,14 @@
                     "WareProducerCode": "Hikvision",
                     "S_WareProducerCode": "hikvision",
                     "WareProducerName": "Hikvision",
-                    "WareProducerQtyWithNa": 876,
+                    "WareProducerQtyWithNa": 838,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6536,
-                "CategoryTreeId": 470,
+                "CategoryTreeId": 469,
                 "PermissionForCategoryView": null
               },
               {
@@ -7479,7 +7417,7 @@
                     "WareProducerCode": "Hikvision",
                     "S_WareProducerCode": "hikvision",
                     "WareProducerName": "Hikvision",
-                    "WareProducerQtyWithNa": 30,
+                    "WareProducerQtyWithNa": 25,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   },
@@ -7494,7 +7432,7 @@
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6545,
-                "CategoryTreeId": 471,
+                "CategoryTreeId": 470,
                 "PermissionForCategoryView": null
               },
               {
@@ -7533,14 +7471,14 @@
                     "WareProducerCode": "WD",
                     "S_WareProducerCode": "wd",
                     "WareProducerName": "WD",
-                    "WareProducerQtyWithNa": 211,
+                    "WareProducerQtyWithNa": 161,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 6550,
-                "CategoryTreeId": 472,
+                "CategoryTreeId": 471,
                 "PermissionForCategoryView": null
               }
             ],
@@ -7549,7 +7487,7 @@
                 "WareProducerCode": "Hikvision",
                 "S_WareProducerCode": "hikvision",
                 "WareProducerName": "Hikvision",
-                "WareProducerQtyWithNa": 956,
+                "WareProducerQtyWithNa": 913,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               },
@@ -7581,14 +7519,14 @@
                 "WareProducerCode": "WD",
                 "S_WareProducerCode": "wd",
                 "WareProducerName": "WD",
-                "WareProducerQtyWithNa": 211,
+                "WareProducerQtyWithNa": 161,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 14100,
-            "CategoryTreeId": 469,
+            "CategoryTreeId": 468,
             "PermissionForCategoryView": null
           },
           {
@@ -7610,14 +7548,14 @@
                     "WareProducerCode": "Hikvision",
                     "S_WareProducerCode": "hikvision",
                     "WareProducerName": "Hikvision",
-                    "WareProducerQtyWithNa": 50,
+                    "WareProducerQtyWithNa": 402,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
                 ],
                 "ConfiguratorActive": false,
                 "CategoryOrder": 15040,
-                "CategoryTreeId": 474,
+                "CategoryTreeId": 473,
                 "PermissionForCategoryView": null
               }
             ],
@@ -7626,14 +7564,14 @@
                 "WareProducerCode": "Hikvision",
                 "S_WareProducerCode": "hikvision",
                 "WareProducerName": "Hikvision",
-                "WareProducerQtyWithNa": 50,
+                "WareProducerQtyWithNa": 402,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
             ],
             "ConfiguratorActive": false,
             "CategoryOrder": 15000,
-            "CategoryTreeId": 473,
+            "CategoryTreeId": 472,
             "PermissionForCategoryView": null
           }
         ],
@@ -7642,7 +7580,7 @@
             "WareProducerCode": "Hikvision",
             "S_WareProducerCode": "hikvision",
             "WareProducerName": "Hikvision",
-            "WareProducerQtyWithNa": 1006,
+            "WareProducerQtyWithNa": 1315,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           },
@@ -7674,14 +7612,14 @@
             "WareProducerCode": "WD",
             "S_WareProducerCode": "wd",
             "WareProducerName": "WD",
-            "WareProducerQtyWithNa": 211,
+            "WareProducerQtyWithNa": 161,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }
         ],
         "ConfiguratorActive": false,
         "CategoryOrder": 14000,
-        "CategoryTreeId": 468,
+        "CategoryTreeId": 467,
         "PermissionForCategoryView": null
       },
       {
@@ -7755,7 +7693,7 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 72,
+                    "WareProducerQtyWithNa": 30,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7777,7 +7715,7 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 701,
+                    "WareProducerQtyWithNa": 692,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7839,7 +7777,7 @@
                 "WareProducerCode": "Microsoft",
                 "S_WareProducerCode": "microsoft",
                 "WareProducerName": "Microsoft",
-                "WareProducerQtyWithNa": 773,
+                "WareProducerQtyWithNa": 722,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -7868,7 +7806,7 @@
                     "WareProducerCode": "Microsoft",
                     "S_WareProducerCode": "microsoft",
                     "WareProducerName": "Microsoft",
-                    "WareProducerQtyWithNa": 479,
+                    "WareProducerQtyWithNa": 386,
                     "HideInB2B": false,
                     "HasVendorAvailableItems": true
                   }
@@ -7884,7 +7822,7 @@
                 "WareProducerCode": "Microsoft",
                 "S_WareProducerCode": "microsoft",
                 "WareProducerName": "Microsoft",
-                "WareProducerQtyWithNa": 479,
+                "WareProducerQtyWithNa": 386,
                 "HideInB2B": false,
                 "HasVendorAvailableItems": true
               }
@@ -7961,7 +7899,7 @@
             "WareProducerCode": "Microsoft",
             "S_WareProducerCode": "microsoft",
             "WareProducerName": "Microsoft",
-            "WareProducerQtyWithNa": 1288,
+            "WareProducerQtyWithNa": 1144,
             "HideInB2B": false,
             "HasVendorAvailableItems": true
           }

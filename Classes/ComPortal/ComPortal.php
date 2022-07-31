@@ -15,7 +15,7 @@ class ComPortal extends Supplier
     public $updated_products = [];
     public $deleted_products = [];
 
-    public $supplier_id = 13; // в настоящем onebox 13
+    public $supplier_id = 3; // в настоящем onebox 13
     public $currency = 'Тенге';
 
     private $filesUrl = 'https://sup.sauda24.kz/Classes/ComPortal/files';
@@ -46,6 +46,9 @@ class ComPortal extends Supplier
     private $ftp;
 
     function __construct($sourceType = 'ftp_read') {
+        if($_GET['content'] ?? false) {
+            $sourceType = $_GET['content'];
+        }
         $this->settings['content'] = $sourceType;
 
         parent::__construct();
@@ -59,8 +62,9 @@ class ComPortal extends Supplier
     
     public function getData() {
         $limit = $_GET['limit'] ?? 0; // limit for import;
+        $skip = $_GET['skip'] ?? 0; // limit for import;
         
-        $this->getImagesFtpDownlaod();
+        //$this->getImagesFtpDownlaod();
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -74,7 +78,7 @@ class ComPortal extends Supplier
         }
 
         if($limit ?? 0) {
-            $products = array_slice($products, 0, $limit);
+            $products = array_slice($products, $skip*1, $limit*1);
         }
         
         foreach ($products as $product_key => $product) {
@@ -87,7 +91,7 @@ class ComPortal extends Supplier
             $product = (array) $product;
 
             // получить артикул
-            $product['article'] = $product['articul'];
+            $product['article'] = $product['articul'] ?: $product['@attributes']['id'];
 
             $this->articuls[] = $product['article'];
 
@@ -108,20 +112,28 @@ class ComPortal extends Supplier
                 $product['pictures'][] = $product['picture'];
                 unset($product['picture']);
             }
+            $pictures = [];
             foreach($product['pictures'] as $pictureKey => $picturePath){
                 if(is_string($picturePath)) {
-                    $product['pictures'][$pictureKey] = $this->filesUrl . $picturePath;
+                    $pictures[] = $this->filesUrl . $picturePath;
                 } elseif(is_array($picturePath)) {
                     foreach($picturePath as $picturePathItem){
-                        $product['pictures'][$pictureKey] = $this->filesUrl . $picturePathItem;
+                        $pictures[] = $this->filesUrl . $picturePathItem;
                     }
                 }
             }
+            $product['pictures'] = $pictures;
 
+            if($_GET['delete'] ?? 0) {
+                $oneboxResponse = $this->onebox->request('/product/delete/', '&articul=' . $product['article']);
+                continue;
+            }
+            
             // проверить если ли товар в Onebox по артикулу
             $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
 
             if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
+                if($_GET['only_create'] ?? false) continue;
                 
                 $product_ob = $oneboxResponse->products;
 
@@ -136,6 +148,8 @@ class ComPortal extends Supplier
 
                     'brandname' => $product['brandname'],
                     'unit' => 'шт.',
+
+                    'customfield_0AsiteUpdate' => 1,
                     
                     'suppliercurrency' => $this->currency,
                     'currencyname' => $this->currency,
@@ -187,25 +201,27 @@ class ComPortal extends Supplier
                     }
                     // добавление информации о новом продукте
                     $request = [
-                        'name' => $product_ob->name,
+                        'name' => $product['name'],
                         'supplierid' => $this->supplier_id,
                         'suppliercode' => $product['article'],
                         'articul' => $product['article'],
 
                         'brandname' => $product['brandname'],
                         'unit' => 'шт.',
-                        
+
+                        'customfield_0AsiteUpdate' => 1,
+    
                         'suppliercurrency' => $this->currency,
                         'currencyname' => $this->currency,
-    
+        
                         'price' => $price ? round($price) : 0,
                         'pricebase' => $price ? round($price) : 0,
                         'supplierprice' => $price ? round($price) : 0,
-    
+        
                         'supplieravail' => $stock > 0 ? 1 : 0,
                         'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
                         'syncpricesup' => 1,
-                        'syncavailsup' => 1,
+                        'syncavailsup' => 1
                     ];
                     if($stock){
                         $request['storaged'] = $stock;
@@ -261,9 +277,11 @@ class ComPortal extends Supplier
         $data = [];
         switch($method) {
             case 'ftp_download':
+                exit('-11-');
                 $data = $this->getDataFtpDownload();
                 break;
             case 'ftp_read':
+                exit('-12-');
                 $data = $this->getDataFtpRead();
                 break;
             case 'read':
@@ -278,7 +296,7 @@ class ComPortal extends Supplier
      * Get data from FTP and download files
      * @return array data from files
      */
-    private function getDataFtpDownload() {
+    private function getDataFtpDownload() {exit('-.-');
         $data = [];
         $this->ftp = new Ftp($this->settings['ftp']);
         foreach($this->settings['source']['files'] as $type => $fileName) {
@@ -300,7 +318,7 @@ class ComPortal extends Supplier
      * Get data from FTP-file and write to local
      * @return array data from files
      */
-    private function getDataFtpRead() {
+    private function getDataFtpRead() {exit('-2-');
         $data = [];
         $this->ftp = new Ftp($this->settings['ftp']);
         foreach($this->settings['source']['files'] as $type => $fileName) {
@@ -321,7 +339,7 @@ class ComPortal extends Supplier
     /**
      * Get images from FTP-dir and download to local-dir
      */
-    private function getImagesFtpDownlaod() {
+    private function getImagesFtpDownlaod() {exit('-1-');
         $this->ftp = new Ftp($this->settings['ftp']);
         $this->ftp->downloadFromDir($this->settings['source']['dir'] . $this->settings['source']['images'], $this->settings['source']['images'], false, 8);
     }

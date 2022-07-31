@@ -7,6 +7,7 @@ use Classes\Supplier;
 
 class Marvel extends Supplier
 {
+    public $sourceType = 'download';
 
     public $supplier_id = 12; // в настоящем onebox 12
     public $currency = 'Тенге';
@@ -23,6 +24,10 @@ class Marvel extends Supplier
 
     public function __construct()
     {
+        if($_GET['content'] ?? false) {
+            $this->sourceType = $_GET['content'];
+        }
+
         parent::__construct();
         Logger::$folder = 'marvel';
     }
@@ -30,6 +35,8 @@ class Marvel extends Supplier
 
     public function getData()
     {
+        $limit = $_GET['limit'] ?? 0; // limit for import;
+        $skip = $_GET['skip'] ?? 0; // limit for import;
 
         $temp_count = false; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -41,7 +48,22 @@ class Marvel extends Supplier
             return false;
         }
 
+
+        $startIndex = 0;
+        if (file_exists(__DIR__.'/last.json')){
+            $last_sync_part = file_get_contents(__DIR__.'/last.json');
+            $startIndex = json_decode($last_sync_part, true)['index'];
+        }
+
+        if($limit ?? 0) {
+            $products['CategoryItem'] = array_slice($products['CategoryItem'], $skip*1, $limit*1);
+        }
+
         foreach ($products['CategoryItem'] as $product_key => $product) {
+
+            if ($product_key < $startIndex){
+                continue;
+            }
 
             if ($temp_count){
                 if ($temp_inc == $temp_count){break;}
@@ -194,8 +216,12 @@ class Marvel extends Supplier
                 }
 
             }
+
+            // записать в файл с какой части начать синхронизацю в следующий раз
+            file_put_contents(__DIR__.'/last.json', json_encode(['index' => $product_key, 'count' => count($products['CategoryItem'])]));
         }
 
+        unlink(__DIR__.'/last.json');
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products));
 
         return true;
@@ -290,7 +316,7 @@ class Marvel extends Supplier
 
         $file_path_name = __DIR__ . "/json/" . $file_name . ".json";
 
-        if (file_exists($file_path_name) && date('Y-m-d', filemtime($file_path_name)) == date('Y-m-d')) {
+        if ($this->sourceType === 'read' || (file_exists($file_path_name) && date('Y-m-d', filemtime($file_path_name)) == date('Y-m-d'))) {
             $response = json_decode(file_get_contents($file_path_name), true);
         } else {
 

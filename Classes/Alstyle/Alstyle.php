@@ -80,7 +80,17 @@ class Alstyle extends Supplier
         }
 
 
+        $startIndex = 0;
+        if (file_exists(__DIR__.'/last.json')){
+            $last_sync_part = file_get_contents(__DIR__.'/last.json');
+            $startIndex = json_decode($last_sync_part, true)['index'];
+        }
+
         foreach ($products as $product_key => $product) {
+
+            if ($product_key < $startIndex){
+                continue;
+            }
 
             if ($temp_count) {
                 if ($temp_inc == $temp_count) {
@@ -236,8 +246,12 @@ class Alstyle extends Supplier
                 }
 
             }
+
+            // записать в файл с какой части начать синхронизацю в следующий раз
+            file_put_contents(__DIR__.'/last.json', json_encode(['index' => $product_key, 'count' => count($products)]));
         }
 
+        unlink(__DIR__.'/last.json');
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products));
 
         return true;

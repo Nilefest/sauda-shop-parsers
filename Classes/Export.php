@@ -8,7 +8,7 @@ use Classes\Onebox\Onebox;
 
 class Export
 {
-    public static function makeXml()
+    public static function makeXml($option)
     {
         $onebox = new Onebox();
         $export_dir = $_SERVER['DOCUMENT_ROOT'] . '/export';
@@ -126,11 +126,12 @@ class Export
         fclose($fh);
         unset($flawed);
 
-
-        static::kaspi($products, $export_dir);
+        if ($option !== 'jusan_only') {
+            static::kaspi($products, $export_dir);
+            static::forte($products, $export_dir);
+            static::halyk($products, $export_dir);
+        }
         static::jusan($products, $export_dir);
-        static::forte($products, $export_dir);
-        static::halyk($products, $export_dir);
     }
     private static function kaspi($products, $export_dir)
     {

@@ -1,3 +1,0 @@
-23.05.2022 03:00:01 [success] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Синхронизация запущена
-23.05.2022 03:01:02 [warning] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Процесс еще выполняется
-23.05.2022 03:05:06 [error] /var/www/www-root/data/www/sup.sauda24.kz/sync.php # Trying to get property 'status' of non-object = /var/www/www-root/data/www/sup.sauda24.kz/Classes/Marvel/Marvel.php = 54

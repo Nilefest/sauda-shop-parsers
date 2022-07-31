@@ -15,7 +15,7 @@ class Azerti extends Supplier
     public $updated_products = [];
     public $deleted_products = [];
 
-    public $supplier_id = 13; // в настоящем onebox 13
+    public $supplier_id = 17; // в настоящем onebox 13
     public $currency = 'Тенге';
 
     private $data = [];
@@ -40,6 +40,9 @@ class Azerti extends Supplier
     private $ftp;
 
     function __construct($sourceType = 'ftp_read') {
+        if($_GET['content'] ?? false) {
+            $sourceType = $_GET['content'];
+        }
         $this->settings['content'] = $sourceType;
 
         parent::__construct();
@@ -56,6 +59,7 @@ class Azerti extends Supplier
 
     public function getData(){
         $limit = $_GET['limit'] ?? 0; // limit for import;
+        $skip = $_GET['skip'] ?? 0; // limit for import;
 
         $temp_count = 0; // количество циклов а не товаров, товары отсеиваются если количество нулевое
         $temp_inc = 0;
@@ -69,7 +73,7 @@ class Azerti extends Supplier
         }
 
         if($limit ?? 0) {
-            $products['offer'] = array_slice($products['offer'], 0, $limit);
+            $products['offer'] = array_slice($products['offer'], $skip*1, $limit*1);
         }
         
         foreach ($products['offer'] as $product_key => $product) {
@@ -82,8 +86,11 @@ class Azerti extends Supplier
             $product = (array) $product;
 
             // получить артикул
-            $product['article'] = $product['ean'] ?? ((array)$product_obj['id'])[0];
+            $product['article'] = ((array)$product_obj['id'])[0] ?: $product['ean'];
 
+            $product['code'] = $product['article'];
+
+            $product['article'] = $product['model'];
             $this->articuls[] = $product['article'];
 
             // Цена "Дилерская цена"
@@ -98,78 +105,92 @@ class Azerti extends Supplier
                 $stock = preg_replace("/[^0-9]/", '', $product['stock']);
             }
 
+            if($_GET['delete'] ?? 0) {
+                //$oneboxResponse = $this->onebox->request('/product/delete/', '&articul=' . $product['article']);
+                // continue; // if need only delete
+            }
+            
             // проверить если ли товар в Onebox по артикулу
-            $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=0&articul=' . $product['article']);
+            $oneboxResponse = $this->onebox->request('/product/get/', '&customfields=1&articul=' . $product['article']);
 
             if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') { // товар есть в onebox
 
                 $product_ob = $oneboxResponse->products;
-
-                $request = [
-                    'id' => $product_ob->id,
-                    'name' => $product_ob->name,
-                    'supplierid' => $this->supplier_id,
-                    'suppliercode' => $product['article'],
-                    'brandname' => (string)$product['vendor'],
-                    'unit' => 'шт.',
-
-                    'suppliercurrency' => $this->currency,
-                    'currencyname' => $this->currency,
-
-                    'price' => $price ? round($price) : 0,
-                    'pricebase' => $price ? round($price) : 0,
-                    'supplierprice' => $price ? round($price) : 0,
-
-                    'supplieravail' => $stock > 0 ? 1 : 0,
-                    'supplieravail' => $stock > 0 ? 1 : 0,
-                    'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
-                    'syncpricesup' => 1,
-                    'syncavailsup' => 1,
-                ];
-                if($stock){
-                    $request['storaged'] = (int)$stock;
-                    $request['avail'] = $stock > 0 ? 1 : 0;
-                }
-
-                // дополнительная информация по продукту
-                $request = $this->addTextInfo($request, $product_obj); 
-                $request = $this->prepare($request);
                 
-                // добавить картинки
-                if (empty($product_ob->image) && isset($product['picture']) && !empty($product['picture'])){
-                    $request .= '&image[0]='.$product['picture'];
+                if(is_array($product_ob) && isset($product_ob[0])){
+                    $product_ob = $product_ob[0];
                 }
 
-                $oneboxResponse = $this->onebox->request('/product/update/', $request);
+                // foreach($product_obs as $product_ob) {
+                    $request = [
+                        'id' => $product_ob->id,
+                        'name' => $product_ob->name,
+                        'supplierid' => $this->supplier_id,
+                        'suppliercode' => $product['code'] ??  $product['article'],
+                        'brandname' => (string)$product['vendor'],
+                        'unit' => 'шт.',
 
-                if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
-                    $this->updated_products[] = $product_ob->id;
-                    Logger::Log('success', 'Обновился товар с артикулом: ' . $product['article'], $this->settings['logPring']);
-                } else {
-                    if (isset($oneboxResponse->errors)){
-                        $errors = json_encode($oneboxResponse->errors);
-                    }else{
-                        $errors = json_encode($oneboxResponse);
+                        'customfield_0AsiteUpdate' => 1,
+    
+                        'suppliercurrency' => $this->currency,
+                        'currencyname' => $this->currency,
+        
+                        'price' => ($product_ob->price ?? 0) && $price ? round($price) : 0,
+                        'pricebase' => $price ? round($price) : 0,
+                        'supplierprice' => $price ? round($price) : 0,
+        
+                        'supplieravail' => $stock > 0 ? 1 : 0,
+                        'supplieravail' => $stock > 0 ? 1 : 0,
+                        'supplieravailtext' => $stock > 0 ? $this->replaceSymbol($product['stock']) : 0,
+                        'syncpricesup' => 1,
+                        'syncavailsup' => 1,
+                    ];
+                    if($stock){
+                        $request['storaged'] = (int)$stock;
+                        $request['avail'] = $stock > 0 ? 1 : 0;
                     }
-                    Logger::Log('error', 'Не удалось обновить товар с артикулом: ' . $product['article'] . ' и id onebox: ' . $product_ob->id . ' || Ошибки: ' . $errors, $this->settings['logPring']);
-                }
+        
+                    // дополнительная информация по продукту
+                    $request = $this->addTextInfo($request, $product_obj); 
+                    $request = $this->prepare($request);
+                        
+                    // добавить картинки
+                    if (empty($product_ob->image) && isset($product['picture']) && !empty($product['picture'])){
+                        $request .= '&image[0]='.$product['picture'];
+                    }
 
+                    $oneboxResponse = $this->onebox->request('/product/update/', $request);
+        
+                    if (isset($oneboxResponse->status) && $oneboxResponse->status == 'ok') {
+                        $this->updated_products[] = $product_ob->id;
+                        Logger::Log('success', 'Обновился товар с артикулом: ' . $product['article'], $this->settings['logPring']);
+                    } else {
+                        if (isset($oneboxResponse->errors)){
+                            $errors = json_encode($oneboxResponse->errors);
+                        }else{
+                            $errors = json_encode($oneboxResponse);
+                        }
+                        Logger::Log('error', 'Не удалось обновить товар с артикулом: ' . $product['article'] . ' и id onebox: ' . $product_ob->id . ' || Ошибки: ' . $errors, $this->settings['logPring']);
+                    }
+                // }
             }else{ // товара нет в onebox
-
+                
                 // проверить если ли товар в наличии и есть ли у него цена
                 if (isset($product['stock']) && isset($price) && $stock > 0 && $price > 0) {
 
                     // добавление информации о новом продукте
                     $request = [
-                        'name' => $product_ob->name,
+                        'name' => $product['name'],
                         'supplierid' => $this->supplier_id,
-                        'suppliercode' => $product['article'],
-                        'brandname' => (string)$product['vendor'],
+                        'suppliercode' => $product['code'] ??  $product['article'],
                         'articul' => $product['article'],
+                        'brandname' => (string)$product['vendor'],
                         'unit' => 'шт.',
     
                         'suppliercurrency' => $this->currency,
                         'currencyname' => $this->currency,
+                        
+                        'customfield_0AsiteUpdate' => 1,
     
                         'price' => $price ? round($price) : 0,
                         'pricebase' => $price ? round($price) : 0,
@@ -182,6 +203,7 @@ class Azerti extends Supplier
                         'syncavailsup' => 1,
 
                     ];
+
                     if($stock){
                         $request['storaged'] = $stock;
                         $request['avail'] = $stock > 0 ? 1 : 0;
@@ -438,7 +460,7 @@ class Azerti extends Supplier
                         'id' => $product->id,
                         'name' => $products->name,
                         'supplierid' => $this->supplier_id,
-                        'suppliercode' => $product['article'],
+                        'suppliercode' => $product['code'] ??  $product['article'],
                         'brandname' => (string)$product['vendor'],
                         'unit' => 'шт.',
     

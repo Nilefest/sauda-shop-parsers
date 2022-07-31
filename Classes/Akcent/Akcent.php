@@ -64,7 +64,17 @@ class Akcent extends Supplier
             return false;
         }
 
+        $startIndex = 0;
+        if (file_exists(__DIR__.'/last.json')){
+            $last_sync_part = file_get_contents(__DIR__.'/last.json');
+            $startIndex = json_decode($last_sync_part, true)['index'];
+        }
+
         foreach ($products['offer'] as $product_key => $product) {
+
+            if ($product_key < $startIndex){
+                continue;
+            }
 
             if ($temp_count){
                 if ($temp_inc == $temp_count){break;}
@@ -190,6 +200,9 @@ class Akcent extends Supplier
                     continue;
                 }
             }
+
+            // записать в файл с какой части начать синхронизацю в следующий раз
+            file_put_contents(__DIR__.'/last.json', json_encode(['index' => $product_key, 'count' => count($products['offer'])]));
         }
 
 
@@ -197,6 +210,7 @@ class Akcent extends Supplier
             $this->updateNotInCatalogProducts(); // обнулить товары которые есть в onebox, но нет в akcent
         }
 
+        unlink(__DIR__.'/last.json');
         Logger::Log('success', 'Синхронизация завершена. Добавлено товаров: ' . count($this->new_product) . ' || Обновлено товаров: ' . count($this->updated_products) . ' || Обнулено товаров: ' . count($this->deleted_products));
 
         return true;
